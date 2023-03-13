@@ -1,4 +1,4 @@
-# GetControl ![logo](https://github.com/WildRams/GetControl-code/blob/main/Graphics/GetControl-256.png?raw=true | width=100px)
+# GetControl ![logo](https://github.com/WildRams/GetControl-code/blob/main/Graphics/GetControl-256.png?raw=true =100x)
 
 GetControl is a simple tool to collect and agregate the information from various files created during the structural
 refinement of powder data using [FullProf](https://www.ill.eu/sites/fullprof/) software. It can get easy access to the supplementary files with further analysis.
