@@ -8,4 +8,4 @@ from the refinement. The way it works is not suitable for all but someone can fo
 
 The tool is under continuous development. All bug report or suggestions are welcomed.
 
-Information about the updates can be found [here](gcupdateinfo.txt){:target="_blank" rel="noopener"}.
+Information about the updates can be found [here](WildRams/GetControl-code/gcupdateinfo.txt).
