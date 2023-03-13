@@ -1,7 +1,7 @@
 # GetControl <img src="https://github.com/WildRams/GetControl-code/blob/main/Graphics/GetControl-256.png?raw=true" alt="logo" width=48px/>
 
 
-GetControl software is designed to help with managing structural refinements (mainly using the powder diffraction data) performed using [<a href="https://www.ill.eu/sites/fullprof/" target="_blank">FullProf Suite</a> software.
+GetControl software is designed to help with managing structural refinements (mainly using the powder diffraction data) performed using [FullProf Suite](https://www.ill.eu/sites/fullprof/){:target="_blank" rel="noopener"} software.
 
 It can help to visualise all PCR files in the directory, collect and aggregate the information from various files created during the structural
  refinement and visualise them. Furthermore, it facilitates easy access to the supplementary files with further analysis.
@@ -10,7 +10,7 @@ I developed it to help me get a quicker overview and control over a vast number 
 
 The tool is under continuous development. All bug reports or suggestions are welcomed.
 
-Information about the updates can be found [here](https://github.com/WildRams/GetControl-code/blob/main/gcupdateinfo.txt?raw=true).
+Information about the updates can be found [here](https://github.com/WildRams/GetControl-code/blob/main/gcupdateinfo.txt?raw=true){:target="_blank" rel="noopener"}.
 
 ## Installation
 There is no need for installation. For Windows and Linux, there are single-file executables. For the macOS, the image disk (DMG file) is available.
