@@ -1,4 +1,4 @@
-# GetControl ![logo](img/GetControl-32.png?raw=true)
+# GetControl # ![logo](img/GetControl-32.png?raw=true)
 
 **GetControl** software is designed to help with managing structural refinements (mainly using the powder diffraction data) performed using [FullProf Suite](https://www.ill.eu/sites/fullprof/) software.
 
@@ -9,41 +9,36 @@ I developed it to help me get a quicker overview and control over a vast number 
 
 The tool is under continuous development. All bug reports or suggestions are welcomed.
 
-Information about the updates can be found [here](autoupdate/gcupdateinfo.txt?raw=true).
+The lates is ![GitHub release (latest by date)](https://img.shields.io/github/v/release/wildrams/getcontrol) (see [Download](#download "Go to Download")).
+Information about the latest release can be found [here](autoupdate/gcupdateinfo.txt?raw=true).
 
-## Installation
+## Installation ##
 There is no need for installation. For Windows and Linux, there are single-file executables. For the macOS, the image disk (DMG file) is available.
 
 The program tries to search for the FullProf path automatically. If not found or you use a nonstandard path, please set it in the Preferences.
 
 Additional 3rd party software facilitating the analysis and visualisation can also be linked. The links to the software webpages are provided by clicking the appropriate labels in the Preferences.
 
-## Setting storage
+## Setting storage ##
 The program stores its settings in the local profile directory. The path depends on the system and is the following
 
-Windows 🪟 c:\Users\Profile_name\AppData\Local\GetControl
-
-Linux 🐧  - ~/config/GetControl
-
-macOS 🍏 - ~/Library/Application Support/GetControl
+    * Windows 🪟 c:\Users\Profile_name\AppData\Local\GetControl
+    * Linux 🐧  - ~/config/GetControl
+    * macOS 🍏 - ~/Library/Application Support/GetControl
 
 This directory can be accessed quickly via Preferences (General tab), and click on the Open directory button side by the LOG files info.
 
-## Update
-An automatic update routine check is set on by default (can be switched off in Preferences). After each program launch, a small file with the version info is downloaded from the server and compared with the local one. No local data are sent to the server.
+## Update ##
+An automatic update check is set on by default (can be switched off in Preferences). After each program launch, a small file with the version info is downloaded from the server and compared with the local one. No local data are sent to the server.
 
-## Download
-Check the [releases](https://github.com/wildrams/getcontrol/releases/latest) section or follow the link below the link below for the latest release
+## Download ##
+Check the [releases](https://github.com/wildrams/getcontrol/releases/latest) section or follow the link below for the latest release
 
-[Windows 64-bit](https://github.com/wildrams/getcontrol/releases/latest/download/GetControl-x86_64.exe?raw=true) ![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/wildrams/getcontrol/latest/getcontrol-x64_86.exe)
+      * [Windows 64-bit](https://github.com/wildrams/getcontrol/releases/latest/download/GetControl-x86_64.exe?raw=true) ![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/wildrams/getcontrol/latest/getcontrol-x64_86.exe)
+      * [Windows 32-bit](https://github.com/wildrams/getcontrol/releases/latest/download/GetControl.exe?raw=true) ![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/wildrams/getcontrol/latest/getcontrol.exe)
+      * [Linux 64-bit](https://github.com/wildrams/getcontrol/releases/latest/download/GetControl-x86_64?raw=true) ![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/wildrams/getcontrol/latest/getcontrol-x64_86)
+      * [Windows 32-bit](https://github.com/wildrams/getcontrol/releases/latest/download/GetControl?raw=true) ![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/wildrams/getcontrol/latest/getcontrol)
+      * [mcOS 64-bit](https://github.com/wildrams/getcontrol/releases/latest/download/GetControl.dmg?raw=true) ![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/wildrams/getcontrol/latest/getcontrol.dmg)
 
-[Windows 32-bit](https://github.com/wildrams/getcontrol/releases/latest/download/GetControl.exe?raw=true) ![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/wildrams/getcontrol/latest/getcontrol.exe)
-
-[Linux 64-bit](https://github.com/wildrams/getcontrol/releases/latest/download/GetControl-x86_64?raw=true) ![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/wildrams/getcontrol/latest/getcontrol-x64_86)
-
-[Windows 32-bit](https://github.com/wildrams/getcontrol/releases/latest/download/GetControl?raw=true) ![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/wildrams/getcontrol/latest/getcontrol)
-
-[mcOS 64-bit](https://github.com/wildrams/getcontrol/releases/latest/download/GetControl.dmg?raw=true) ![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/wildrams/getcontrol/latest/getcontrol.dmg)
-
-## Usage
+## Usage ##
 Open the directory with your PCR files using the Open button or Ctrl(Meta)+O shortcut. You can also drag&drop any file from the directory containing PCR files.
