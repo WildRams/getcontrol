@@ -1,8 +1,8 @@
 0.7.0 build 1
-Win32-MD5Sum: f906005c6edf18acc07732568f75a12d
-Linux32-MD5Sum: d41d8cd98f00b204e9800998ecf8427e
-Win64-MD5Sum: d41d8cd98f00b204e9800998ecf8427e
-Linux64-MD5Sum: d41d8cd98f00b204e9800998ecf8427e
+Win32-MD5Sum: 73a15bce20451a9e81c53ea05de8b2ed
+Linux32-MD5Sum: 32ca6718f9be1c0b8e804003c2a991b1
+Win64-MD5Sum: c520377e225e2109a896b7bc476140b8
+Linux64-MD5Sum: a46664261f010c31b165d7f8eb38262e
 -----------------------------------------------
                  GetControl
  Tool for collecting information about 
