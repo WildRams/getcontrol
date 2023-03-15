@@ -1,18 +1,27 @@
-0.6.2 build 3
-Win32-MD5Sum: 0bf3a018e10deff1bb26c73119768575
-Linux32-MD5Sum: cb75a64e6d2297ec0c0481e11a5e7bc3
-Win64-MD5Sum: 8f81a0fd6227860f616fde0445e2a283
-Linux64-MD5Sum: 8e77dc1b4957f81c0bfb046897da2a73
+0.7.0 build 1
+Win32-MD5Sum: f906005c6edf18acc07732568f75a12d
+Linux32-MD5Sum: d41d8cd98f00b204e9800998ecf8427e
+Win64-MD5Sum: d41d8cd98f00b204e9800998ecf8427e
+Linux64-MD5Sum: d41d8cd98f00b204e9800998ecf8427e
 -----------------------------------------------
                  GetControl
  Tool for collecting information about 
  structural refinements using FullProf
 
- Web page for download https://neutron.ujf.cas.cz/old/meredit/getcontrol.php
+ Web page on Github https://github.com/WildRams/getcontrol
  
  Compiled with CT 8.0
  
 - all suggestions are welcomed at prema@email.cz
+-----------------------------------------------
+15/03/2023 0.7.0 build 1
+- X-axis reset from Q or d to Theta/TOF after the change of the PCR file corrected
+- errors for C4-C6 were not read - corrected
+- update of the export to the SXY file when there is no pattern contribution, now the Python SXY-plotter
+  should show all patterns even if some phases don't contribute.
+- some update in the summary info when magnetic phases are used
+- the project was moved to Github as there will be disruption of the old server for external users
+- update the Linux and Windows updater to version 0.3.1.1
 -----------------------------------------------
 06/02/2023 0.6.2 build 2
 - wrong read of the big negative hkl indexes from PRF (example "-14-10  5") is corrected
