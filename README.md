@@ -32,7 +32,7 @@ This directory can be accessed quickly via Preferences (General tab), and click 
 An automatic update check is set on by default (can be switched off in Preferences). After each program launch, a small file with the version info is downloaded from the server and compared with the local one. No local data are sent to the server.
 
 ## Licence
-GetControl is developed as freeware. The licence can be accessed [here](LICENCE?raw=true). I keep the source closed for the moment as I develop it mainly for myself. There was no initial intention to share it, but some of my colleagues found it very useful. So you are free to use it if found appropriate for you.
+GetControl is developed as freeware. The licence can be accessed [here](LICENSE?raw=true). I keep the source closed for the moment as I develop it mainly for myself. There was no initial intention to share it, but some of my colleagues found it very useful. So you are free to use it if found appropriate for you.
 
 The Python scripts generated for the plotters are free to be modified, and they are under MIT licence (see the header of the scripts).
 
