@@ -1,8 +1,8 @@
-0.7.0 build 1
-Win32-MD5Sum: 73a15bce20451a9e81c53ea05de8b2ed
-Linux32-MD5Sum: 32ca6718f9be1c0b8e804003c2a991b1
-Win64-MD5Sum: c520377e225e2109a896b7bc476140b8
-Linux64-MD5Sum: a46664261f010c31b165d7f8eb38262e
+0.7.1 build 1
+Win32-MD5Sum: d7dd08e6efee0d1c95f808f5d9efdf4b
+Linux32-MD5Sum: b6e25f64a0bc87e15c6e52e887b2fb35
+Win64-MD5Sum: 0301bb33b0af2a90ba190e544d14d0d1
+Linux64-MD5Sum: fb368e789270c72766a08630c45a1a93
 -----------------------------------------------
                  GetControl
  Tool for collecting information about 
@@ -13,6 +13,16 @@ Linux64-MD5Sum: a46664261f010c31b165d7f8eb38262e
  Compiled with CT 8.0
  
 - all suggestions are welcomed at prema@email.cz
+-----------------------------------------------
+10/07/2023 0.7.1 build 1
+- wrong pattern plotting by the SXY plotter in the multi-pattern mode in some
+  particular settings was corrected
+- when backing up the structure, the Dysnomia outputs were copied wrongly, now corrected
+- Microstructure plotter (Python script) was added. It can be accessed by the Export menu.
+  The form is similar to the SXY plotter one. The script can be adapted if necessary.
+- update of the SXY plotter script
+- better identification of the terminal application on Linux (used in Python script export)
+- a lot of small enhancements in the layout
 -----------------------------------------------
 15/03/2023 0.7.0 build 1
 - X-axis reset from Q or d to Theta/TOF after the change of the PCR file corrected

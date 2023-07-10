@@ -1,0 +1,49 @@
+__________________________________________________________________
+
+                   G e t C o n t r o l
+Program for collecting information from the structural refinements
+          using FullProf Suite software package
+__________________________________________________________________
+
+Author: Premek Beran
+
+Copyright © Premek Beran (WildRam), 2010-2023, All Rights Reserved
+__________________________________________________________________
+
+GetControl (hereby called "SOFTWARE") is free for use in any environment,
+including but not necessarily limited to personal, academic, commercial,
+government, business, non-profit, and for-profit. "Free" in the preceding
+sentence means that there is no cost or charge associated with the installation
+and use of the SOFTWARE.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+the SOFTWARE and associated documentation files, without limitation, the rights
+to use, copy, publish, and distribute copies of the SOFTWARE and to permit persons
+to whom the SOFTWARE is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies of the SOFTWARE.
+
+You are specifically prohibited from charging or requesting donations, for
+any copies, however, made and from distributing the SOFTWARE and/or documentation
+with other products, commercial or otherwise, without prior written permission
+of the Copyright holders.
+
+You may not modify, adapt, rent, lease, loan or sell the SOFTWARE, nor may you
+create derivative works based upon the SOFTWARE. This doesn't apply to files
+created or exported by the SOFTWARE (for ex., PDFs, Python scripts, etc.),
+which have their own licence mentioned in the file header (Python scripts) or
+they are considered as outputs of general usage of the SOFTWARE (PDFs, SXY, etc.).
+
+All rights not explicitly granted in this Licence Agreement are reserved by
+the Copyright holders.
+
+THE SOFTWARE IS PROVIDED “AS IS” IN THE HOPE THAT IT WILL BE USEFUL WITHOUT
+WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT AND BEING FREE OF INTERNAL ERRORS. IN NO EVENT WILL THE AUTHORS
+BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR
+CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE SOFTWARE,
+INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR
+LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE SOFTWARE TO OPERATE
+WITH ANY OTHER PROGRAMS.
