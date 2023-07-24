@@ -1,8 +1,8 @@
-0.7.1 build 1
-Win32-MD5Sum: d7dd08e6efee0d1c95f808f5d9efdf4b
-Linux32-MD5Sum: b6e25f64a0bc87e15c6e52e887b2fb35
-Win64-MD5Sum: 0301bb33b0af2a90ba190e544d14d0d1
-Linux64-MD5Sum: fb368e789270c72766a08630c45a1a93
+0.7.2 build 1
+Win32-MD5Sum: 29366b008b65b332a95602cc7dd834f5
+Linux32-MD5Sum: a4c3f596e4963ce0b0966d90d3241e26
+Win64-MD5Sum: fa88e787ba00e0335bb0bf70aa30ddb3
+Linux64-MD5Sum: b889689ffe5b55bd05d683c247e4c8a2
 -----------------------------------------------
                  GetControl
  Tool for collecting information about 
@@ -14,6 +14,16 @@ Linux64-MD5Sum: fb368e789270c72766a08630c45a1a93
  
 - all suggestions are welcomed at prema@email.cz
 -----------------------------------------------
+24/07/2023 0.7.2 build 1
+- New bottom toolbar was added to access the "cryscalc" tool (CC). First, you create a *_cc_*.cfl file, which can 
+  be edited, and then you launch it, and the result file (*.cci) is automatically opened. Some more hits for 
+  cryscalc are shown. The file can be modified as necessary. Cryscalc can be launched directly from
+  the internal editor when *_cc_*.cfl file is active. 
+- Open terminal in the working directory menu was added to the Tools menu
+- Open COD (Crystallographic Open Database) link was added to the Tools menu
+- Mouse position info now shows when over the WH plot
+- Some small improvements in the script hints and layout 
+-----------------------------------------------
 10/07/2023 0.7.1 build 1
 - wrong pattern plotting by the SXY plotter in the multi-pattern mode in some
   particular settings was corrected
@@ -24,7 +34,7 @@ Linux64-MD5Sum: fb368e789270c72766a08630c45a1a93
 - better identification of the terminal application on Linux (used in Python script export)
 - a lot of small enhancements in the layout
 -----------------------------------------------
-15/03/2023 0.7.0 build 1
+06/02/2023 0.7.0 build 1
 - X-axis reset from Q or d to Theta/TOF after the change of the PCR file corrected
 - errors for C4-C6 were not read - corrected
 - update of the export to the SXY file when there is no pattern contribution, now the Python SXY-plotter
