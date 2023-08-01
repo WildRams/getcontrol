@@ -1,8 +1,8 @@
-0.7.2 build 1
-Win32-MD5Sum: 29366b008b65b332a95602cc7dd834f5
-Linux32-MD5Sum: a4c3f596e4963ce0b0966d90d3241e26
-Win64-MD5Sum: fa88e787ba00e0335bb0bf70aa30ddb3
-Linux64-MD5Sum: b889689ffe5b55bd05d683c247e4c8a2
+0.7.2 build 2
+Win32-MD5Sum: 80e5e6eedfbd7de136c7c850c144f23e
+Linux32-MD5Sum: 9fa1dfd8e2f15a87a8b671a1c63c1750
+Win64-MD5Sum: b65ba9642b09877b0ea37a29af2f194c
+Linux64-MD5Sum: 5b664ad3a214d18cb8002655b1ba9902
 -----------------------------------------------
                  GetControl
  Tool for collecting information about 
@@ -13,6 +13,12 @@ Linux64-MD5Sum: b889689ffe5b55bd05d683c247e4c8a2
  Compiled with CT 8.0
  
 - all suggestions are welcomed at prema@email.cz
+-----------------------------------------------
+01/08/2023 0.7.2 build 2
+ - Ctrl+T (open terminal) shortcut didn't work when the cursor in editors now corrected
+ - Splitter position not correctly recovered when in high-DPI now corrected
+ - In Preferences, the tab Colour schema was renamed Colour/layout. You can adjust the size of the button and menu
+   icons (normal/medium/large) and also the font size for all hints (useful for long FP hints in high-DPI).
 -----------------------------------------------
 24/07/2023 0.7.2 build 1
 - New bottom toolbar was added to access the "cryscalc" tool (CC). First, you create a *_cc_*.cfl file, which can 
