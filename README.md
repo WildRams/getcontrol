@@ -42,7 +42,7 @@ Check the [releases](https://github.com/wildrams/getcontrol/releases/latest) sec
 * [Windows 64-bit](https://github.com/wildrams/getcontrol/releases/latest/download/GetControl-x86_64.exe?raw=true) ![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/wildrams/getcontrol/latest/getcontrol-x64_86.exe)
 * [Windows 32-bit](https://github.com/wildrams/getcontrol/releases/latest/download/GetControl.exe?raw=true) ![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/wildrams/getcontrol/latest/getcontrol.exe)
 * [Linux 64-bit](https://github.com/wildrams/getcontrol/releases/latest/download/GetControl-x86_64?raw=true) ![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/wildrams/getcontrol/latest/getcontrol-x64_86)
-* [Windows 32-bit](https://github.com/wildrams/getcontrol/releases/latest/download/GetControl?raw=true) ![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/wildrams/getcontrol/latest/getcontrol)
+* [Linux 32-bit](https://github.com/wildrams/getcontrol/releases/latest/download/GetControl?raw=true) ![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/wildrams/getcontrol/latest/getcontrol)
 * [mcOS 64-bit](https://github.com/wildrams/getcontrol/releases/latest/download/GetControl.dmg?raw=true) ![GitHub release (latest by date and asset)](https://img.shields.io/github/downloads/wildrams/getcontrol/latest/getcontrol.dmg)
 
 ## Usage ##

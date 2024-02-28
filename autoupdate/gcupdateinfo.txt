@@ -1,8 +1,8 @@
-0.7.2 build 2
-Win32-MD5Sum: 80e5e6eedfbd7de136c7c850c144f23e
-Linux32-MD5Sum: 9fa1dfd8e2f15a87a8b671a1c63c1750
-Win64-MD5Sum: b65ba9642b09877b0ea37a29af2f194c
-Linux64-MD5Sum: 5b664ad3a214d18cb8002655b1ba9902
+0.8.0 build 1
+Win32-MD5Sum: 59e1610c5ea82486f12dd5373767db78
+Linux32-MD5Sum: 465cefe5532368f10b1e260289deda4c
+Win64-MD5Sum: 18413db4c87546e14ef1fd64be3581f7
+Linux64-MD5Sum: 6101ec5756ae9cef1f459026d9a94ccd
 -----------------------------------------------
                  GetControl
  Tool for collecting information about 
@@ -10,9 +10,28 @@ Linux64-MD5Sum: 5b664ad3a214d18cb8002655b1ba9902
 
  Web page on Github https://github.com/WildRams/getcontrol
  
- Compiled with CT 8.0
+ Compiled with CT 8.3
  
 - all suggestions are welcomed at prema@email.cz
+-----------------------------------------------
+28/02/2024 0.8.0 build 1
+ - Updated the Python scripts (SXY and MIC plotter) to use UTF8 charset
+ - Not possible to change the axes title is corrected
+ - Corrected the wrong formatting of the edited hints file
+ - Some improvements of the FP hints strings
+ - Corrected wrong reading of the atomic parameters when using atomic types with negative signs
+   (ex. O-2)Thanks, Stefan, for reporting
+ - Changed the colours for the MIC tab for better visibility; it is possible to reset the marks' colour
+  - The font of the FP hints is set to one with the fixed pitch for better formatting
+ - Added an extraction of the negative FWHM points from *.out file; the list of points is shown
+   at the "Refinement summary" tab at the end (folding is available)
+ - Added the site fraction (0-1 notation) for each atom (suggested by Stefan); useful when not the full site
+   or mixed-site occupancy
+ - Double-click on the *.PCR file in the list opens the PCR file in an editor (suggested by Vitalii)
+ - When you provide the number of formula units on the line with the phase title, GC can calculate the composition
+   based on the chemical formula, not by the unit cell; put "Z=x" where x is your formula unit number; this will not
+   affect the FP refinement or VARY and FIX commands; for example: My new phase Z=4 VARY xyz FIX b; note capital Z
+ - A link to the license was added to the About form
 -----------------------------------------------
 01/08/2023 0.7.2 build 2
  - Ctrl+T (open terminal) shortcut didn't work when the cursor in editors now corrected
