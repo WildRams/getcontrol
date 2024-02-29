@@ -1,5 +1,9 @@
-title: <img src="img/GetControl-256.png" width="64px" /> GetControl
+title: GetControl <img src="img/GetControl-256.png" width="64px" />
 description: Program for collecting data and facilitating the structural refinement using the FullProf Suite.
 #remote_theme: pages-themes/architect@v0.2.0
 remote_theme: rundocs/jekyll-rtd-theme
+baseurl: GetControl
+url: https://wildrams.github.io/getcontrol/
+readme_index:
+  with_frontmatter: true
 #show_downloads: false

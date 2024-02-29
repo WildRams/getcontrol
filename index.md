@@ -1,3 +1,6 @@
+---
+sort: 1
+---
 **GetControl** software is designed to help with managing structural refinements (mainly using the powder diffraction data) performed using [FullProf Suite](https://www.ill.eu/sites/fullprof/) software.
 
 It can help to visualise all PCR files in the directory, collect and aggregate the information from various files created during the structural
