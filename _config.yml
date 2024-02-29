@@ -1,6 +1,5 @@
 title: <img src="img/GetControl-256.png" width="64px" /> GetControl
 description: Program for collecting data and facilitating the structural refinement using the FullProf Suite.
 #remote_theme: pages-themes/architect@v0.2.0
-#remote_theme: rundocs/jekyll-rtd-theme
-remote_theme: readthedocs/sphinx_rtd_theme
+remote_theme: rundocs/jekyll-rtd-theme
 #show_downloads: false
