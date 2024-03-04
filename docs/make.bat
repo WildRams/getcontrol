@@ -10,7 +10,7 @@ if "%SPHINXBUILD%" == "" (
 set SPHINXOPTS=
 set SPHINXBUILD=sphinx-build
 set SOURCEDIR=.
-set BUILDDIR=build
+set BUILDDIR=_build
 set SPHINXPROJ=ReadtheDocsSphinxTheme
 
 if "%1" == "" goto help

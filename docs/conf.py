@@ -5,32 +5,32 @@ from pathlib import Path
 import sys
 
 import sphinx_nefertiti
+from sphinx.locale import _
 
-
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
-if on_rtd:
+if 'READTHEDOCS' in os.environ:
     html_theme_path = [sphinx_nefertiti.get_html_theme_path()]
 else:
     # Add `sphinx_nefertiti` to the python path.
     PRJ_PATH = Path(__file__).parents[2]
     sys.path.insert(0, str(PRJ_PATH))
-from sphinx.locale import _
+    html_static_path = ['_static/']
+
+# -- Project information ---------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'GetControl'
-copyright = '2011-2024, WildRam'
 author = 'Přemysl (Premek) Beran'
-release = '0.8.0.1'
+copyright = '2011-2024, WildRam'
+
 version = '0.8.0.1'
-author = 'WildRam'
-copyright = author
+release = version
+
 language = 'en'
-email_automode = True
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'myst_parser',
     'sphinx_design',
     'sphinx_copybutton',
     'sphinx.ext.autodoc',
@@ -47,25 +47,20 @@ myst_enable_extensions = [
     'tasklist',
 ]
 
-# -- Options for HTML output -------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
-
-language = "en"
-
-html_theme = "sphinx_nefertiti"
-
-if not 'READTHEDOCS' in os.environ:
-    html_static_path = ['_static/']
-
-templates_path = ['_templates']
 source_suffix = '.rst'
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+master_doc = 'index'
 
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+suppress_warnings = ['image.nonlocal_uri']
+
+numfig = False
 pygments_style = "pastie"
 pygments_dark_style = "dracula"
 
-master_doc = 'index'
-suppress_warnings = ['image.nonlocal_uri']
+show_authors = True
+
+# -- Options for HTML output -------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 release_pattern_url = 'https://github.com/wildrams/getcontrol/releases/tag/v{release}/'
 releases = [
@@ -80,6 +75,7 @@ html_context = {}
 html_show_sourcelink = False
 html_favicon = "_static/img/favicon.ico"
 
+html_theme = "sphinx_nefertiti"
 html_theme_options = {
     "documentation_font": "Open Sans",
     "documentation_font_size": "1.1rem",
