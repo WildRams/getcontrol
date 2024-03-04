@@ -9,8 +9,8 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
       - name: Install dependencies
         run: |
           pip install sphinx sphinx_rtd_theme pygments sphinx_design sphinx_copybutton sphinx_nefertiti
@@ -18,7 +18,7 @@ jobs:
         run: |
           sphinx-build docs _build
       - name: Upload artifacts
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: DocumentationHTML
           path: docs/_build/html/
