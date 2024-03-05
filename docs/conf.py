@@ -78,9 +78,9 @@ html_favicon = "_static/img/favicon.ico"
 html_theme = "sphinx_nefertiti"
 html_theme_options = {
     "documentation_font": "Open Sans",
-    "documentation_font_size": "1.1rem",
+    "documentation_font_size": "1.0rem",
     "monospace_font": "Ubuntu Mono",
-    "monospace_font_size": "1.2rem",
+    "monospace_font_size": "1.1rem",
 
     "style": "blue",
 
