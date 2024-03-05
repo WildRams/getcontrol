@@ -19,7 +19,7 @@ Installation
 
 There is no need for installation. For **Windows** and **Linux**, there are single-file executables. Just copy the executable file to the location of your choise and launch it. For the **macOS**, the image disk (DMG file) is available (see Download_ section).
 
-.. warning::
+.. caution::
     Copy the executable to the folder to which you have writing permission. Don't use the system folders. Try not to use the directory names with spaces.
 
 The program tries to search for the *FullProf* path automatically. If not found or you use a nonstandard path, please set it in the :ref:`Preferences <Preferences>`.

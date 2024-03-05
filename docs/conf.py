@@ -5,7 +5,6 @@ from pathlib import Path
 import sys
 
 import sphinx_nefertiti
-from sphinx.locale import _
 
 if 'READTHEDOCS' in os.environ:
     html_theme_path = [sphinx_nefertiti.get_html_theme_path()]
