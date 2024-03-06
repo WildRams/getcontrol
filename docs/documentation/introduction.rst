@@ -17,17 +17,17 @@ Introduction
 Installation
 ============
 
-There is no need for installation. For **Windows** and **Linux**, there are single-file executables. Just copy the executable file to the location of your choise and launch it. For the **macOS**, the image disk (DMG file) is available (see Download_ section).
+There is no need for installation. For **Windows** and **Linux**, there are single-file executables. Just copy the executable file to the location of your choice and launch it. For the **macOS**, the image disk (DMG file) is available (see Download_ section).
 
 .. caution::
     Copy the executable to the folder to which you have writing permission. Don't use the system folders. Try not to use the directory names with spaces.
 
-The program tries to search for the *FullProf* path automatically. If not found or you use a nonstandard path, please set it in the :ref:`Preferences <Preferences>`.
+The program tries to search for the *FullProf* path automatically. If not found or you use a nonstandard path, please set it in the ``Pref ->`` :ref:`General setup <General setup>` tab.
 
-Additional 3rd party software facilitating the analysis (*Dysnomia* - MEM) and visualisation (*VESTA* - CIF viewer) can also be linked. The links to the software webpages are provided by clicking the appropriate labels in the :ref:`Preferences <Preferences>`.
+Additional 3rd party software facilitating the analysis (*Dysnomia* - MEM) and visualisation (*VESTA* - CIF viewer) can also be linked. The links to the software webpages are provided by clicking the appropriate labels in the ``Pref ->`` :ref:`General setup <General setup>` tab.
 
 .. tip::
-    For a visualisation of the refinement results, there is not needed to have *FullProf* installed. You will need it only when you want to perform further calculations.
+    For a visualisation of the refinement results, there is no need to have *FullProf* installed. You will need it only when you want to perform further calculations.
 
 .. _SettingStorage:
 
@@ -40,12 +40,12 @@ The program stores its settings in the local profile directory. The path depends
 * Linux 🐧  ``~/config/GetControl``
 * macOS 🍏 ``~/Library/Application Support/GetControl``
 
-This directory can be accessed quickly via :ref:`Preferences<Preferences>` (General tab), and click on the *Open directory* button side by the :guilabel:`LOG files` info.
+This directory can be accessed quickly via ``Pref ->`` :ref:`General setup <General setup>` tab, and click on the *Open directory* button side by the *LOG files* info.
 
 Update
 ======
 
-An automatic update check is set on by default (can be switched off in :ref:`Preferences <Preferences>`). After each program launch, a small (in order of 50 kB) file with the version info is downloaded from the server and compared with the local one. No local data are sent to the server.
+An automatic update check is set on by default (can be switched off in ``Pref ->`` :ref:`General setup <General setup>` tab). After each program launch, a small (in order of 50 kB) file with the version info is downloaded from the server and compared with the local one. No local data are sent to the server.
 
 Only the major versions are released. The *builds* are distributed through the *auto-update* feature.
 
@@ -55,7 +55,7 @@ Only the major versions are released. The *builds* are distributed through the *
 License
 =======
 
-**GetControl** is developed as **freeware**. The licence can be accessed `here <https://raw.githubusercontent.com/WildRams/getcontrol/main/LICENSE>`__. I keep the source closed for the moment as I develop it mainly for myself. There was no initial intention to share it, but some of my colleagues found it very useful. So you are free to use it if found appropriate for you.
+**GetControl** is developed as **freeware**. The licence can be accessed `here <https://raw.githubusercontent.com/WildRams/getcontrol/main/LICENSE>`__. I keep the source closed for the moment as I develop it mainly for myself. I had no initial intention to share it, but some of my colleagues found it very useful. So you are free to use it if it is found appropriate for you.
 
 .. _Download:
 

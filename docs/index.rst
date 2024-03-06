@@ -6,9 +6,6 @@
 GetControl
 ##########
 
-Introduction
-------------
-
 **GetControl** software is designed to help with managing structural refinements (mainly using the powder diffraction data) performed using `FullProf Suite`_ software.
 
 It can help to visualise all PCR files in the directory, collect and aggregate the information from various files created during the structural refinement and visualise them. Furthermore, it facilitates easy access to the supplementary files with further analysis.
@@ -24,13 +21,13 @@ I developed it to help me get a quicker overview and control over a vast number 
 
 The tool is under continuous but unregular development. All bug reports or suggestions are welcomed (see :ref:`Contact<Contact>`).
 
-Follow
-------
+Download
+--------
 
-You can download it :ref:`here<Download>` and follow the :ref:`Documentation<Introduction>` for more insight or see some useful :ref:`FullProf tricks<FPtricks>`.
+The application 32- and 64-bit executables for **Windows**, **Linux** or 64-bit image disk (DMG) for **macOS** can be dowloaded :ref:`here<Download>`.
 
-INDEX
------
+Table of content
+----------------
 
 .. toctree::
    :caption: Documentation
@@ -40,6 +37,7 @@ INDEX
    ./documentation/introduction
    ./documentation/mainform
    ./documentation/preferences
+   ./documentation/editor
    ./documentation/changelog
 
 .. toctree::

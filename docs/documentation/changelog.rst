@@ -1,3 +1,5 @@
+.. _WhatIsNew:
+
 What is news
 ############
 
