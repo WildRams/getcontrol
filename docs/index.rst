@@ -16,7 +16,7 @@ I developed it to help me get a quicker overview and control over a vast number 
     :width: 70%
     :align: center
 
-    Main window of GetControl
+    The main window of GetControl
 
 
 The tool is under continuous but unregular development. All bug reports or suggestions are welcomed (see :ref:`Contact<Contact>`).
@@ -24,7 +24,7 @@ The tool is under continuous but unregular development. All bug reports or sugge
 Download
 --------
 
-The application 32- and 64-bit executables for **Windows**, **Linux** or 64-bit image disk (DMG) for **macOS** can be dowloaded :ref:`here<Download>`.
+The application 32- and 64-bit executables for **Windows**, **Linux** or 64-bit image disk (DMG) for **macOS** can be downloaded :ref:`here<Download>`.
 
 Table of content
 ----------------
@@ -41,7 +41,7 @@ Table of content
    ./documentation/changelog
 
 .. toctree::
-    :caption: FulProf Trics
+    :caption: FullProf Trics
     :maxdepth: 1
     :glob:
 

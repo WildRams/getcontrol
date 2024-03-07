@@ -12,4 +12,4 @@ Here are some FP tricks which can be useflu for you.
 
 Read
 ----
-rewtwe
+It will come soon.

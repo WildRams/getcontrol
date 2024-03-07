@@ -14,7 +14,7 @@ The **GetControl** main form contains several main parts: `Menu and Toolbar`_, `
 How to start
 ============
 
-To start using the **GetControl**, go to the menu ``File -> Open Directory``, use the ``Ctrl(⌘)-O`` or ``Drag&Drop`` any file from your working directory (it doesn't need to be a PCR file). The application will search all the PCR files in the selected directory, sort them in the `Files list`_ and automatically load the info from the first PCR file.
+To start using the **GetControl**, go to the menu ``File->Open Directory``, use the ``Ctrl(⌘)+O`` or ``Drag&Drop`` any file from your working directory (it doesn't need to be a PCR file). The application will search all the PCR files in the selected directory, sort them in the `Files list`_ and automatically load the info from the first PCR file.
 
 .. _Menu and Toolbar:
 
@@ -25,85 +25,250 @@ Menu and Toolbar
 
 Most of the **Menu** items have their corresponding **Toolbar** buttons. Below is the list with a quick explanation:
 
-- **File**
+- File
+    .. image:: ./svg/folder-open.ico
+        :align: left
+        :width: 20px
+
     * ``Open directory`` (Ctrl(⌘)+O)
         It enables you to select your working directory, where it searches for the PCR files (sub-directories are not included).
+
+    .. image:: ./svg/reload-folder.ico
+        :align: left
+        :width: 20px
+
     * ``Reload folder`` (F4)
         It again searches for the PCR files in the working directory (use when you copy/add/delete the PCR files).
+
+    .. image:: ./svg/folder-open-recent.ico
+        :align: left
+        :width: 20px
+
     * ``Recent directories``
         It shows the list of 10 previously used directories.
     * ``Save`` [1]_
         There are three sub-menus to save
 
-        + text info from *Phases info*/*Profile parameters*/*Refinement summary* tabs,
+        .. image:: ./svg/save-info.ico
+            :align: left
+            :width: 20px
+
+        + text info from *Phases info*/*Profile parameters*/*Refinement summary* tabs
+
+        .. image:: ./svg/save-XY.ico
+            :align: left
+            :width: 20px
+
         + an SXY [2]_ file of the patterns shown on *Profile viewer* tab
+
+        .. image:: ./svg/save-picture.ico
+            :align: left
+            :width: 20px
+
         + the picture of the *Profile viewer* tab
+
+    .. image:: ./svg/bin-trash.ico
+        :align: left
+        :width: 20px
+
     * ``Delete file`` (Ctrl(⌘)+D)
         It deletes the selected PCR file and all supplementary files; the form, when you can filter by extension what to delete, will pop up (see **Note** below).
+
+    .. image:: ./svg/editor.ico
+        :align: left
+        :width: 20px
+
     * ``Editor`` (Ctrl(⌘)+E)
-        It opens the internal or external (see ``Pref ->`` :ref:`General setup <General setup>` tab) editor.
+        It opens the internal or external (see :ref:`Pref->General <General setup>` setup tab) editor.
+
+    .. image:: ./svg/GetControl.ico
+        :align: left
+        :width: 20px
+
     * ``New instance`` (Shift+F1) [3]_
         It opens the new instance of the **GetControl** application.
+
+    .. image:: ./svg/exit.ico
+        :align: left
+        :width: 20px
+
     * ``Exit`` (Ctrl(⌘)+Q) [3]_
         It closes the application
-- **Edit**
+- Edit
+    .. image:: ./svg/clean.ico
+        :align: left
+        :width: 20px
+
     * ``Clear supplementary files`` (Ctrl(⌘)+Y)
-        It will allow you to delete particular (the new form where the filer can be selected will pop up; see **Note** below) supplementary files for the selected PCR file (it can free the space on your disk).
+        It will allow you to delete particular supplementary files (the new form where the filer can be selected will pop up; see **Note** below) for the selected PCR file (it can free the space on your disk).
+
+    .. image:: ./svg/clean-all.ico
+        :align: left
+        :width: 20px
+
     * ``Clear supplementary files for ALL``
-        The same as above but for all the PCR files in the working directory.
+        The same as above, but now it applies to all the PCR files in the working directory.
+
+    .. image:: ./svg/backup-file.ico
+        :align: left
+        :width: 20px
+
     * ``Backup structure`` (Ctrl(⌘)+B)
-        It backups the selected PCR file together with the supplementary files by adding `-backup` (by default) to their file name; see ``Pref ->`` :ref:`General setup <General setup>` tab to allow your own selection of the *suffix*/name.
+        It backups the selected PCR file together with the supplementary files by adding `-backup` (by default) to their file name; see :ref:`Pref->General <General setup>` setup tab to allow your own selection of the *suffix*/name.
+
+    .. image:: ./svg/rename.ico
+        :align: left
+        :width: 20px
+
     * ``Rename structure`` (Ctrl(⌘)+R)
         It renames the select PCR file with all supplementary files.
 - **View**
+    .. image:: ./svg/phase-info.ico
+        :align: left
+        :width: 20px
+
     * ``Phases info`` (Ctrl(⌘)+1)
         It shows/switches to the `Phases info`_ tab.
+
+    .. image:: ./svg/profile-info.ico
+        :align: left
+        :width: 20px
+
     * ``Profile parameters`` (Ctrl(⌘)+2)
         It shows/switches to the `Profile parameters`_ tab.
+
+    .. image:: ./svg/summary-info.ico
+        :align: left
+        :width: 20px
+
     * ``Refinement summary`` (Ctrl(⌘)+3)
         It shows/switches to the `Refinement summary`_ tab.
+
+    .. image:: ./svg/profile-viewer.ico
+        :align: left
+        :width: 20px
+
     * ``Profile viewer`` (Ctrl(⌘)+4)
         It shows/switches to the `Profile viewer`_ tab.
+
+    .. image:: ./svg/mic-info.ico
+        :align: left
+        :width: 20px
+
     * ``Microstructure viewer`` (Ctrl(⌘)+5)
         It shows/switches to the `Microstructure viewer`_ tab.
+
+    .. image:: ./svg/reload.ico
+        :align: left
+        :width: 20px
+
     * ``Reload`` (F5)
-        It reloads structure info from the selected PCR file.
+        It reloads structure information from the selected PCR file.
 - **Export** [4]_
+    .. image:: ./svg/export-tab.ico
+        :align: left
+        :width: 20px
+
     * ``"Phases info" TAB separation``
         It copies to the **clipboard** information about all the phases from the `Phases info`_ tab; atomic positions are separated by TAB.
+
+    .. image:: ./svg/export-tex.ico
+        :align: left
+        :width: 20px
+
     * ``"Phases info" in Latex``
         It exports to the **clipboard** information about all phases from the `Phases info`_ tab in the Latex table format.
+
+    .. image:: ./svg/export-cell.ico
+        :align: left
+        :width: 20px
+
     * ``Fraction and Cell for active``
         It copies to the **clipboard** the *name*, *fraction* and *cell parameters* separated by TAB for all the phases in the one currently selected PCR.
+
+    .. image:: ./svg/export-cell-all.ico
+        :align: left
+        :width: 20px
+
     * ``Fraction and Cell for selected``
         It copies to the **clipboard** the *name*, *fraction* and *cell parameters* separated by TAB for all the phases in all selected PCR; it is easy to paste to worksheet-like software for quick plotting of the cell parameter evolution.
+
+    .. image:: ./svg/Python.ico
+        :align: left
+        :width: 20px
+
     * ``Python script for SXY plotter``
         It opens the form when you can adjust the command for the Python script, which allows you to plot the pattern(s).
+
+    .. image:: ./svg/Python.ico
+        :align: left
+        :width: 20px
+
     * ``Python script for MIC plotter``
         It opens the form when you can adjust the command for the Python script, which allows you to plot the Williamson-Hall plot to visualise the microstructure.
 - **Tools**
+    .. image:: ./svg/measure.ico
+        :align: left
+        :width: 20px
+
     * ``Measure distance`` (Ctrl+M)
         The tools to measure different distances on the pattern chart; an additional form opens to select the measurement along various axes and visualise the results (see `Profile viewer`_).
+
+    .. image:: ./svg/terminal.ico
+        :align: left
+        :width: 20px
+
     * ``Open Terminal`` (Ctrl+T) [3]_
         It will try to open the default system terminal.
+
+    .. image:: ./svg/COD.ico
+        :align: left
+        :width: 20px
+
     * ``Open COD`` [3]_
         It opens the web page of the *Crystallographic Open Database* (COD).
 - **Help**
+    .. image:: ./svg/check-for-update.ico
+        :align: left
+        :width: 20px
+
     * ``Check for update`` (F2)
         It opens the dialogue to check the availability of the new version and the updating process.
+
+    .. image:: ./svg/what-is-new.ico
+        :align: left
+        :width: 20px
+
     * ``What is new``
         It opens the update information changelog in the editor. The same information you can find :ref:`here<WhatIsNew>`.
+
+    .. image:: ./svg/FP-news.ico
+        :align: left
+        :width: 20px
+
     * ``FullProf News`` (Ctrl(⌘)+Alt+M)
-        It opens in the editor the *FullProf changelog* (information from 2000 onwards)
+        It opens in the editor the *FullProf changelog* (information from the year 2000 onwards)
+
+    .. image:: ./svg/FP-manual.ico
+        :align: left
+        :width: 20px
+
     * ``FullProf Manual`` (Ctrl+Shift+M)
         It opens the *FullProf manual* (PDF file from 2000) in the default viewer.
     * ``Write debug log``
-        It enables/disables to write the debug log in the :ref:`Setting storage <SettingStorage>` directory. By default, it is switched off.
+        It enables/disables to write the debug log in the :ref:`config <SettingStorage>` directory. By default, it is switched off.
 
-.. [1] The *save sub-menu* buttons are located at the right part of the **Toolbar**, but they have the same icons
+.. [1] The *Save* buttons are located at the right part of the **Toolbar**, but they have the same icons
 .. [2] **SXY** is a single-X and multi-Y file format
 .. [3] It exists only in **Menu**
-.. [4] In the **Toolbar**, it is hidden under the *Export option* button
+
+    .. image:: ./svg/export.ico
+        :align: right
+        :width: 20px
+
+.. [4] In the **Toolbar** the *Export* items are hidden under the *Export option* button ->
+
+
 
 .. note::
     The menu on the macOS systems is located in the system menu (top bar). The :ref:`Preferences <Preferences>` and *About* dialogs are located under **GetControl** main menu item as usual for the system.
@@ -118,14 +283,14 @@ Most of the **Menu** items have their corresponding **Toolbar** buttons. Below i
     The form for delete/clear filter selection allows you to select particular types of files to delete. When the *delete* PCR function is selected, then the list also contains the PCR file. Otherwise, only supplementary files are shown. No IRF or data files are listed. Only be *careful* with the **hkl** filter when using the HKL file as an input.
 
 .. tip::
-    When you use the ``Backup structure`` function with the enabled **Ask for name when backup?** (see ``Pref ->`` :ref:`General setup <General setup>` tab), it works like a backup and rename together.
+    When you use the ``Backup structure`` function with the enabled **Ask for name when backup?** (see :ref:`Pref->General <General setup>` setup tab), it works like a backup and rename together.
 
 .. _Files list:
 
 Files list
 ==========
 
-In the *Files list*, all PCR files found in the working directory are listed. You can select the file by the mouse click or by using the keyboard arrows. By right-clicking, you will have access to the selected functions dedicated to the currently selected PCR file (``Delete file``, ``Clear supplementary files``, ``Reload``, ``Backup``, and ``Rename structure``).
+In the *Files list*, all PCR files found in the working directory are listed. You can select the file by clicking the mouse or using the keyboard arrows. By right-clicking, you will have access to the selected functions dedicated to the currently selected PCR file (``Delete file``, ``Clear supplementary files``, ``Reload``, ``Backup``, and ``Rename structure``).
 
 You can change the order of the PCR file by the ``click&drag`` method. It is particularly useful when the searched order is not the one you like. The order should be preserved even when you do the ``Reload directory``, but it will be lost when you load the different directory and come back.
 
@@ -151,7 +316,7 @@ Phases info tab
 
 In the **Phases info** tab, the application collects various information about all phases. If **OUT** and **SUM** files exist, the *errors*, *phase fraction*, *density*, *R-factors*, *site multiplicity*, etc., are extracted as well and properly shown, then there is a comprehensive overview of your refinement. The unit cell composition and site fractions are also calculated.
 
-The information for each phase is coloured based on the preselected pattern (see ``Pref ->`` :ref:`Colours/layout <Colours and layout>` tab). If it is too long, it can be folded on the phases or atoms level (click the small rectangles on the left side of the text).
+The information for each phase is coloured based on the preselected pattern (see :ref:`Pref->General <General setup>` setup tab). If it is too long, it can be folded at the phases or atom level (click the small rectangles on the left side of the text).
 
 .. figure:: ./img/phasesinfo.jpg
     :width: 80%
@@ -226,8 +391,10 @@ Braggs are coloured with the same pattern as phases in the `Phases info`_ tab. T
 
     Profile viewer tab
 
+The layout of the **Profile view**, for example, the axis font size, etc., can be adjusted in the :ref:`Pref->Profile chart <Profile chart>` setup tab.
+
 .. tip::
-    To get the contribution for each phase, set the ``Ipr`` parameter to **3**. Then launch the FP refinement, and when you reload the file, the application will automatically search for the phase's contributions and will load them.
+    To get the contribution for each phase, set the ``Ipr`` parameter to **3**. Then, launch the FP refinement, and when you reload the file, the application will automatically search for the phase's contributions and load them.
 
 If you hang over the Bragg positions, a hint pops up to show the extensive information gathered from the OUT and PRF files about the pointed position.
 
@@ -259,6 +426,8 @@ The navigation on the chart is a bit different from the *Winplotr* navigation. B
 
 .. note::
     There is no **right-click** routine for *Winplotr*. *Undo-zoom* is done by a simple click or "unzoom" drag&drop.
+
+.. _Chart export:
 
 Chart export
 ^^^^^^^^^^^^
@@ -292,7 +461,7 @@ When the **Profile viewer** is active tab, you can use the **Measuring tool**, w
 Microstructure viewer tab
 -------------------------
 
-The **Microstructure viewer** tab is only visible when the *microstructure effects* are calculated and the *IRF* (instrument resolution file) is provided. In the default setting, it plots the *Williamson-Hall* (WH) plot. In the top part of the tab, you can select the appropriate phase or pattern. If the phase or pattern name is *grey*, it means that there is no microstructure implemented in the refinement for this phase/pattern.
+The **Microstructure viewer** tab is only visible when the *microstructure effects* are calculated and the *IRF* (instrument resolution file) is provided. In the default setting, it plots the *Williamson-Hall* (WH) plot. In the top part of the tab, you can select the appropriate phase or pattern. If the phase or pattern name is *grey*, it means that no microstructure has been implemented in the refinement for this phase/pattern.
 
 If the asymmetric model of broadening is used, the chars of *Maximum strain* or *Apparent size* can reveal the directional feeling about the microstructure.
 
@@ -301,6 +470,8 @@ If the asymmetric model of broadening is used, the chars of *Maximum strain* or 
     :align: center
 
     Microstructure viewer tab
+
+The layout of the **Microstructure view**, for example, the axis font size, etc., can be adjusted in the :ref:`Pref->MIC chart <MIC chart>` setup tab.
 
 .. note::
     **Microstructure viewer** visualises the content of the MIC file created during refinement.
@@ -314,54 +485,88 @@ FP applications
 
 The panel provides access to a quick launch of the selected *FullProf* applications.
 
+.. figure:: ./svg/FP2k.ico
+    :width: 32px
+    :align: left
+
 - *FullProf* (shortcut F9)
     Launching the FullProf (*wfp2k*) with the selected PCR file.
+
+.. figure:: ./svg/EdPcr.ico
+    :width: 32px
+    :align: left
+
 - *EdPcr* (shortcut F10)
     Open the selected PCR file with the *EdPcr* tool
+
+.. figure:: ./svg/Winplotr.ico
+    :width: 32px
+    :align: left
+
 - *WinPlotr* (shortcut F11)
     Opens the PRF file with the *WinPlotr* tool. This tool is not available on *Unix-based* systems.
+
+.. figure:: ./svg/Winplotr-2006.ico
+    :width: 32px
+    :align: left
+
 - *WinPlotr2006*
     Opens the PRF file with the *WinPlotr2006* tool.
+
+.. figure:: ./svg/Sym.ico
+    :width: 32px
+    :align: left
+
 - *Symmcal*
     It opens the *Symmcal* tool for information about the space groups
+
+.. figure:: ./svg/SymMag.ico
+    :width: 32px
+    :align: left
+
 - *MagSymmCal*
     It opens the *MagSymmCal* tool for information about the magnetic space groups
-- *powderpat*
+
+.. figure:: ./svg/PowderPat.ico
+    :width: 32px
+    :align: left
+
+- *PowderPat*
     It opens the *Powder Pattern Calculation* tool. It can import CIF files and simulate the powder patterns for various settings and radiations, etc.
 
 .. caution::
-    Those tools are available only when the *FullProf* path is properly set up in the ``Pref ->`` :ref:`General setup <General setup>` tab.
+    Those tools are available only when the *FullProf* path is properly set up in the :ref:`Pref->General <General setup>` setup tab.
 
-.. _Spplementary files:
+.. _Supplementary files:
 
 Supplementary files
 -------------------
 
-The **Supplementary files** button bar provides easy access to the various supplementary files created during the refinement. You can edit them or launch additional tools (*FPStudio*, *GFourier*, etc.) with the proper input files and perform further analysis. The buttons act as single buttons or as a drop-down menu that appears when clicking to navigate in a more concrete action selection. If the button name is *grey*, it means that the supplementary file of the particular kind doesn't exist.
+The **Supplementary files** buttons' bar provides easy access to the various supplementary files created during the refinement. You can edit them or launch additional tools (*FPStudio*, *GFourier*, etc.) with the proper input files and perform further analysis. The buttons act as single buttons or as a drop-down menu that appears when clicking to navigate in a more concrete action selection. If the button name is *grey*, it means that the supplementary file of the particular kind doesn't exist.
 
-- *PCR* (shortcut F6)
+- PCR (shortcut F6)
     It opens the selected PCR file in the editor.
-- *OUT* (shortcut F7)
+- OUT (shortcut F7)
     It opens the selected OUT file in the editor.
-- *SUM* (shortcut F8)
+- SUM (shortcut F8)
     It opens the selected SUM file in the editor.
-- *DIS*
+- DIS
     If the distances/angles or BVS are calculated, the results are opened in the editor.
-- *MIC*
+- MIC
     If microstructure files are created, then it allows them to open, and if the 3D visualisation is initiated, then it allows it to be opened in the *VESTA* viewer. The MIC files are grouped by the phase name.
 
 .. tip::
     To enable the 3D visualisation of the *microstructure*, you need to put the parameter ``Jvi`` to **5** and have the *IRF* file defined. *Note*: ``Jvi`` is available only when ``More`` for selected phase is set to **1**.
 
-- *FST*
+- FST
     The **FPStudio** files can be opened and modified in the editor or directly opened by the *FPStudio* tool to visualise. The FST files are grouped by the phase name.
-- *INP*
+- INP
     The **GFrourier** files can be opened and modified in the editor or directly opened by the *GFourier* tool to do the analysis. If the analysis is done, there will be items to access the output or to the Fourier maps visualisation (*Realod* the file or use *F5* to see it).
-- *CFL*
+- CFL
     The files for **BondStr** tool. You can edit the input files in the editor or open them directly with the *BondStr* tool. If the analysis is done by the tool, there will be access to the results and visualisations (BVS maps, etc.) (*Realod* the file or use *F5* to see it).
-- *CIF*
-    If CIF files are created and a viewer is provided (see ``Pref ->`` :ref:`General setup <General setup>` tab), then there is access to directly open the created CIF file.
-- *Dys*
+- CIF
+    If CIF files are created and a viewer is provided (see :ref:`Pref->General <General setup>` setup tab), then there is access to directly open the created CIF file.
+- Dys
     If the input files for *Dysnomia* (MEM analysis) are created, there is access to open the input files in the editor or to launch the analysis directly and, after the analysis is done, to visualise the outputs and Fourier maps.
 
 .. tip::
@@ -369,7 +574,9 @@ The **Supplementary files** button bar provides easy access to the various suppl
 
 .. _Dysnomia web: https://jp-minerals.org/dysnomia/en/
 
-- *CC*
+.. _CC:
+
+- CC
     The *crystallographic calculations* input files. First, you need to create the CC files for your PCR file by clicking *Create CrysCalc files* in the sub-menu. It will create the text files for each phase with some basic inputs. Then, you can launch the *cryscalc* tool on this input or edit and adjust the input file.
 
     There are preset options from which some of them are disabled (see description inside the input file). The *cryscalc* tool can calculate useful crystallographic information such as *absorption per unit cell*, *showing the scattering coefficients* for atoms and many more. Please consult the *help* of the tool for more information.

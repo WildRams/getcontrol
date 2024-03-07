@@ -22,30 +22,30 @@ There is no need for installation. For **Windows** and **Linux**, there are sing
 .. caution::
     Copy the executable to the folder to which you have writing permission. Don't use the system folders. Try not to use the directory names with spaces.
 
-The program tries to search for the *FullProf* path automatically. If not found or you use a nonstandard path, please set it in the ``Pref ->`` :ref:`General setup <General setup>` tab.
+The program tries to search for the *FullProf* path automatically. If not found or you use a nonstandard path, please set it in the :ref:`Pref->General <General setup>` setup tab.
 
-Additional 3rd party software facilitating the analysis (*Dysnomia* - MEM) and visualisation (*VESTA* - CIF viewer) can also be linked. The links to the software webpages are provided by clicking the appropriate labels in the ``Pref ->`` :ref:`General setup <General setup>` tab.
+Additional 3rd party software facilitating the analysis (*Dysnomia* - MEM) and visualisation (*VESTA* - CIF viewer) can also be linked. The links to the software webpages are provided by clicking the appropriate labels in the :ref:`Pref->General <General setup>` setup tab.
 
 .. tip::
     For a visualisation of the refinement results, there is no need to have *FullProf* installed. You will need it only when you want to perform further calculations.
 
 .. _SettingStorage:
 
-Setting storage
-===============
+Configuration storage
+=====================
 
-The program stores its settings in the local profile directory. The path depends on the system and is the following
+The program stores its settings in the local *config* directory. The path depends on the system and is the following
 
 * Windows 🪟 ``c:\Users\Profile_name\AppData\Local\GetControl``
 * Linux 🐧  ``~/config/GetControl``
 * macOS 🍏 ``~/Library/Application Support/GetControl``
 
-This directory can be accessed quickly via ``Pref ->`` :ref:`General setup <General setup>` tab, and click on the *Open directory* button side by the *LOG files* info.
+This directory can be accessed quickly via :ref:`Pref->General <General setup>` setup tab, and click on the *Open directory* button side by the *LOG files* info.
 
 Update
 ======
 
-An automatic update check is set on by default (can be switched off in ``Pref ->`` :ref:`General setup <General setup>` tab). After each program launch, a small (in order of 50 kB) file with the version info is downloaded from the server and compared with the local one. No local data are sent to the server.
+An automatic update check is set on by default (can be switched off in :ref:`Pref->General <General setup>` setup tab). After each program launch, a small file (in the order of 50 kB) with the version info is downloaded from the server and compared with the local one. No local data are sent to the server.
 
 Only the major versions are released. The *builds* are distributed through the *auto-update* feature.
 
