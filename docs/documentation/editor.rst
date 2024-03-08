@@ -3,7 +3,9 @@
 Internal editor
 ###############
 
-The **Editor** is a simple text editor that allows you to open any file. It allows multiple files to be opened in one window. The files are open in separate tabs. It has the usual functionality of the text editor. For the PCR files, it offers additional tools and functions helpful in handling the structural refinements with **FullProf**.
+The internal **Editor** is a simple text editor that allows you to open any file. It allows multiple files to be opened in one window. The files are open in separate tabs. It has the usual functionality of the text editor. For the PCR files, it offers additional tools and functions helpful in handling the structural refinements with **FullProf**.
+
+It can be opened from the :ref:`Main from<Main form>` using :ref:`menu or toolbar<Menu and Toolbar>` button. It will also open any time the files are edited. If no external editor is selected in :ref:`Pref->General<General setup>` setup, then the internal one is used.
 
 .. figure:: ./img/editor-empty.jpg
     :width: 80%
@@ -31,31 +33,31 @@ Most of the **Menu** items have their corresponding **Toolbar** buttons.
 Left toolbar and menu Edit
 --------------------------
 
-.. image:: ./svg/fold-all.ico
+.. image:: ./svg/fold-all.png
     :align: left
     :width: 20px
 
 **Fold all** - The *Fold all* will collapse all the fold points.
 
-.. image:: ./svg/expand-all.ico
+.. image:: ./svg/expand-all.png
     :align: left
     :width: 20px
 
 **Expand all** - The *Expand all* will expand all the fold points.
 
-.. image:: ./svg/fold-background.ico
+.. image:: ./svg/fold-background.png
     :align: left
     :width: 20px
 
 **Fold background** - It will fold the part of the long *background* lists when ``Nba > 2``. A shortcut ``Ctrl+B``.
 
-.. image:: ./svg/goto-line.ico
+.. image:: ./svg/goto-line.png
     :align: left
     :width: 20px
 
 **Go to Phase XY** - The drop-down menu with the list of the phases to quickly navigate to the part of the PCR file where the selected phase starts. A shortcut ``Alt+PhaseNumber``.
 
-.. image:: ./svg/CrysCalc.ico
+.. image:: ./svg/CrysCalc.png
     :align: left
     :width: 20px
 
@@ -64,7 +66,7 @@ Left toolbar and menu Edit
 Top toolbar and menu View
 --------------------------
 
-.. image:: ./svg/show-hints.ico
+.. image:: ./svg/show-hints.png
     :align: left
     :width: 20px
 
@@ -76,16 +78,19 @@ Top toolbar and menu View
 
     Editor with the PCR file open and active hint on the ``Job`` parameter
 
+.. note::
+    **Keywords** descriptions are taken from the *FullProf* manual (year 2000) combined with additional information from *changelog* and personal experince. If you have more insight help update, please (see **Menu Special** below).
+
 Top toolbar and menu FP
 --------------------------
 
-.. image:: ./svg/dummy-run.ico
+.. image:: ./svg/dummy-run.png
     :align: left
     :width: 20px
 
 **Dummy run** - When clicked, it changes the parameter ``Aut`` and sets the :literal:`!Number of refined parameters` both to **0** and start the refinement. To set those two parameters to zero means that only one cycle will be performed without real refinement of any parameter. In other words, only *simulation* will be performed. It is useful when you want to check the influence of the hand-made change of certain parameters. A shortcut ``Ctrl+F9``.
 
-.. image:: ./svg/auto.ico
+.. image:: ./svg/auto.png
     :align: left
     :width: 20px
 
@@ -94,7 +99,7 @@ Top toolbar and menu FP
 .. tip::
     To restart the full refinement after **Dummy run**, press the **"Aut" parameter status** to set ``Aut`` to **1** and start the refinement.
 
-.. image:: ./svg/chi-remove.ico
+.. image:: ./svg/chi-remove.png
     :align: left
     :width: 20px
 
@@ -109,6 +114,8 @@ Top toolbar and menu FP
         => W A R N I N G!
         => Current parameters not saved to the current PCR file: final(Chi2) > 1.2*initial(Chi2)
         => Current parameters are saved in a file of extension NEW
+
+.. _Special editor menu:
 
 Menu Special
 ------------
@@ -126,3 +133,19 @@ Menu Special
 
 - Edit Python MIC plotter script
     It saves (into :ref:`config<SettingStorage>` folder) and opens the source file for the *MIC plotter*. You can edit/modify the content of the script. When you use the **MIC plotter** form, the application will use your modified script stored in the :ref:`config<SettingStorage>` folder instead of build-in one. If you want to restore the default, just delete your modified one.
+
+Help
+----
+.. image:: ./svg/FP-news.png
+    :align: left
+    :width: 20px
+
+* ``FullProf News`` (Ctrl(⌘)+Alt+M)
+    It opens in the editor the *FullProf changelog* (information from the year 2000 onwards)
+
+.. image:: ./svg/FP-manual.png
+    :align: left
+    :width: 20px
+
+* ``FullProf Manual`` (Ctrl+Shift+M)
+    It opens the *FullProf manual* (PDF file from 2000) in the default viewer.

@@ -18,7 +18,6 @@ I developed it to help me get a quicker overview and control over a vast number 
 
     The main window of GetControl
 
-
 The tool is under continuous but unregular development. All bug reports or suggestions are welcomed (see :ref:`Contact<Contact>`).
 
 Download
@@ -38,10 +37,11 @@ Table of content
    ./documentation/mainform
    ./documentation/preferences
    ./documentation/editor
+   ./documentation/plotters
    ./documentation/changelog
 
 .. toctree::
-    :caption: FullProf Trics
+    :caption: FullProf Tricks
     :maxdepth: 1
     :glob:
 

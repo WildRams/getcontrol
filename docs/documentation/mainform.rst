@@ -26,21 +26,21 @@ Menu and Toolbar
 Most of the **Menu** items have their corresponding **Toolbar** buttons. Below is the list with a quick explanation:
 
 - File
-    .. image:: ./svg/folder-open.ico
+    .. image:: ./svg/folder-open.png
         :align: left
         :width: 20px
 
     * ``Open directory`` (Ctrl(⌘)+O)
         It enables you to select your working directory, where it searches for the PCR files (sub-directories are not included).
 
-    .. image:: ./svg/reload-folder.ico
+    .. image:: ./svg/reload-folder.png
         :align: left
         :width: 20px
 
     * ``Reload folder`` (F4)
         It again searches for the PCR files in the working directory (use when you copy/add/delete the PCR files).
 
-    .. image:: ./svg/folder-open-recent.ico
+    .. image:: ./svg/folder-open-recent.png
         :align: left
         :width: 20px
 
@@ -49,207 +49,217 @@ Most of the **Menu** items have their corresponding **Toolbar** buttons. Below i
     * ``Save`` [1]_
         There are three sub-menus to save
 
-        .. image:: ./svg/save-info.ico
+        .. image:: ./svg/save-info.png
             :align: left
             :width: 20px
 
         + text info from *Phases info*/*Profile parameters*/*Refinement summary* tabs
 
-        .. image:: ./svg/save-XY.ico
+        .. image:: ./svg/save-xy.png
             :align: left
             :width: 20px
 
         + an SXY [2]_ file of the patterns shown on *Profile viewer* tab
 
-        .. image:: ./svg/save-picture.ico
+        .. image:: ./svg/save-picture.png
             :align: left
             :width: 20px
 
         + the picture of the *Profile viewer* tab
 
-    .. image:: ./svg/bin-trash.ico
+    .. image:: ./svg/bin-trash.png
         :align: left
         :width: 20px
 
     * ``Delete file`` (Ctrl(⌘)+D)
         It deletes the selected PCR file and all supplementary files; the form, when you can filter by extension what to delete, will pop up (see **Note** below).
 
-    .. image:: ./svg/editor.ico
+    .. image:: ./svg/editor.png
         :align: left
         :width: 20px
 
     * ``Editor`` (Ctrl(⌘)+E)
-        It opens the internal or external (see :ref:`Pref->General <General setup>` setup tab) editor.
+        It opens the internal :ref:`Editor<Editor>` or external (see :ref:`Pref->General <General setup>` setup tab) editor.
 
-    .. image:: ./svg/GetControl.ico
+    .. image:: ./svg/GetControl.png
         :align: left
         :width: 20px
 
     * ``New instance`` (Shift+F1) [3]_
         It opens the new instance of the **GetControl** application.
 
-    .. image:: ./svg/exit.ico
+    .. image:: ./svg/exit.png
         :align: left
         :width: 20px
 
     * ``Exit`` (Ctrl(⌘)+Q) [3]_
         It closes the application
 - Edit
-    .. image:: ./svg/clean.ico
+    .. image:: ./svg/clean.png
         :align: left
         :width: 20px
 
     * ``Clear supplementary files`` (Ctrl(⌘)+Y)
         It will allow you to delete particular supplementary files (the new form where the filer can be selected will pop up; see **Note** below) for the selected PCR file (it can free the space on your disk).
 
-    .. image:: ./svg/clean-all.ico
+    .. image:: ./svg/clean-all.png
         :align: left
         :width: 20px
 
     * ``Clear supplementary files for ALL``
         The same as above, but now it applies to all the PCR files in the working directory.
 
-    .. image:: ./svg/backup-file.ico
+    .. image:: ./svg/backup-file.png
         :align: left
         :width: 20px
 
     * ``Backup structure`` (Ctrl(⌘)+B)
         It backups the selected PCR file together with the supplementary files by adding `-backup` (by default) to their file name; see :ref:`Pref->General <General setup>` setup tab to allow your own selection of the *suffix*/name.
 
-    .. image:: ./svg/rename.ico
+    .. image:: ./svg/rename.png
         :align: left
         :width: 20px
 
     * ``Rename structure`` (Ctrl(⌘)+R)
         It renames the select PCR file with all supplementary files.
-- **View**
-    .. image:: ./svg/phase-info.ico
+
+    .. image:: ./svg/setup.png
+        :align: left
+        :width: 20px
+
+    * ``Preferences`` (Ctrl(⌘)+,)
+        It opens the :ref:`Preferences<Preferences>` form.
+- View
+    .. image:: ./svg/phase-info.png
         :align: left
         :width: 20px
 
     * ``Phases info`` (Ctrl(⌘)+1)
         It shows/switches to the `Phases info`_ tab.
 
-    .. image:: ./svg/profile-info.ico
+    .. image:: ./svg/profile-info.png
         :align: left
         :width: 20px
 
     * ``Profile parameters`` (Ctrl(⌘)+2)
         It shows/switches to the `Profile parameters`_ tab.
 
-    .. image:: ./svg/summary-info.ico
+    .. image:: ./svg/summary-info.png
         :align: left
         :width: 20px
 
     * ``Refinement summary`` (Ctrl(⌘)+3)
         It shows/switches to the `Refinement summary`_ tab.
 
-    .. image:: ./svg/profile-viewer.ico
+    .. image:: ./svg/profile-viewer.png
         :align: left
         :width: 20px
 
     * ``Profile viewer`` (Ctrl(⌘)+4)
         It shows/switches to the `Profile viewer`_ tab.
 
-    .. image:: ./svg/mic-info.ico
+    .. image:: ./svg/mic-info.png
         :align: left
         :width: 20px
 
     * ``Microstructure viewer`` (Ctrl(⌘)+5)
         It shows/switches to the `Microstructure viewer`_ tab.
 
-    .. image:: ./svg/reload.ico
+    .. image:: ./svg/reload.png
         :align: left
         :width: 20px
 
     * ``Reload`` (F5)
         It reloads structure information from the selected PCR file.
-- **Export** [4]_
-    .. image:: ./svg/export-tab.ico
+
+.. _Menu export:
+
+- Export [4]_
+    .. image:: ./svg/export-tab.png
         :align: left
         :width: 20px
 
     * ``"Phases info" TAB separation``
         It copies to the **clipboard** information about all the phases from the `Phases info`_ tab; atomic positions are separated by TAB.
 
-    .. image:: ./svg/export-tex.ico
+    .. image:: ./svg/export-tex.png
         :align: left
         :width: 20px
 
     * ``"Phases info" in Latex``
         It exports to the **clipboard** information about all phases from the `Phases info`_ tab in the Latex table format.
 
-    .. image:: ./svg/export-cell.ico
+    .. image:: ./svg/export-cell.png
         :align: left
         :width: 20px
 
     * ``Fraction and Cell for active``
         It copies to the **clipboard** the *name*, *fraction* and *cell parameters* separated by TAB for all the phases in the one currently selected PCR.
 
-    .. image:: ./svg/export-cell-all.ico
+    .. image:: ./svg/export-cell-all.png
         :align: left
         :width: 20px
 
     * ``Fraction and Cell for selected``
         It copies to the **clipboard** the *name*, *fraction* and *cell parameters* separated by TAB for all the phases in all selected PCR; it is easy to paste to worksheet-like software for quick plotting of the cell parameter evolution.
 
-    .. image:: ./svg/Python.ico
+    .. image:: ./svg/Python.png
         :align: left
         :width: 20px
 
     * ``Python script for SXY plotter``
         It opens the form when you can adjust the command for the Python script, which allows you to plot the pattern(s).
 
-    .. image:: ./svg/Python.ico
+    .. image:: ./svg/Python.png
         :align: left
         :width: 20px
 
     * ``Python script for MIC plotter``
         It opens the form when you can adjust the command for the Python script, which allows you to plot the Williamson-Hall plot to visualise the microstructure.
-- **Tools**
-    .. image:: ./svg/measure.ico
+- Tools
+    .. image:: ./svg/measure.png
         :align: left
         :width: 20px
 
     * ``Measure distance`` (Ctrl+M)
         The tools to measure different distances on the pattern chart; an additional form opens to select the measurement along various axes and visualise the results (see `Profile viewer`_).
 
-    .. image:: ./svg/terminal.ico
+    .. image:: ./svg/terminal.png
         :align: left
         :width: 20px
 
     * ``Open Terminal`` (Ctrl+T) [3]_
         It will try to open the default system terminal.
 
-    .. image:: ./svg/COD.ico
+    .. image:: ./svg/COD.png
         :align: left
         :width: 20px
 
     * ``Open COD`` [3]_
         It opens the web page of the *Crystallographic Open Database* (COD).
-- **Help**
-    .. image:: ./svg/check-for-update.ico
+- Help
+    .. image:: ./svg/check-for-update.png
         :align: left
         :width: 20px
 
     * ``Check for update`` (F2)
         It opens the dialogue to check the availability of the new version and the updating process.
 
-    .. image:: ./svg/what-is-new.ico
+    .. image:: ./svg/what-is-new.png
         :align: left
         :width: 20px
 
     * ``What is new``
         It opens the update information changelog in the editor. The same information you can find :ref:`here<WhatIsNew>`.
 
-    .. image:: ./svg/FP-news.ico
+    .. image:: ./svg/FP-news.png
         :align: left
         :width: 20px
 
     * ``FullProf News`` (Ctrl(⌘)+Alt+M)
         It opens in the editor the *FullProf changelog* (information from the year 2000 onwards)
 
-    .. image:: ./svg/FP-manual.ico
+    .. image:: ./svg/FP-manual.png
         :align: left
         :width: 20px
 
@@ -262,7 +272,7 @@ Most of the **Menu** items have their corresponding **Toolbar** buttons. Below i
 .. [2] **SXY** is a single-X and multi-Y file format
 .. [3] It exists only in **Menu**
 
-    .. image:: ./svg/export.ico
+    .. image:: ./svg/export.png
         :align: right
         :width: 20px
 
@@ -277,10 +287,12 @@ Most of the **Menu** items have their corresponding **Toolbar** buttons. Below i
     :class: attention
 
     .. image:: ./img/clean-delete-form.jpg
-        :width: 60%
+        :width: 50%
         :align: right
 
-    The form for delete/clear filter selection allows you to select particular types of files to delete. When the *delete* PCR function is selected, then the list also contains the PCR file. Otherwise, only supplementary files are shown. No IRF or data files are listed. Only be *careful* with the **hkl** filter when using the HKL file as an input.
+    The form for delete/clear filter selection allows you to select types of files to delete. When the *delete* PCR function is selected, then the list also contains the PCR file. Otherwise, only supplementary files are shown. You can select even individual files from the list.
+
+    No IRF or data files are listed. Only be *careful* with the **hkl** filter when using the HKL file as an input.
 
 .. tip::
     When you use the ``Backup structure`` function with the enabled **Ask for name when backup?** (see :ref:`Pref->General <General setup>` setup tab), it works like a backup and rename together.
@@ -404,6 +416,8 @@ If you hang over the Bragg positions, a hint pops up to show the extensive infor
 
     Bragg information
 
+.. _Axis manipulations:
+
 Axis manipulations
 ^^^^^^^^^^^^^^^^^^
 
@@ -492,21 +506,21 @@ The panel provides access to a quick launch of the selected *FullProf* applicati
 - *FullProf* (shortcut F9)
     Launching the FullProf (*wfp2k*) with the selected PCR file.
 
-.. figure:: ./svg/EdPcr.ico
+.. figure:: ./svg/EdPcr.png
     :width: 32px
     :align: left
 
 - *EdPcr* (shortcut F10)
     Open the selected PCR file with the *EdPcr* tool
 
-.. figure:: ./svg/Winplotr.ico
+.. figure:: ./svg/WinPLOTR.png
     :width: 32px
     :align: left
 
 - *WinPlotr* (shortcut F11)
     Opens the PRF file with the *WinPlotr* tool. This tool is not available on *Unix-based* systems.
 
-.. figure:: ./svg/Winplotr-2006.ico
+.. figure:: ./svg/WinPLOTR-2006.png
     :width: 32px
     :align: left
 
