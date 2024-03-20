@@ -10,6 +10,15 @@ All suggestions are welcomed at prema@email.cz
 Version 0.8
 ^^^^^^^^^^^
 
+Version 0.8.0 build 2
+-----------------------------------------------
+:Date: 20/03/2024
+
+- The old PCR format created out of the DICVOL program was not read properly; now corrected (thanks, Stefan, for reporting)
+- Creating "cryscalc" input file via CC was not working when there were no atoms in the phase; not corrected
+- Some minor adjustments to the layout
+- First draft of documentation published on `<https://wildrams.github.io/getcontrol/>`__ (link added in the About form)
+
 Version 0.8.0 build 1
 -----------------------------------------------
 :Date: 28/02/2024

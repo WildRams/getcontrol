@@ -112,9 +112,9 @@ htmlhelp_basename = 'sphinx_nefertitidoc'
 
 latex_elements = {}
 latex_documents = [
-    (master_doc, 'sphinx_nefertiti.tex',
-     'Nefertiti for Sphinx - Documentation',
-     'Daniela Rus Morales', 'manual'),
+    (master_doc, 'GetControl-manual.tex',
+     'GetControl - Documentation',
+     'WildRam', 'manual'),
 ]
 
 # -- Options for manual page output ------------------------------------
