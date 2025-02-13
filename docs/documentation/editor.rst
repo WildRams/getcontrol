@@ -8,7 +8,7 @@ The internal **Editor** is a simple text editor that allows you to open any file
 It can be opened from the :ref:`Main from<Main form>` using :ref:`menu or toolbar<Menu and Toolbar>` button. It will also open any time the files are edited. If no external editor is selected in :ref:`Pref->General<General setup>` setup, then the internal one is used.
 
 .. figure:: ./img/editor-empty.jpg
-    :width: 80%
+    :width: 100%
     :align: center
 
     Empty page in Editor form
@@ -24,6 +24,23 @@ General editor area
     The main keywords are printed in **bold**.
 - Folding
     The content of the PCR file can be folded at several points to shorten the content on the page. See the small rectangles on the left side of the text.
+- Autocompletion
+    When pressing *Ctrl-Space* in the empty space or predefined short commands, you can initiate the auto-completion dialogue, which allows you to add special nontrivial additional lines of code for further analysis.
+
+    Example of adding the lines necessary to produce the BVS calculation. Type "add" or "bvs" and initiate autocomplete by *Ctrl+Space*. You should see the following.
+
+    .. image:: ./img/autocomplete-ini.jpg
+        :align: center
+        :width: 80%
+
+    If you select the proper adding routine (adding BVS calculation), the auto-completion will add the necessary lines which still need to be updated, but it gives you hints about what needs to be added.
+
+    .. image:: ./img/autocomplete-done.jpg
+        :align: center
+        :width: 80%
+
+    .. attention::
+        You have to know where those additional lines have to be added and initiate the autocomplete from the proper location.
 
 Menu and Toolbar
 ================
@@ -39,7 +56,7 @@ Left toolbar and menu Edit
 
 **Fold all** - The *Fold all* will collapse all the fold points.
 
-.. image:: ./svg/expand-all.png
+.. image:: ./svg/fold-unfold-all.png
     :align: left
     :width: 20px
 
@@ -73,7 +90,7 @@ Top toolbar and menu View
 **Show FullProf hints** - When enabled/pressed, the description of the **keywords** in the form of *hint* will appear when the cursor is over it. The font size of the hints can be adjusted in the :ref:`Pref->Colours&layout<Colours and layout>`.
 
 .. figure:: ./img/editor-hints.jpg
-    :width: 80%
+    :width: 100%
     :align: center
 
     Editor with the PCR file open and active hint on the ``Job`` parameter
@@ -90,11 +107,14 @@ Top toolbar and menu FP
 
 **Dummy run** - When clicked, it changes the parameter ``Aut`` and sets the :literal:`!Number of refined parameters` both to **0** and start the refinement. To set those two parameters to zero means that only one cycle will be performed without real refinement of any parameter. In other words, only *simulation* will be performed. It is useful when you want to check the influence of the hand-made change of certain parameters. A shortcut ``Ctrl+F9``.
 
-.. image:: ./svg/auto.png
+.. image:: ./svg/auto-on.png
+    :align: left
+    :width: 20px
+.. image:: ./svg/auto-off.png
     :align: left
     :width: 20px
 
-**"Aut" parameter status** - It shows the status of the parameter ``Aut``. If ``Aut=1``, the button is pressed, and if ``Aut=0``, the button is released. You can **change** the status by clicking the button. The editor will set the ``Aut`` parameter as described.
+**"Aut" parameter status** - It shows the status of the parameter ``Aut``. If ``Aut=1``, the button is green, and if ``Aut=0``, the button is red. You can **change** the status by clicking the button. The editor will set the ``Aut`` parameter as described.
 
 .. tip::
     To restart the full refinement after **Dummy run**, press the **"Aut" parameter status** to set ``Aut`` to **1** and start the refinement.
@@ -133,6 +153,25 @@ Menu Special
 
 - Edit Python MIC plotter script
     It saves (into :ref:`config<SettingStorage>` folder) and opens the source file for the *MIC plotter*. You can edit/modify the content of the script. When you use the **MIC plotter** form, the application will use your modified script stored in the :ref:`config<SettingStorage>` folder instead of build-in one. If you want to restore the default, just delete your modified one.
+
+- Edit Auto Complete list
+    It saves (into :ref:`config<SettingStorage>` folder) and opens the source file for the *Autocompletion*. This file contains special formatting input, which is read by the application. You can edit the content of each item, correct it or add a new one. Please follow the formatting, or otherwise, it will not be shown properly. Please, **share** it when you enhance it. If you want to restore the default, just delete your modified one.
+
+.. tip::
+    Description of the autocomplete formatting:
+
+    .. parsed-literal::
+        short_name - long descriptions with spaces
+        = puting the text line 1
+        = puting the text line 2|
+
+    "|" symbol says where the cursor should be placed after autocompletion. Real example:
+
+    .. parsed-literal::
+        more1 - Add paremeter line when More=1
+        =1
+        =!Jvi Jdi Hel Sol Mom Ter  N_Domains
+        =   0|   0   0   0   0   0      0
 
 Help
 ----

@@ -6,7 +6,7 @@ Main form
 The **GetControl** main form contains several main parts: `Menu and Toolbar`_, `Files list`_ box, `Information pages`_ with various tabs, `FP applications`_ panel, and `Supplementary files`_ button bar, which are described in more detail below. The main form appears at the start of the application.
 
 .. figure:: ./img/mainform-empty.jpg
-    :width: 80%
+    :width: 100%
     :align: center
 
     Main GetControl window. Green - `Menu and Toolbar`_, Red - `Information pages`_, Blue - `Files list`_, Pink - `FP applications`_, Black - `Supplementary files`_
@@ -33,7 +33,7 @@ Most of the **Menu** items have their corresponding **Toolbar** buttons. Below i
     * ``Open directory`` (Ctrl(⌘)+O)
         It enables you to select your working directory, where it searches for the PCR files (sub-directories are not included).
 
-    .. image:: ./svg/reload-folder.png
+    .. image:: ./svg/folder-reload.png
         :align: left
         :width: 20px
 
@@ -53,19 +53,19 @@ Most of the **Menu** items have their corresponding **Toolbar** buttons. Below i
             :align: left
             :width: 20px
 
-        + text info from *Phases info*/*Profile parameters*/*Refinement summary* tabs
+        text info from *Phases info* / *Profile parameters* / *Refinement summary* tabs
 
         .. image:: ./svg/save-xy.png
             :align: left
             :width: 20px
 
-        + an SXY [2]_ file of the patterns shown on *Profile viewer* tab
+        an SXY [2]_ file of the patterns shown on *Profile viewer* tab
 
         .. image:: ./svg/save-picture.png
             :align: left
             :width: 20px
 
-        + the picture of the *Profile viewer* tab
+        the picture of the *Profile viewer* tab
 
     .. image:: ./svg/bin-trash.png
         :align: left
@@ -123,28 +123,28 @@ Most of the **Menu** items have their corresponding **Toolbar** buttons. Below i
     * ``Rename structure`` (Ctrl(⌘)+R)
         It renames the select PCR file with all supplementary files.
 
-    .. image:: ./svg/setup.png
+    .. image:: ./svg/preferences.png
         :align: left
         :width: 20px
 
     * ``Preferences`` (Ctrl(⌘)+,)
         It opens the :ref:`Preferences<Preferences>` form.
 - View
-    .. image:: ./svg/phase-info.png
+    .. image:: ./svg/info-phase.png
         :align: left
         :width: 20px
 
     * ``Phases info`` (Ctrl(⌘)+1)
         It shows/switches to the `Phases info`_ tab.
 
-    .. image:: ./svg/profile-info.png
+    .. image:: ./svg/info-profile.png
         :align: left
         :width: 20px
 
     * ``Profile parameters`` (Ctrl(⌘)+2)
         It shows/switches to the `Profile parameters`_ tab.
 
-    .. image:: ./svg/summary-info.png
+    .. image:: ./svg/info-summary.png
         :align: left
         :width: 20px
 
@@ -158,7 +158,7 @@ Most of the **Menu** items have their corresponding **Toolbar** buttons. Below i
     * ``Profile viewer`` (Ctrl(⌘)+4)
         It shows/switches to the `Profile viewer`_ tab.
 
-    .. image:: ./svg/mic-info.png
+    .. image:: ./svg/info-mic.png
         :align: left
         :width: 20px
 
@@ -547,6 +547,13 @@ The panel provides access to a quick launch of the selected *FullProf* applicati
 
 - *PowderPat*
     It opens the *Powder Pattern Calculation* tool. It can import CIF files and simulate the powder patterns for various settings and radiations, etc.
+
+.. figure:: ./svg/tfp.ico
+    :width: 32px
+    :align: left
+
+- *FPT*
+    It opens the *FullProf Toolbar*. Toolbar to access the settings and the programs of the FullProf Suite.
 
 .. caution::
     Those tools are available only when the *FullProf* path is properly set up in the :ref:`Pref->General <General setup>` setup tab.

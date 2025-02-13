@@ -3,9 +3,23 @@
 What is news
 ############
 
-Compiled with `CT <https://www.pilotlogic.com>`__ 8.3
+Compiled with `CT <https://www.pilotlogic.com>`__ 8.5
 
 All suggestions are welcomed at prema@email.cz
+
+Version 0.9
+^^^^^^^^^^^
+
+Version 0.9.0 build 1
+-----------------------------------------------
+:Date: 14/02/2025
+
+- All the non-FP icons remade for better contrast
+- Lots of internal process and layout updates
+- In the FP tools buttons, added the button to launch the FP toolbar
+- The button for launching the terminal was added to the toolbar
+- When opening the directory, the files starting with "._" are filtered out now
+- Autocompletion function to insert additional code lines in the internal editor added (Ctrl+Space)
 
 Version 0.8
 ^^^^^^^^^^^

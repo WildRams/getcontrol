@@ -1,8 +1,8 @@
-0.8.0 build 2
-Win32-MD5Sum: aab68ed3e49246c3f6fcdc142cf05070
-Linux32-MD5Sum: 7fdc51bd24d6293383b1cc1a22f4fdf0
-Win64-MD5Sum: 18717bab3ea756247663563d586ee4eb
-Linux64-MD5Sum: 9c6e6742dc5e346cf4932ea657f92277
+0.9.0 build 1
+Win32-MD5Sum: 35ee2cf654936f3e61cbfc04f7ee5198
+Linux32-MD5Sum: 7e71f9a73be06f1875d63581bd89e43e
+Win64-MD5Sum: e7bb9d713c7dcd1b3e0b2ed0a2d9089e
+Linux64-MD5Sum: 15c8b3ff8f63b2647a6d0a98d42c739e
 -----------------------------------------------
                  GetControl
  Tool for collecting information about 
@@ -11,9 +11,17 @@ Linux64-MD5Sum: 9c6e6742dc5e346cf4932ea657f92277
  Web page on Github https://github.com/WildRams/getcontrol
  Documentation on https://wildrams.github.io/getcontrol/
  
- Compiled with CT 8.3
+ Compiled with CT 8.5
  
 - all suggestions are welcomed at prema@email.cz
+-----------------------------------------------
+13/02/2025 0.9.0 build 1
+- All the non-FP icons remade for better contrast
+- Lots of internal process and layout updates
+- In the FP tools buttons, added the button to launch the FP toolbar
+- The button for launching the terminal was added to the toolbar
+- When opening the directory, the files starting with "._" are filtered out now
+- Autocompletion function to insert additional code lines in the internal editor added (Ctrl+Space)
 -----------------------------------------------
 20/03/2024 0.8.0 build 2
 - The old PCR format created out of the DICVOL program was not read properly; now corrected (thanks, Stefan, for reporting)

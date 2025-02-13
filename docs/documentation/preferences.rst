@@ -116,6 +116,8 @@ Here, you can adjust the colours for the phases if you are not happy with the pr
 
 The size of the icons on the :ref:`Main form<Main form>` can be adjusted if necessary together with the font size of the *hints* in :ref:`Editor<Editor>`. This is practical for HiDPI monitors where *hints* take too much of the screen space.
 
+The *Reset forms* button resets the position and size of all the forms. This can be useful when you have multiple monitors, and you switch the one, and the form is placed on the other monitor. All open forms except the main one will be closed, and the size will be reset.
+
 .. figure:: ./img/pref-layout.jpg
     :width: 50%
     :align: center

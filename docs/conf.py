@@ -19,9 +19,9 @@ else:
 
 project = 'GetControl'
 author = 'Přemysl (Premek) Beran'
-copyright = '2011-2024, WildRam'
+copyright = '2011-2025, WildRam'
 
-version = '0.8.0.1'
+version = '0.9.0.1'
 release = version
 
 language = 'en'
@@ -64,6 +64,7 @@ show_authors = True
 release_pattern_url = 'https://github.com/wildrams/getcontrol/releases/tag/v{release}/'
 releases = [
     release,
+    '0.8.0.1'
     '0.7.2.1',
     '0.7.1.1',
     '0.7.0.1'
@@ -95,11 +96,11 @@ html_theme_options = {
         for item in releases
     ],
 
-    "footer_links": ",".join([
-        "Documentation|https://wildrams.github.io/getcontrol",
-        "Download|https://github.com/wildrams/getcontrol/releases/latest",
-        "Repository|https://github.com/wildrams/getcontrol",
-    ]),
+    "footer_links": [
+        {'text':'Documentation', 'link':'https://wildrams.github.io/getcontrol'},
+        {'text':'Download', 'link':'https://github.com/wildrams/getcontrol/releases/latest'},
+        {'text':'Repository', 'link':'https://github.com/wildrams/getcontrol'},
+    ],
 
     "show_colorset_choices": False
 }

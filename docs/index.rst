@@ -13,7 +13,7 @@ It can help to visualise all PCR files in the directory, collect and aggregate t
 I developed it to help me get a quicker overview and control over a vast number of additional info you can obtain from the refinement. Of course, the way it works is not suitable for all, but someone can find it helpful.
 
 .. figure:: ./documentation/img/mainform-phases.jpg
-    :width: 70%
+    :width: 100%
     :align: center
 
     The main window of GetControl
