@@ -1,8 +1,8 @@
-0.9.0 build 1
-Win32-MD5Sum: 35ee2cf654936f3e61cbfc04f7ee5198
-Linux32-MD5Sum: 7e71f9a73be06f1875d63581bd89e43e
-Win64-MD5Sum: e7bb9d713c7dcd1b3e0b2ed0a2d9089e
-Linux64-MD5Sum: 15c8b3ff8f63b2647a6d0a98d42c739e
+0.9.1 build 1
+Win32-MD5Sum: 8e8b0b83d5213fdf8065e155ec289ba1
+Linux32-MD5Sum: 6d1f3f371387cb8f20e1e00b3d746f35
+Win64-MD5Sum: 6edb0fde4fcc0ddfaf560c41bcaa60e1
+Linux64-MD5Sum: 5e59bda9a7420a6a8ec5ac80b35eb8e2
 -----------------------------------------------
                  GetControl
  Tool for collecting information about 
@@ -14,6 +14,10 @@ Linux64-MD5Sum: 15c8b3ff8f63b2647a6d0a98d42c739e
  Compiled with CT 8.5
  
 - all suggestions are welcomed at prema@email.cz
+-----------------------------------------------
+13/02/2025 0.9.1 build 1
+- After the FP update to v8.2, the file name structure changed. Now, GC should read old and
+  new file names correctly.
 -----------------------------------------------
 13/02/2025 0.9.0 build 1
 - All the non-FP icons remade for better contrast

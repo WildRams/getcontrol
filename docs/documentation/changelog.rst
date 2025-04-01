@@ -10,6 +10,12 @@ All suggestions are welcomed at prema@email.cz
 Version 0.9
 ^^^^^^^^^^^
 
+Version 0.9.1 build 1
+-----------------------------------------------
+:Date: 01/04/2025
+
+- After the FP update to v8.2, the file name structure changed. Now, GC should read old and new file names correctly.
+
 Version 0.9.0 build 1
 -----------------------------------------------
 :Date: 14/02/2025

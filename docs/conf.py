@@ -21,7 +21,7 @@ project = 'GetControl'
 author = 'Přemysl (Premek) Beran'
 copyright = '2011-2025, WildRam'
 
-version = '0.9.0.1'
+version = '0.9.1.1'
 release = version
 
 language = 'en'
@@ -53,8 +53,6 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 suppress_warnings = ['image.nonlocal_uri']
 
 numfig = False
-pygments_style = "pastie"
-pygments_dark_style = "dracula"
 
 show_authors = True
 
@@ -64,10 +62,10 @@ show_authors = True
 release_pattern_url = 'https://github.com/wildrams/getcontrol/releases/tag/v{release}/'
 releases = [
     release,
-    '0.8.0.1'
+    '0.9.0.1',
+    '0.8.0.1',
     '0.7.2.1',
-    '0.7.1.1',
-    '0.7.0.1'
+    '0.7.1.1'
 ]
 
 html_context = {}
@@ -80,12 +78,15 @@ html_theme_options = {
     "documentation_font": "Open Sans",
     "documentation_font_size": "1.0rem",
     "monospace_font": "Ubuntu Mono",
-    "monospace_font_size": "1.1rem",
+    "monospace_font_size": "1.0rem",
 
     "style": "blue",
 
     "logo": "img/getcontrol.svg",
     "logo_alt": "GetControl",
+
+    "pygments_light_style": "pastie",
+    "pygments_dark_style": "dracula",
 
     "repository_url": "https://github.com/wildrams/getcontrol",
     "repository_name": "wildrams/getcontrol",
@@ -94,6 +95,12 @@ html_theme_options = {
     "versions": [
         ("v%s" % item, release_pattern_url.format(release=item))
         for item in releases
+    ],
+
+    'header_links': [
+        {'text': 'Home', 'link': 'index'},
+        {'text': 'Documentation', 'link': 'documentation/introduction'},
+        {'text': 'What is new','link': 'documentation/changelog'},
     ],
 
     "footer_links": [
