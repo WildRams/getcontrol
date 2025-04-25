@@ -10,6 +10,13 @@ All suggestions are welcomed at prema@email.cz
 Version 0.9
 ^^^^^^^^^^^
 
+Version 0.9.1 build 2
+-----------------------------------------------
+:Date: 25/04/2025
+
+- After the last update and change of FP file names, the *.sub files were not loaded, now corrected
+- Opening of *.mic files via the submenu in the bottom toolbar was not working when using FP version < 8.2
+
 Version 0.9.1 build 1
 -----------------------------------------------
 :Date: 01/04/2025

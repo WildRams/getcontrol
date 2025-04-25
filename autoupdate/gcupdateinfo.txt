@@ -1,8 +1,8 @@
-0.9.1 build 1
-Win32-MD5Sum: 8e8b0b83d5213fdf8065e155ec289ba1
-Linux32-MD5Sum: 6d1f3f371387cb8f20e1e00b3d746f35
-Win64-MD5Sum: 6edb0fde4fcc0ddfaf560c41bcaa60e1
-Linux64-MD5Sum: 5e59bda9a7420a6a8ec5ac80b35eb8e2
+0.9.1 build 2
+Win32-MD5Sum: b278897ccd6e493b2d10778edf1369a6
+Linux32-MD5Sum: 4f63a2aeed6d861b365d97932f867d8c
+Win64-MD5Sum: 7b08eee0ad71869eafa39e6c0f96227d
+Linux64-MD5Sum: ecb5146b0686ff822dc441716550c785
 -----------------------------------------------
                  GetControl
  Tool for collecting information about 
@@ -14,6 +14,10 @@ Linux64-MD5Sum: 5e59bda9a7420a6a8ec5ac80b35eb8e2
  Compiled with CT 8.5
  
 - all suggestions are welcomed at prema@email.cz
+-----------------------------------------------
+25/04/2025 0.9.1 build 2
+- After the last update and change of FP file names, the *.sub files were not loaded, now corrected
+- Opening of *.mic files via the submenu in the bottom toolbar was not working when using FP version < 8.2
 -----------------------------------------------
 13/02/2025 0.9.1 build 1
 - After the FP update to v8.2, the file name structure changed. Now, GC should read old and
