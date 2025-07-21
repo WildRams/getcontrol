@@ -81,6 +81,13 @@ Most of the **Menu** items have their corresponding **Toolbar** buttons. Below i
     * ``Editor`` (Ctrl(⌘)+E)
         It opens the internal :ref:`Editor<Editor>` or external (see :ref:`Pref->General <General setup>` setup tab) editor.
 
+    .. image:: ./svg/toggle-editor.png
+        :align: left
+        :width: 20px
+
+    * ``Toggle Form/Editor View`` (F12)
+        Switch between **Main** and **Editor** form. The same button functionality you will find on the **Editor** form.
+
     .. image:: ./svg/GetControl.png
         :align: left
         :width: 20px

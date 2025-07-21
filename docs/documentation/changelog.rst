@@ -10,12 +10,21 @@ All suggestions are welcomed at prema@email.cz
 Version 0.9
 ^^^^^^^^^^^
 
+Version 0.9.2 build 1
+-----------------------------------------------
+:Date: 21/07/2025
+
+- Added toggle button on the main and editor form to be able to switch between those forms (shortcut F12).
+  It is useful when working in fullscreen mode. The editor form doesn't need to be closed when you launch FP.
+- Extraction (or calculation when only PCR available) of the unit cell volume added. Value listed below cell parameters.
+- Single-crystal PCR can be read, but reading of the PRF file is not yet implemented.
+
 Version 0.9.1 build 2
 -----------------------------------------------
 :Date: 25/04/2025
 
-- After the last update and change of FP file names, the *.sub files were not loaded, now corrected
-- Opening of *.mic files via the submenu in the bottom toolbar was not working when using FP version < 8.2
+- After the last update and change of FP file names, the `*`.sub files were not loaded, now corrected
+- Opening of `*`.mic files via the submenu in the bottom toolbar was not working when using FP version < 8.2
 
 Version 0.9.1 build 1
 -----------------------------------------------
