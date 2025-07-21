@@ -10,6 +10,13 @@ All suggestions are welcomed at prema@email.cz
 Version 0.9
 ^^^^^^^^^^^
 
+Version 0.9.2 build 4
+-----------------------------------------------
+:Date: 21/07/2025
+
+- Update form shows up during launch. Now corrected.
+- Version comparison issue now corrected.
+
 Version 0.9.2 build 3
 -----------------------------------------------
 :Date: 21/07/2025
