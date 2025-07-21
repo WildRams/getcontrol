@@ -77,7 +77,7 @@ html_theme = "sphinx_nefertiti"
 html_theme_options = {
     "documentation_font": "Open Sans",
     "documentation_font_size": "1.0rem",
-    "monospace_font": "Ubuntu Mono",
+    "monospace_font": "Andale Mono",
     "monospace_font_size": "1.0rem",
 
     "style": "blue",
