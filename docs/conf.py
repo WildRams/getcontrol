@@ -21,7 +21,7 @@ project = 'GetControl'
 author = 'Přemysl (Premek) Beran'
 copyright = '2011-2025, WildRam'
 
-version = '0.9.2.1'
+version = '0.9.2.3'
 release = version
 
 language = 'en'

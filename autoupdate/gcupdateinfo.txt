@@ -1,8 +1,8 @@
-0.9.2 build 1
-Win32-MD5Sum: 345efd6cab270f23f92b410d7a111fb4
-Linux32-MD5Sum: d1fe53a1379877e313b5e5649452301d
-Win64-MD5Sum: a17334407835dce5889e7c7afdc698ac
-Linux64-MD5Sum: d7e25ec0a6af08d025a504505a473ded
+0.9.2 build 3
+Win32-MD5Sum: d74fd1ae282abd9a78efd570ded1554e
+Linux32-MD5Sum: 3244653ac08ffed62ca32b3b4be75813
+Win64-MD5Sum: fbbe49261ef6caefde2d8ae698bdc52d
+Linux64-MD5Sum: 1d213d3242a386ad758626d134a88682
 -----------------------------------------------
                  GetControl
  Tool for collecting information about 
@@ -15,7 +15,7 @@ Linux64-MD5Sum: d7e25ec0a6af08d025a504505a473ded
  
 - all suggestions are welcomed at prema@email.cz
 -----------------------------------------------
-21/07/2025 0.9.2 build 1
+21/07/2025 0.9.2 build 3
 - Added toggle button on the main and editor form to be able to switch between those forms (shortcut F12).
   It is useful when working in fullscreen mode. The editor form doesn't need to be closed when you launch FP.
 - Extraction (or calculation when only PCR available) of the unit cell volume added. Value listed below cell parameters.
