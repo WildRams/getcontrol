@@ -1,0 +1,1680 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    
+    <meta name="docsearch:name" content="GetControl" />
+    <meta name="docsearch:package_type" content="" />
+    <meta name="docsearch:release" content="0.9.3.1" />
+    <meta name="docsearch:version" content="0.9.3.1" />
+    
+      <meta name="theme-color" content="#0D6EFD" />
+    
+    
+      <title>What is news &mdash; GetControl 0.9.3.1 documentation</title>
+    
+    <link rel="canonical" href="documentation/changelog" />
+      <link rel="icon" href="../_static/favicon.ico" />
+          <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8e8a900e" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/sphinx-nefertiti-blue.min.css?v=6eb1378b" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/fonts/nunito/stylesheet.css?v=abf98f06" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/fonts/open-sans/stylesheet.css?v=8129c031" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/pygments-dark.css?v=f21207c5" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/pygments-light.css?v=6c104457" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/bootstrap-icons.min.css?v=44730005" /><!-- add (1) -->
+        <link rel="index" title="Index" href="../genindex.html" />
+        <link rel="search" title="Search" href="../search.html" />
+        <link rel="top" title="GetControl 0.9.3.1 documentation" href="#" />
+        <link rel="next" title="The strain refinement" href="../fptricks/strain.html" />
+        <link rel="prev" title="SXY and MIC plotters" href="plotters.html" />
+    <style>
+      :root {
+        --nftt-body-font-family: "Nunito", var(--nftt-font-sans-serif) !important;
+        --nftt-font-monospace: "Andale Mono", var(--nftt-font-family-monospace) !important;
+        --nftt-project-name-font: var(--nftt-body-font-family);
+        --nftt-documentation-font: "Open Sans", var(--nftt-body-font-family);
+        --nftt-doc-headers-font: "Georgia", var(--nftt-documentation-font);--nftt-documentation-font-size: 1.0rem;--nftt-monospace-font-size: 1.0rem;}
+
+      h1 *,
+      h2 *,
+      h3 *,
+      h4 *,
+      h5 *,
+      h6 * {
+        font-size: inherit;
+      }
+
+      .light pre,
+      .dark pre {
+        line-height: var(--nftt-pre-line-height, 140%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="back-to-top-container" class="position-fixed start-50 translate-middle-x">
+      <button id="back-to-top" type="button" class="d-none btn btn-neutral btn-sm shadow px-4" data-bs-toggle="button">Back to top</button>
+    </div>
+    <header id="snftt-nav-bar" class="navbar navbar-expand-xl navbar-dark nftt-navbar flex-column fixed-top">
+      <div class="skip-links container-fluid visually-hidden-focusable overflow-hidden justify-content-start flex-grow-1">
+        <div class="border-bottom mb-2 pb-2 w-100">
+          <a class="d-none d-md-inline-flex p-2 m-1" href="#sidebar-filter">Skip to index filter</a>
+          <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
+        </div>
+      </div>
+      <nav class="container-xxl nftt-gutter flex-nowrap" aria-label="Main navigation">
+        <div class="nftt-navbar-toggler">
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-label="Toggle documentation navigation">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+          <a
+            href="../index.html"
+            class="navbar-brand"
+          >
+            <img src="../_static/img/getcontrol.svg" width="35" height="35" alt="GetControl"
+              class="project-logo"
+            />
+            <span class="brand-text">GetControl</span><span class="brand-short-text">GetControl</span>
+          </a>
+        
+        
+          <ul class="nftt-header-links-large navbar-nav">
+          
+            
+            
+            
+            
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="../index.html" data-snftt-hl-id="1" >Home</a>
+    </li>
+  
+
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="introduction.html" data-snftt-hl-id="2" >Documentation</a>
+    </li>
+  
+
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="#" data-snftt-hl-id="3" >What is new</a>
+    </li>
+  
+
+          
+          </ul>
+        
+        <div class="d-flex d-xl-none">
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#nfttSearch" aria-controls="nfttSearch" aria-label="Search">
+            <i class="bi bi-search"></i>
+          </button>
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#nfttNavbar" aria-controls="nfttNavbar" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+        </div>
+        
+<div class="offcanvas-xl offcanvas-end flex-grow-1" tabindex="-1" id="nfttSearch" aria-labelledby="nfttSearchOffcanvasLabel" data-bs-scroll="true">
+  <div class="offcanvas-header px-4 pb-0">
+    <h5 class="offcanvas-title fw-bold" id="nfttSearchOffcanvasLabel">Search the documentation</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#nfttSearch"></button>
+  </div>
+  <div class="offcanvas-body p-4 pt-0 p-xl-0 ps-xl-4">
+    <hr class="d-xl-none text-white-50">
+    <ul class="navbar-nav flex-row align-items-center flex-wrap ms-md-auto">
+      <li class="nav-item col-12 col-xl-auto">
+        <form id="nftt-search-form" action="../search.html" method="get">
+          <div class="input-group">
+            <input type="text" name="q" class="form-control search-input" placeholder="Search" aria-label="Search" aria-describedby="button-search">
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+            <button class="btn btn-primary" type="submit" id="button-search" aria-label="Search"><i class="bi bi-search"></i></button>
+          </div>
+        </form>
+      </li>
+    </ul>
+  </div>
+</div>
+
+        <div class="offcanvas-xl offcanvas-end" tabindex="-1" id="nfttNavbar" aria-labelledby="nfttNavbarOffcanvasLabel" data-bs-scroll="true">
+          <div class="offcanvas-header px-4 pb-0">
+            <div class="offcanvas-title navbar-brand" id="nfttNavbarOffcanvasLabel"><span class="brand-short-text">GetControl</span></div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#nfttNavbar"></button>
+          </div>
+          <div class="offcanvas-body p-4 pt-0 p-xl-0 px-xl-3">
+            <hr class="d-xl-none text-white-50">
+            <ul class="navbar-nav flex-row align-items-center flex-wrap ms-lg-auto">
+              
+                <div class="nftt-header-links-small">
+                  
+                    
+                    
+                    
+                    <div class="d-inline-block">
+                      
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="../index.html" data-snftt-hl-id="1" >Home</a>
+    </li>
+  
+
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="introduction.html" data-snftt-hl-id="2" >Documentation</a>
+    </li>
+  
+
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="#" data-snftt-hl-id="3" >What is new</a>
+    </li>
+  
+
+                    </div>
+                  
+                  <li class="nav-item col-12 col-xl-auto h-100" aria-hidden="true">
+                    <div class="vr d-none d-xl-flex h-100 mx-xl-2 text-white-50"></div>
+                    <hr class="d-xl-none text-white-50">
+                  </li>
+                </div>
+              
+              
+              <li class="nav-item col-12 col-xl-auto">
+                <a class="nav-link py-2 py-xl-0 px-0 px-xl-2" href="https://github.com/wildrams/getcontrol" target="_blank" rel="noopener">
+                  <div class="d-flex align-items-center">
+                    <div class="me-2">
+                      <i class="bi bi-git size-24"></i>
+                    </div>
+                    <div class="repo d-flex flex-column align-items-center" data-snftt-repo-url="https://github.com/wildrams/getcontrol">
+                      wildrams/getcontrol
+                      <div class="d-flex justify-content-center" data-snftt-repo-metrics>
+                        <span class="pe-2 d-flex justify-content-center align-items-center">
+                          <i class="bi bi-tag size-14"></i>
+                          <span class="repo-metric" data-snftt-repo-tag></span>
+                        </span>
+                        <span class="pe-2 d-flex justify-content-center align-items-center">
+                          <i class="bi bi-star size-14"></i>
+                          <span class="repo-metric" data-snftt-repo-stars></span>
+                        </span>
+                        <span class="d-flex justify-content-center align-items-center">
+                          <i class="bi bi-diagram-2 size-14"></i>
+                          <span class="repo-metric" data-snftt-repo-forks></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item col-12 col-xl-auto h-100" aria-hidden="true">
+                <div class="vr d-none d-xl-flex h-100 mx-xl-2 text-white-50"></div>
+                <hr class="d-xl-none text-white-50">
+              </li>
+              
+              
+  <li class="nav-item dropdown">
+    <a class="nav-link d-flex py-2 px-0 px-xl-2 dropdown-toggle align-items-center" id="snftt-version" href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Select version">
+      <span id="snftt-version-text" class="d-xl-none">GetControl</span>
+      <span class="ms-2" data-snftt-version-active="v0.9.3.1">v0.9.3.1</span>
+    </a>
+    
+    <ul class="dropdown-menu dropdown-menu-end dropdown-limit-max-height" aria-labelledby="snftt-version-text" id="versions-dropdown-menu">
+      <li>
+        <h6 class="dropdown-header">Versions</h6>
+      </li>
+    </ul>
+  </li>
+  <li class="nav-item col-12 col-xl-auto h-100" aria-hidden="true">
+    <div class="vr d-none d-xl-flex h-100 mx-xl-2 text-white-50"></div>
+    <hr class="d-xl-none text-white-50">
+  </li>
+
+              
+              
+              <!-- lightdark-dropdown.html -->
+<li class="nav-item dropdown">
+  <a class="nav-link d-flex py-2 px-0 px-xl-2 dropdown-toggle align-items-center" id="snftt-luz" href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Change appearance">
+    <i class="bi bi-circle-half" data-snftt-luz-icon-active></i>
+    <span id="snftt-luz-text" class="d-xl-none ms-2">Change appearance</span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="snftt-luz-text">
+    <li>
+      <h6 class="dropdown-header">Change appearance</h6>
+    </li>
+    <li>
+      <a class="dropdown-item d-flex align-items-center" data-snftt-luz="light" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-sun" data-snftt-luz-icon="light"></i>
+        </span>
+        <span class="ms-3">Light</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item d-flex align-items-center" data-snftt-luz="dark" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-moon-stars" data-snftt-luz-icon="dark"></i>
+        </span>
+        <span class="ms-3">Dark</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item current d-flex align-items-center" data-snftt-luz="default" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-circle-half" data-snftt-luz-icon="default"></i>
+        </span>
+        <span class="ms-3">Automatic</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+  </ul>
+</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    </header>
+
+    <div class="container-fluid flex-grow-1">
+      <div class="nftt-gutter nftt-page">
+        <aside class="nftt-sidebar ">
+          <div class="nftt-sidebar-content">
+            
+            <div class="title d-none d-xl-block">
+              <i class="bi bi-book"></i>&nbsp;&nbsp;<span>Index</span>
+            </div>
+            <div id="sidebar" tabindex="-1" class="offcanvas-xl offcanvas-start" aria-labelledby="nfttSidebarOffcanvasLabel">
+                <!-- sidebartemplate: "globaltoc.html" --><div class="offcanvas-header border-bottom">
+  <h5 class="offcanvas-title fw-bold" id="nfttSidebarOffcanvasLabel">
+    Index
+  </h5>
+  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#sidebar"></button>
+</div>
+
+<div class="offcanvas-body">
+  <nav class="toc" aria-label="Main menu">
+    <div class="mb-3 p-1 pt-3 pb-4 border-bottom">
+      <input id="sidebar-filter" type="text" name="filter" class="form-control form-control-sm" placeholder="index filter" aria-label="index filter">
+    </div>
+    <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mainform.html">Main form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences.html">Preferences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editor.html">Internal editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotters.html">SXY and MIC plotters</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">What is news</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FullProf Tricks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fptricks/strain.html">The strain refinement</a></li>
+</ul>
+
+  </nav>
+  <template data-toggle-item-template>
+    <button class="btn btn-sm btn-link toctree-expand" type="button">
+      <i class="bi bi-caret-right"></i>
+      <span class="visually-hidden">Toggle menu contents</span>
+    </button>
+  </template>
+</div>
+            </div>
+            
+          </div>
+        </aside>
+        <article id="content" class="nftt-content" role="main">
+          <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../index.html">Start</a></li>
+    <li class="breadcrumb-item active" aria-current="page">What is news</li>
+  </ol>
+</nav>
+    <section id="what-is-news">
+<span id="whatisnew"></span><h1>What is news<a class="headerlink" href="#what-is-news" title="Link to this heading">¶</a></h1>
+<p>Compiled with <a class="reference external" href="https://www.pilotlogic.com">CT</a> 8.7</p>
+<p>All suggestions are welcomed at <a class="reference external" href="mailto:prema&#37;&#52;&#48;email&#46;cz">prema<span>&#64;</span>email<span>&#46;</span>cz</a></p>
+<section id="version-0-9">
+<h2>Version 0.9<a class="headerlink" href="#version-0-9" title="Link to this heading">¶</a></h2>
+<section id="version-0-9-3-build-1">
+<h3>Version 0.9.3 build 1<a class="headerlink" href="#version-0-9-3-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>29/08/2025</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>Slider for size changing the file list not visible (macOS) corrected.</p></li>
+<li><p>Python command editors (SXY and MIC) wrongly formatted command line when editor was updated manually, now corrected.</p></li>
+<li><p>Corrected wrong reading space group info when using modes Jbt=±6.</p></li>
+<li><p>Corrected not reading and showing HKL info on the chart for Jbt=±6.</p></li>
+<li><p>When using the COMMANDS block, the phase name is read correctly now.</p></li>
+<li><p>New option in Preferences-&gt;Colors/layout tab, you can select if the phase colour will be used for font face colour
+or background (default). (Suggested by Denis)</p></li>
+</ul>
+</section>
+<section id="version-0-9-2-build-4">
+<h3>Version 0.9.2 build 4<a class="headerlink" href="#version-0-9-2-build-4" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>21/07/2025</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>Update form shows up during launch. Now corrected.</p></li>
+<li><p>Version comparison issue now corrected.</p></li>
+</ul>
+</section>
+<section id="version-0-9-2-build-3">
+<h3>Version 0.9.2 build 3<a class="headerlink" href="#version-0-9-2-build-3" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>21/07/2025</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>Added toggle button on the main and editor form to be able to switch between those forms (shortcut F12).
+It is useful when working in fullscreen mode. The editor form doesn’t need to be closed when you launch FP.</p></li>
+<li><p>Extraction (or calculation when only PCR available) of the unit cell volume added. Value listed below cell parameters.</p></li>
+<li><p>Single-crystal PCR can be read, but reading of the PRF file is not yet implemented.</p></li>
+</ul>
+</section>
+<section id="version-0-9-1-build-2">
+<h3>Version 0.9.1 build 2<a class="headerlink" href="#version-0-9-1-build-2" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>25/04/2025</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>After the last update and change of FP file names, the <cite>*</cite>.sub files were not loaded, now corrected</p></li>
+<li><p>Opening of <cite>*</cite>.mic files via the submenu in the bottom toolbar was not working when using FP version &lt; 8.2</p></li>
+</ul>
+</section>
+<section id="version-0-9-1-build-1">
+<h3>Version 0.9.1 build 1<a class="headerlink" href="#version-0-9-1-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>01/04/2025</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>After the FP update to v8.2, the file name structure changed. Now, GC should read old and new file names correctly.</p></li>
+</ul>
+</section>
+<section id="version-0-9-0-build-1">
+<h3>Version 0.9.0 build 1<a class="headerlink" href="#version-0-9-0-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>14/02/2025</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>All the non-FP icons remade for better contrast</p></li>
+<li><p>Lots of internal process and layout updates</p></li>
+<li><p>In the FP tools buttons, added the button to launch the FP toolbar</p></li>
+<li><p>The button for launching the terminal was added to the toolbar</p></li>
+<li><p>When opening the directory, the files starting with “._” are filtered out now</p></li>
+<li><p>Autocompletion function to insert additional code lines in the internal editor added (Ctrl+Space)</p></li>
+</ul>
+</section>
+</section>
+<section id="version-0-8">
+<h2>Version 0.8<a class="headerlink" href="#version-0-8" title="Link to this heading">¶</a></h2>
+<section id="version-0-8-0-build-2">
+<h3>Version 0.8.0 build 2<a class="headerlink" href="#version-0-8-0-build-2" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>20/03/2024</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>The old PCR format created out of the DICVOL program was not read properly; now corrected (thanks, Stefan, for reporting)</p></li>
+<li><p>Creating “cryscalc” input file via CC was not working when there were no atoms in the phase; not corrected</p></li>
+<li><p>Some minor adjustments to the layout</p></li>
+<li><p>First draft of documentation published on <a class="reference external" href="https://wildrams.github.io/getcontrol/">https://wildrams.github.io/getcontrol/</a> (link added in the About form)</p></li>
+</ul>
+</section>
+<section id="version-0-8-0-build-1">
+<h3>Version 0.8.0 build 1<a class="headerlink" href="#version-0-8-0-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>28/02/2024</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>Updated the Python scripts (SXY and MIC plotter) to use UTF8 charset</p></li>
+<li><p>Not possible to change the axes title is corrected</p></li>
+<li><p>Corrected the wrong formatting of the edited hints file</p></li>
+<li><p>Some improvements of the FP hints strings</p></li>
+<li><p>Corrected wrong reading of the atomic parameters when using atomic types with negative signs
+(ex. O-2); thanks, Stefan, for reporting</p></li>
+<li><p>Changed the colours for the MIC tab for better visibility; it is possible to reset the marks’ colour</p></li>
+<li><p>The font of the FP hints is set to one with the fixed pitch for better formatting</p></li>
+<li><p>Added an extraction of the negative FWHM points from ‘*’.out file; the list of points is shown
+at the “Refinement summary” tab at the end (folding is available)</p></li>
+<li><p>Added the site fraction (0-1 notation) for each atom (suggested by Stefan); useful when not the full site
+or mixed-site occupancy</p></li>
+<li><p>Double-click on the <cite>*</cite>.PCR file in the list opens the PCR file in an editor (suggested by Vitalii)</p></li>
+<li><p>When you provide the number of formula units on the line with the phase title, GC can calculate the composition
+based on the chemical formula, not by the unit cell; put “Z=x” where x is your formula unit number; this will not
+affect the FP refinement or VARY and FIX commands; for example: My new phase Z=4 VARY xyz FIX b; note capital Z</p></li>
+<li><p>A link to the license was added to the About form</p></li>
+</ul>
+</section>
+</section>
+<section id="version-0-7">
+<h2>Version 0.7<a class="headerlink" href="#version-0-7" title="Link to this heading">¶</a></h2>
+<section id="version-0-7-2-build-2">
+<h3>Version 0.7.2 build 2<a class="headerlink" href="#version-0-7-2-build-2" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>01/08/2023</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>Ctrl+T (open terminal) shortcut didn’t work when the cursor in editors now corrected</p></li>
+<li><p>Splitter position not correctly recovered when in high-DPI now corrected</p></li>
+<li><p>In Preferences, the tab Colour schema was renamed Colour/layout. You can adjust the size of the button and menu
+icons (normal/medium/large) and also the font size for all hints (useful for long FP hints in high-DPI).</p></li>
+</ul>
+</section>
+<section id="version-0-7-2-build-1">
+<h3>Version 0.7.2 build 1<a class="headerlink" href="#version-0-7-2-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>24/07/2023</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>New bottom toolbar was added to access the “cryscalc” tool (CC). First, you create a <cite>*`_cc_`*</cite>.cfl file, which can
+be edited, and then you launch it, and the result file (<cite>*</cite>.cci) is automatically opened. Some more hits for
+cryscalc are shown. The file can be modified as necessary. Cryscalc can be launched directly from
+the internal editor when <cite>*`_cc_`*</cite>.cfl file is active.</p></li>
+<li><p>Open terminal in the working directory menu was added to the Tools menu</p></li>
+<li><p>Open COD (Crystallographic Open Database) link was added to the Tools menu</p></li>
+<li><p>Mouse position info now shows when over the WH plot</p></li>
+<li><p>Some small improvements in the script hints and layout</p></li>
+</ul>
+</section>
+<section id="version-0-7-1-build-1">
+<h3>Version 0.7.1 build 1<a class="headerlink" href="#version-0-7-1-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>10/07/2023</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>wrong pattern plotting by the SXY plotter in the multi-pattern mode in some
+particular settings was corrected</p></li>
+<li><p>when backing up the structure, the Dysnomia outputs were copied wrongly, now corrected</p></li>
+<li><p>Microstructure plotter (Python script) was added. It can be accessed by the Export menu.
+The form is similar to the SXY plotter one. The script can be adapted if necessary.</p></li>
+<li><p>update of the SXY plotter script</p></li>
+<li><p>better identification of the terminal application on Linux (used in Python script export)</p></li>
+<li><p>a lot of small enhancements in the layout</p></li>
+</ul>
+</section>
+<section id="version-0-7-0-build-1">
+<h3>Version 0.7.0 build 1<a class="headerlink" href="#version-0-7-0-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>06/02/2023</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>X-axis reset from Q or d to Theta/TOF after the change of the PCR file corrected</p></li>
+<li><p>errors for C4-C6 were not read - corrected</p></li>
+<li><p>update of the export to the SXY file when there is no pattern contribution, now the Python SXY-plotter
+should show all patterns even if some phases don’t contribute.</p></li>
+<li><p>some update in the summary info when magnetic phases are used</p></li>
+<li><p>the project was moved to Github as there will be disruption of the old server for external users</p></li>
+<li><p>update the Linux and Windows updater to version 0.3.1.1</p></li>
+</ul>
+</section>
+</section>
+<section id="version-0-6">
+<h2>Version 0.6<a class="headerlink" href="#version-0-6" title="Link to this heading">¶</a></h2>
+<section id="version-0-6-2-build-2">
+<h3>Version 0.6.2 build 2<a class="headerlink" href="#version-0-6-2-build-2" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>06/02/2023</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>wrong read of the big negative hkl indexes from PRF (example “-14-10  5”) is corrected</p></li>
+<li><p>ad-hoc signature of macOS bundle</p></li>
+<li><p>some small improvement in FP hints</p></li>
+</ul>
+</section>
+<section id="version-0-6-2-build-1">
+<h3>Version 0.6.2 build 1<a class="headerlink" href="#version-0-6-2-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>06/02/2023</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>improvement of the Drag&amp;Drop in PCR list (dragged file stays in focus)</p></li>
+<li><p>open the Linux terminal in the Python export should work now</p></li>
+<li><p>Bragg highlighter works on all platforms; some settings added to the preferences</p></li>
+<li><p>Linux about form show now the full description</p></li>
+<li><p>in About form, the link to the download web page was added</p></li>
+<li><p>better extraction of the information about the magnetic space group</p></li>
+<li><p>phase name was not properly shown when COMMANDS were used</p></li>
+<li><p>some more improvements in the background extraction functions</p></li>
+</ul>
+</section>
+<section id="version-0-6-1-build-1">
+<h3>Version 0.6.1 build 1<a class="headerlink" href="#version-0-6-1-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>11/11/2022</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>multi-pattern TOF PCR loaded wrongly Dtt1 and Dtt2 parameters for Pattern#1 and Pattern#2,
+the other patterns were not affected; this error is now corrected (thanks, Johan, for reporting)</p></li>
+<li><p>update of the editor FP hints</p></li>
+<li><p>for Jbt=10 the magnetic and nuclear R-factors are read from <cite>*</cite>.out file instead of <cite>*</cite>.sum</p></li>
+<li><p>when Dysnomia is created, the additional <cite>*</cite>.vesta file combining both the density map and
+CIF file is created, accessible through the Dysnomia menu (Density map with structure)</p></li>
+<li><p>microstructure information is read from the <cite>*</cite>.mic file written in the Profile tab</p></li>
+<li><p>if the microstructure model is used, the Williamson-Hall plot is shown in the new tab,
+some more info and adjustments can be made on the new tab; the tab is visible only when there is
+none-zero microstructure</p></li>
+</ul>
+</section>
+</section>
+<section id="version-0-5">
+<h2>Version 0.5<a class="headerlink" href="#version-0-5" title="Link to this heading">¶</a></h2>
+<section id="version-0-5-1-build-2">
+<h3>Version 0.5.1 build 2<a class="headerlink" href="#version-0-5-1-build-2" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>22/09/2022</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>shortcuts for a jump to phases in Editor form updated to Alt+1-9 (some collisions found for F-keys)</p></li>
+<li><p>shortcut for FullProf manual changed on Wind/Linux to Ctrl+Shift+M (Ctrl+M is for measuring tool)</p></li>
+<li><p>conversion to Q and d for TOF data didn’t work when not IRF used and Fp version &gt; 7.30; now
+it should be corrected, but some more tests will be in the future (thanks Johan for reporting)</p></li>
+</ul>
+</section>
+<section id="version-0-5-1-build-1">
+<h3>Version 0.5.1 build 1<a class="headerlink" href="#version-0-5-1-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>14/09/2022</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>folding in the information tabs was added to handle long lists better</p></li>
+<li><p>the position of the cursor and the folding are preserved for reloading on the same CPR</p></li>
+<li><p>separation lines in the phase info tab were replaced because they are not visible on all OSs the same way</p></li>
+<li><p>some minor updates in the layout and reading process</p></li>
+</ul>
+</section>
+<section id="version-0-5-0-build-1">
+<h3>Version 0.5.0 build 1<a class="headerlink" href="#version-0-5-0-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>22/04/2022</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>update server changed to HTTPS, error during auto-update, added OpenSSL 1.1.1m libraries
+to executables (Win, Linux) and the bundle (macOS), now the update should work again</p></li>
+<li><p>when reloading the directory and an error occurred, the old PCR was still loaded - corrected</p></li>
+<li><p>propagation vector/composition of value 2/3 was shown as 0.2 - corrected</p></li>
+<li><p>adjustment of SySin systematic shift for the phase contributions was wrong in some cases - corrected</p></li>
+<li><p>in some cases, the conversion to Q for multidetector TOF didn’t work properly - corrected</p></li>
+<li><p>not possible to select FP path on macOS - corrected</p></li>
+<li><p>Shortcut for a jump to phases in Editor form updated to Alt+F1-F12 (it collided with MainForm tab change)</p></li>
+<li><p>some adjustments for dark mode on macOS and Linux (on Windows still doesn’t work)</p></li>
+<li><p>wrong phase name jump menu in Editor for multipattern files corrected</p></li>
+<li><p>some layout improvements</p></li>
+<li><p>new measurement tool added (Ctrl+M)</p></li>
+<li><p>update of the FP hints</p></li>
+</ul>
+</section>
+</section>
+<section id="version-0-4">
+<h2>Version 0.4<a class="headerlink" href="#version-0-4" title="Link to this heading">¶</a></h2>
+<section id="version-0-4-9-build-1">
+<h3>Version 0.4.9 build 1<a class="headerlink" href="#version-0-4-9-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>15/11/2021</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>updated the Python sxy-plotter script to better handle the PCRs with Jbt=±10 + some updates for Python compatibility</p></li>
+<li><p>new default colour schema (need reset in Setup if you want to update), which works better in dark theme</p></li>
+<li><p>the chart and series lines thickness adjusted based on DPI, should look better on HiDPI screens (test and report)</p></li>
+<li><p>better description of the magnetic contributions, extraction of the propagations vectors and print on the phase info tab</p></li>
+<li><p>some update on the phase info tab</p></li>
+<li><p>export menu also added to the main menu for better visibility</p></li>
+<li><p>updated FullProf hints</p></li>
+<li><p>in Editor added some new buttons for folding and unfolding and jumping to the phase info for PCR files</p></li>
+<li><p>updated reload function, which should keep the scroll on the page properly now</p></li>
+</ul>
+</section>
+<section id="version-0-4-8-build-2">
+<h3>Version 0.4.8 build 2<a class="headerlink" href="#version-0-4-8-build-2" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>24/10/2021</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>corrected error introduced in 0.4.7.3 when the export to <cite>*</cite>.sxy doesn’t saved Bragg reflections
+and Python plot didn’t work properly (thanks Cecilia for reporting)</p></li>
+</ul>
+</section>
+<section id="version-0-4-8-build-1">
+<h3>Version 0.4.8 build 1<a class="headerlink" href="#version-0-4-8-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>20/10/2021</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>not able to launch on macOS BigSur sorrected (thanks Priyank for report and tests)</p></li>
+<li><p>Update for macOS works now. It downloads GetControl.dgm package which is opened when click Install.
+So you can use drag&amp;drop to Applications as usual. (thanks Priyank for test)</p></li>
+<li><p>in Preferences added link to FullProf and VESTA web sites (same as for Dysnomia)</p></li>
+<li><p>link should work also on Linux now</p></li>
+<li><p>download progress bar during update download should work on Linux now</p></li>
+<li><p>some further minor changes</p></li>
+</ul>
+</section>
+<section id="version-0-4-7-build-3">
+<h3>Version 0.4.7 build 3<a class="headerlink" href="#version-0-4-7-build-3" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>27/09/2021</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>corrected error when Braggs were not loaded when Ycalc=0 in the case of Jbt=10 on Windows systems</p></li>
+</ul>
+</section>
+<section id="version-0-4-7-build-2">
+<h3>Version 0.4.7 build 2<a class="headerlink" href="#version-0-4-7-build-2" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>23/09/2021</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>corrected error when About dialog was initiated</p></li>
+<li><p>corrected error when position of the splitter was not properly handled when scaling was different
+from 100% (thanks Cecilia to report)</p></li>
+</ul>
+</section>
+<section id="version-0-4-7-build-1">
+<h3>Version 0.4.7 build 1<a class="headerlink" href="#version-0-4-7-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>22/09/2021</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>not accessible Setup and Exit menu item are again available (thanks Cecilia for reporting)</p></li>
+<li><p>write Debug Log menu off by default</p></li>
+<li><p>the Bragg hint info in the chart were rewritten and consolidated for better experience</p></li>
+<li><p>Setup renamed to Preferences</p></li>
+<li><p>for macOS the About and Preferences menu are placed as default by system under GetControl menu item</p></li>
+<li><p>some small improvements everywhere</p></li>
+</ul>
+</section>
+<section id="version-0-4-6-build-1">
+<h3>Version 0.4.6 build 1<a class="headerlink" href="#version-0-4-6-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>28/07/2021</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>some minor layout update</p></li>
+<li><p>Editor - added function to run the dummy cycle (set Aut and number of refined parameters to zero) with shortcut
+Shift+F9. It is useful when you manually adjust the parameter and want to see the effect on fitting. The dummy cycle
+is run automatically after.</p></li>
+<li><p>Editor - status of the parameter ‘Aut’ is shown and can be switched on and of by the button. Switching it off
+doesn’t mean directly not refine any parameter. It is useful when after the dummy cycle, you want to switch
+the refinement back on.</p></li>
+<li><p>Editor - removal of the old Chi2 value stored in PCR and used to check if the refinement is better than
+the last one. It can create unnecessary warnings, which can be overcome by deleting the old value.</p></li>
+</ul>
+</section>
+<section id="version-0-4-5-build-5">
+<h3>Version 0.4.5 build 5<a class="headerlink" href="#version-0-4-5-build-5" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>19/04/2021</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>the backup/clone now use ‘-backup’ instead of ‘_bakcup’ as an appendix; there were some interference during the file search</p></li>
+<li><p>the FP news short-cut changed to Alt+Ctrl(command)+M, the FP manual is still Ctrl(command)+M</p></li>
+<li><p>in the internal editor menu ‘Help’ item added when one can access the FP news and manual (short-cut the same as for the main form)</p></li>
+<li><p>updated FP-hints; if someone edited it before using the ‘Special’ menu in the editor, then you need to delete the FP-hints.txt file form
+your config directory to see the new one; if you have made some serious update of the hints and you want to share it
+then drop me an email (thanks)</p></li>
+</ul>
+</section>
+<section id="version-0-4-5-build-4">
+<h3>Version 0.4.5 build 4<a class="headerlink" href="#version-0-4-5-build-4" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>25/03/2021</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>corrected reading of <cite>*</cite>.PCR and <cite>*</cite>.pcr in Linux</p></li>
+<li><p>corrected error when it was not possible to remove external editor from Setup form (thanks to Stefan from FRMII)</p></li>
+<li><p>corrected pattern shift for phase contributions when SySin or SyCos is used</p></li>
+<li><p>increased the number of decimals on 2Theta show bellow the chart from 2 to 4</p></li>
+</ul>
+</section>
+<section id="version-0-4-5-build-3">
+<h3>Version 0.4.5 build 3<a class="headerlink" href="#version-0-4-5-build-3" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>01/03/2021</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>corrected reading of <cite>*</cite>.PCR and <cite>*</cite>.pcr in macOS</p></li>
+<li><p>corrected reading of IRF file when it contains multiple inputs</p></li>
+<li><p>corrected the wrong display of Q and d-spacing below the chart for TOF</p></li>
+</ul>
+</section>
+<section id="version-0-4-5-build-2">
+<h3>Version 0.4.5 build 2<a class="headerlink" href="#version-0-4-5-build-2" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>11/02/2021</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>corrected error of loading the cell parameters in some never version of FP</p></li>
+<li><p>corrected error of copy to clipboard in Python form only a part of the command in Windows</p></li>
+</ul>
+</section>
+<section id="version-0-4-5-build-1">
+<h3>Version 0.4.5 build 1<a class="headerlink" href="#version-0-4-5-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>18/12/2020</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>menu added to editor form</p></li>
+<li><p>editor PCR hints updated, you can edit and update them in Special menu</p></li>
+<li><p>SXY-viewer renamed to SXY-plotter, script export form was update additional parameters can be edited directly in the form</p></li>
+<li><p>some improvement in the sxy-plotter.py script</p></li>
+<li><p>layout of additional files changed, a lot of re-arrangement and improvements</p></li>
+<li><p>JANA support was removed as complicated to maintain all together</p></li>
+<li><p>access to Dysnomia (MEM analysis - use Fou=6) output was added among additional files, launching, editing and viewing sorted by phase</p></li>
+<li><p>the possibility of the launching of the new instance was added in the menu</p></li>
+<li><p>the recent open directories (10) menu and toll button were added a lot of small layout improvements</p></li>
+</ul>
+</section>
+<section id="version-0-4-0-build-2">
+<h3>Version 0.4.0 build 2<a class="headerlink" href="#version-0-4-0-build-2" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>28/09/2020</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>corrected error of saving SXY files under different name and with wrong header</p></li>
+</ul>
+</section>
+<section id="version-0-4-0-build-1">
+<h3>Version 0.4.0 build 1<a class="headerlink" href="#version-0-4-0-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>25/09/2020</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>improvements when launching external applications especially GFourier (report problems)</p></li>
+<li><p>lot of improvements in editor: added simple search tool (F3), hints for some parameters (more will come),
+folding in some places to shorten the long PCR files for editing (it keeps when realod), loading is much faster</p></li>
+<li><p>some layout and extraction improvements for MacOS and Linux</p></li>
+<li><p>many of improvements on layout: HiDPI ready, dark them in Linux and MacOS works quite fine</p></li>
+<li><p>new application main icon and some new icons within the menu</p></li>
+<li><p>Python3 script for plotting of more camera ready charts available in Export menu (any script improvements appreciated)</p></li>
+<li><p>for MacOS version still send email for obtaining new version</p></li>
+</ul>
+</section>
+</section>
+<section id="version-0-3">
+<h2>Version 0.3<a class="headerlink" href="#version-0-3" title="Link to this heading">¶</a></h2>
+<section id="version-0-3-5-build-1">
+<h3>Version 0.3.5 build 1<a class="headerlink" href="#version-0-3-5-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>27/05/2019</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>wrong recalculation to Q and d for TOF using IRF file and D2TOF keyword corrected (thanks Mathias from Arhus Uni. for info)</p></li>
+<li><p>saving of SXY with excluded region shrink the phase contribution was corrected (thanks Mathias from Arhus Uni. for info)</p></li>
+<li><p>description of the magnetic moments using spherical coordinates (Jbt &lt; 0) is now corrected (thanks Mathias from Arhus Uni. for info)</p></li>
+<li><p>in the Setup form (Line chart tab) added option to save the data to SXY also for excluded regions (default is False)</p></li>
+<li><p>some improvements in the layout</p></li>
+<li><p>for MacOS the auto-update still not work (check for new version works), send an email if you need the new version</p></li>
+</ul>
+</section>
+<section id="version-0-3-4-build-1">
+<h3>Version 0.3.4 build 1<a class="headerlink" href="#version-0-3-4-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>16/11/2018</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>added button for quick launch of the MagSymmCal</p></li>
+<li><p>added extraction of the errors for magnetic moments errors from <cite>*</cite>.out file for Jbt=10</p></li>
+<li><p>improvement of error extraction routines</p></li>
+<li><p>Setup menu item was temporarily moved under the File menu item</p></li>
+<li><p>some updates of the layout</p></li>
+<li><p>first compilation for the MacOS, who is interested, please send the email</p></li>
+</ul>
+</section>
+<section id="version-0-3-3-build-2">
+<h3>Version 0.3.3 build 2<a class="headerlink" href="#version-0-3-3-build-2" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>6/11/2017</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>calculation of nuclear contribution for Jbt=10 for TOF again enabled (still not work for more phases)</p></li>
+<li><p>when the PCR is incomplete (as export from SARAh) the load is stopped without error (info shown in status bar)</p></li>
+<li><p>in Help menu added links to FullProf news and Manual (PDF)</p></li>
+</ul>
+</section>
+<section id="version-0-3-3-build-1">
+<h3>Version 0.3.3 build 1<a class="headerlink" href="#version-0-3-3-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3/11/2017</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>added possibility to select custom editor in Setup form</p></li>
+<li><p>in delete and clean up form added option for selecting and deselecting all</p></li>
+<li><p>disabled calculation of nuclear contribution when Jbt=10 for TOF, only magnetic contribution is shown</p></li>
+</ul>
+</section>
+<section id="version-0-3-2-build-3">
+<h3>Version 0.3.2 build 3<a class="headerlink" href="#version-0-3-2-build-3" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3/3/2017</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>wrong reading of Scor parameter when larger than 10 corrected</p></li>
+<li><p>if PCR file is shorter than 10 lines then program crashed - corrected</p></li>
+<li><p>error when empty chart accessed corrected</p></li>
+</ul>
+</section>
+<section id="version-0-3-2-build-2">
+<h3>Version 0.3.2 build 2<a class="headerlink" href="#version-0-3-2-build-2" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>24/2/2017</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>unable to change colour of excluded region corrected</p></li>
+<li><p>no more warnings when CIF path is empty</p></li>
+</ul>
+</section>
+<section id="version-0-3-2-build-1">
+<h3>Version 0.3.2 build 1<a class="headerlink" href="#version-0-3-2-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>24/2/2017</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>open LOG folder button added</p></li>
+<li><p>better extraction of the space group for magnetic phases</p></li>
+<li><p>when save SXY you can select in setup form how to deal with multiple phase Bragg</p></li>
+<li><p>when save XY the <cite>*</cite>.sub files are stored with separate X column for each phase</p></li>
+<li><p>when backup or rename the check for bad characters (<cite>*</cite>, , /) in file name is made; replacement by <cite>_</cite></p></li>
+<li><p>some minor changes in layout</p></li>
+</ul>
+</section>
+<section id="version-0-3-1-build-2">
+<h3>Version 0.3.1 build 2<a class="headerlink" href="#version-0-3-1-build-2" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>20/1/2017</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>corrected error of launching external applications under linux</p></li>
+</ul>
+</section>
+<section id="version-0-3-1-build-1">
+<h3>Version 0.3.1 build 1<a class="headerlink" href="#version-0-3-1-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>20/1/2017</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>corrected thread update check</p></li>
+<li><p>information about LOG file size and clean button added to setup form</p></li>
+<li><p>better handling of extracted error, added option to define error length in setup form</p></li>
+<li><p>composition is rounded to 2 decimals if not refined</p></li>
+<li><p>better handling of errors extraction and formatting</p></li>
+<li><p>tool bar buttons hint are shown in the status bar</p></li>
+<li><p>improved LaTeX and TAB export including also multi-pattern information</p></li>
+<li><p>LaTeX export whole table for each phase</p></li>
+</ul>
+</section>
+<section id="version-0-3-0-build-5">
+<h3>Version 0.3.0 build 5<a class="headerlink" href="#version-0-3-0-build-5" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>25/10/2016</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>corrected error of reading of error of cell parameters form out file</p></li>
+</ul>
+</section>
+<section id="version-0-3-0-build-4">
+<h3>Version 0.3.0 build 4<a class="headerlink" href="#version-0-3-0-build-4" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3/8/2016</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>checking for update procedure in separate thread (not quenching when server not available)</p></li>
+<li><p>error when automatic status of check for updates in setup form was not stored was corrected</p></li>
+</ul>
+</section>
+<section id="version-0-3-0-build-3">
+<h3>Version 0.3.0 build 3<a class="headerlink" href="#version-0-3-0-build-3" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2/8/2016</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>corrected error of file load in editor (additional text from other files was added)</p></li>
+<li><p>adjustment of limits of Y axis when changing Y axis state</p></li>
+<li><p>added plot of magnetic and nuclear contribution when Jbt=10</p></li>
+<li><p>small improvements of layout</p></li>
+</ul>
+</section>
+<section id="version-0-3-0-build-2">
+<h3>Version 0.3.0 build 2<a class="headerlink" href="#version-0-3-0-build-2" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>21/7/2016</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>cursor position show x axis in original, Q and d values in Profile view</p></li>
+<li><p>editor and also pcr files now can read properly the UTF8 and ANSI characters</p></li>
+</ul>
+</section>
+<section id="version-0-3-0-build-1">
+<h3>Version 0.3.0 build 1<a class="headerlink" href="#version-0-3-0-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>20/7/2016</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>big improvements in extracting routines for PCR, SUM and OUT files</p></li>
+<li><p>number of last cycles preformed and convergence status printed in Refinement Summary tab</p></li>
+<li><p>lot of small improvements in layout</p></li>
+</ul>
+</section>
+</section>
+<section id="version-0-2">
+<h2>Version 0.2<a class="headerlink" href="#version-0-2" title="Link to this heading">¶</a></h2>
+<section id="version-0-2-0-build-1">
+<h3>Version 0.2.0 build 1<a class="headerlink" href="#version-0-2-0-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>23/12/2015</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>improvements in reading of PCR files</p></li>
+<li><p>improved Clean/Delete procedure for FullProf (get more files)</p></li>
+<li><p>added option to ask for new name when use backup (Ctrl+B)</p></li>
+<li><p>added different colour for excluded regions</p></li>
+<li><p>excluded region options for colour and visibility in Setup</p></li>
+<li><p>internal code improvements</p></li>
+<li><p>Updater version 0.2.2.1</p></li>
+</ul>
+</section>
+</section>
+<section id="version-0-1">
+<h2>Version 0.1<a class="headerlink" href="#version-0-1" title="Link to this heading">¶</a></h2>
+<section id="version-0-1-1-build-1">
+<h3>Version 0.1.1 build 1<a class="headerlink" href="#version-0-1-1-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>22/1/2015</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>added launching of CIF and mCIF files from toolbar button (in Setup form need to specify CIF viewer)</p></li>
+<li><p>updated input of FullProf and Jana executables path, check is performed</p></li>
+<li><p>added visualization of size and strain bin files created when JVI = 5 in GFourier</p></li>
+<li><p>when VESTA is CIF viewer then visualization of ggrid and pgrid file form toolbar button</p></li>
+<li><p>automatic actualization routine added (can be disabled in Setup form)</p></li>
+<li><p>corrected display of file names with accents</p></li>
+<li><p>some minor layout changes</p></li>
+<li><p>Updater version 0.2.1.1 - minor improvements</p></li>
+</ul>
+</section>
+<section id="version-0-1-0-build-3">
+<h3>Version 0.1.0 build 3<a class="headerlink" href="#version-0-1-0-build-3" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>1/12/2014</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>changed shortcut for cleanup routine from Ctrl-X to Ctrl+Y (conflict with “Cut” function in Editor)</p></li>
+<li><p><cite>*</cite>.sub will be read now also for complex path with spaces and special characters</p></li>
+<li><p>minor changes in layout</p></li>
+</ul>
+</section>
+<section id="version-0-1-0-build-2">
+<h3>Version 0.1.0 build 2<a class="headerlink" href="#version-0-1-0-build-2" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>7/8/2014</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>native compilation also for win64 and linux64</p></li>
+<li><p>small changes in update routines</p></li>
+</ul>
+</section>
+<section id="version-0-1-0-build-1">
+<h3>Version 0.1.0 build 1<a class="headerlink" href="#version-0-1-0-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>5/8/2014</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>initial zoom issue corrected</p></li>
+<li><p>reading Bragg positions with excluded region corrected</p></li>
+<li><p>reading Bragg information from OUT corrected</p></li>
+<li><p>improved reading of PCR and SUM file information</p></li>
+<li><p>in the export of cell parameters added also the phase fraction</p></li>
+<li><p>export of cell parameters and phase fraction for all files in the list</p></li>
+<li><p>possible to change file order in list by drag&amp;drop method</p></li>
+<li><p>added popup menu for file list</p></li>
+<li><p>added functions of delete, backup and rename of selected structure</p></li>
+<li><p>clean up procedure for FullProf to delete of supplementary files (it can save disk usage)</p></li>
+<li><p>new updater</p></li>
+</ul>
+</section>
+</section>
+<section id="version-0-0">
+<h2>Version 0.0<a class="headerlink" href="#version-0-0" title="Link to this heading">¶</a></h2>
+<section id="version-0-0-9-build-2">
+<h3>Version 0.0.9 build 2<a class="headerlink" href="#version-0-0-9-build-2" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>16/9/2013</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>corrected reading of the Bragg position when second Ioc=2</p></li>
+</ul>
+</section>
+<section id="version-0-0-9-build-1">
+<h3>Version 0.0.9 build 1<a class="headerlink" href="#version-0-0-9-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>9/9/2013</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>corrected error shift of the PRF file due to the sysin</p></li>
+<li><p>each phase has coloured the Bragg positions</p></li>
+<li><p>small layout improvements</p></li>
+<li><p>path can now contain the UTF8 characters or spaces (GFourier doesn’t like
+spaces in file names but in path should be OK)</p></li>
+<li><p>selected zoom is now preserved when change the X axis state</p></li>
+<li><p>phases colour schema changed and in setup form you can put your own colours</p></li>
+<li><p>chart axis font label size can be adjusted in setup form</p></li>
+<li><p>new application icon added</p></li>
+</ul>
+</section>
+<section id="version-0-0-8-build-8">
+<h3>Version 0.0.8 build 8<a class="headerlink" href="#version-0-0-8-build-8" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>27/11/2012</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>maximized window position is now properly set</p></li>
+<li><p>some minor update when multi-pattern PRF and SUB files are loaded</p></li>
+</ul>
+</section>
+<section id="version-0-0-8-build-7">
+<h3>Version 0.0.8 build 7<a class="headerlink" href="#version-0-0-8-build-7" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>21/11/2012</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>shift of the PRF file for the TOF experiment corrected</p></li>
+</ul>
+</section>
+<section id="version-0-0-8-build-6">
+<h3>Version 0.0.8 build 6<a class="headerlink" href="#version-0-0-8-build-6" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>21/11/2012</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>shift of the PRF file is read no correctly (shift due to zero, sycos, sysin)</p></li>
+<li><p>added hint for the Bragg reflections (not only in the status bar)</p></li>
+<li><p>difference pattern normalized to the max of measured intensity, in status bar is shown in %</p></li>
+<li><p>background is shown on small graph with the same y-scale as main chart</p></li>
+</ul>
+</section>
+<section id="version-0-0-8-build-5">
+<h3>Version 0.0.8 build 5<a class="headerlink" href="#version-0-0-8-build-5" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>6/11/2012</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>automatic detection of <cite>*</cite>.sub format; so the <cite>*</cite>.sub files are read properly</p></li>
+<li><p>disable FullProf when FullProf path added automatically corrected</p></li>
+</ul>
+</section>
+<section id="version-0-0-8-build-4">
+<h3>Version 0.0.8 build 4<a class="headerlink" href="#version-0-0-8-build-4" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>29/6/2012</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>error of reading the multi-axial preferred orientation for multiphase system corrected</p></li>
+</ul>
+</section>
+<section id="version-0-0-8-build-3">
+<h3>Version 0.0.8 build 3<a class="headerlink" href="#version-0-0-8-build-3" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>22/6/2012</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>wrong file name when profile saved as picture corrected</p></li>
+</ul>
+</section>
+<section id="version-0-0-8-build-2">
+<h3>Version 0.0.8 build 2<a class="headerlink" href="#version-0-0-8-build-2" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>22/6/2012</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>preferred orientation extraction from PCR added</p></li>
+</ul>
+</section>
+<section id="version-0-0-8-build-1">
+<h3>Version 0.0.8 build 1<a class="headerlink" href="#version-0-0-8-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>14/6/2012</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>max phase count set to 15 (tell me if it is not enough)</p></li>
+<li><p>fixed phases colours. all the time now will have the phases the same colours in the same order.</p></li>
+<li><p>improved colour phase scheme in the phases info tab</p></li>
+<li><p>cursor position in phases tab preserved in the same position</p></li>
+<li><p>colour scheme added also to the profile and refinement summary tabs</p></li>
+<li><p>cursor position in profile and refinement summary tabs preserved in the same position</p></li>
+<li><p>extraction of correlated parameters if Mat=1 was added</p></li>
+<li><p>extraction of FP rating for each pattern added</p></li>
+<li><p>weight of each pattern added</p></li>
+<li><p>extraction of excluded region added</p></li>
+<li><p>extraction of other useful information from sum file when Ana=1 added</p></li>
+</ul>
+</section>
+<section id="version-0-0-7-build-1">
+<h3>Version 0.0.7 build 1<a class="headerlink" href="#version-0-0-7-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>11/6/2012</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>save PRF image to wrong path corrected</p></li>
+<li><p>save buttons added to the main menu. Short-cuts added Ctr+S for save info, Ctrl+Alt+S for save PRF as SXY file and
+Ctrl+Shift+S for save PRF as image</p></li>
+<li><p>back colour of the chart was set to clear white - better when save as image</p></li>
+<li><p>editor window title changed to “edited_file_name - Editor”</p></li>
+<li><p>phases information tab make the each phases background text colour the same as the colour of pattern contribution of each phase in profile viewer</p></li>
+</ul>
+</section>
+<section id="version-0-0-6-build-1">
+<h3>Version 0.0.6 build 1<a class="headerlink" href="#version-0-0-6-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>6/6/2012</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>error when Res file is provided with full path corrected</p></li>
+<li><p>layout of the main form redesigned. New arrangement of tabs should more likely provided the overview for the
+refinement. Short-cuts for changing the tabs are Ctrl+position_of_tab</p></li>
+<li><p>last open file path is stored and applied when open dialogue executed</p></li>
+<li><p>in setup form you can find the path to the FullProf and Jana2006 installation directory which was find in the
+environments variables. If is empty you can provide it by yourself.</p></li>
+<li><p>you will not be informed after GetControl execution about the missing FullProf and Jana2006 directories. Check setup
+form if they are properly set.</p></li>
+<li><p>new layout of profile viewer. Bragg, Background and Difference pattern are plotted in separate charts. You can zoom or drag
+move them like the main chart.</p></li>
+<li><p>new item in the Y axis option. Relative zero = Min(Y) added. It is more reliable when you want to compare the patterns
+with different background level.</p></li>
+<li><p>save PRF pattern together with each phase contribution to the SXY file importable to other graphical programs</p></li>
+<li><p>save PRF pattern also like images of different formats</p></li>
+<li><p>debug log disabled by default - you can delete all the log file in the config directory
+(in Win7 or Vista $YourProfilePath$AppDataLocalGetControlin Linux /home/user_name/.config/GetControl)</p></li>
+<li><p>new icons in the main form added</p></li>
+<li><p>Linux version released and the update procedure changed to accommodate also Linux updater</p></li>
+</ul>
+</section>
+<section id="version-0-0-5-build-2">
+<h3>Version 0.0.5 build 2<a class="headerlink" href="#version-0-0-5-build-2" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>7/3/2012</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>resolution file info read from the file and printed</p></li>
+<li><p>improvement stability of read of the PCR file</p></li>
+<li><p>TOF profile parameters read</p></li>
+<li><p>wrong Q and d calculation for TOF when IRF file used corrected</p></li>
+<li><p>reading of number of reflection in multi-pattern multi-phase case corrected</p></li>
+<li><p>improved of loading magnetic phase information</p></li>
+<li><p>improved loading information from SUM and OUT files</p></li>
+<li><p>HKL information about reflections is back again</p></li>
+<li><p>wrong setting of position for editor window corrected</p></li>
+<li><p>error occurred when press F4 for reload folder content fixed</p></li>
+<li><p>density of each phase extracted from SUM file</p></li>
+<li><p>Scor factor is extracted and in setup form can be applied to the sigma values</p></li>
+</ul>
+</section>
+<section id="version-0-0-5-build-1">
+<h3>Version 0.0.5 build 1<a class="headerlink" href="#version-0-0-5-build-1" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>29/2/2012</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>improvements in loading of multi-pattern multiphase pcr files</p></li>
+<li><p>application title = “structure_file_name - GetControl”</p></li>
+<li><p>the data of TOF refinement loaded in the graph with correct x axis description</p></li>
+<li><p>splitter added between list of files and printing results - you can adjust the size.</p></li>
+<li><p>improvements in reading the PCR file - now it is more stable</p></li>
+<li><p>debugging is back on by default for now. It creates <em>debug_”date and time”.log</em> file in the config
+directory (in Win7 or Vista $YourProfilePath$AppDataLocalGetControl)</p></li>
+<li><p>setup form created and added option for save settings and position and size of each window</p></li>
+</ul>
+</section>
+<section id="version-0-0-4-build-110">
+<h3>Version 0.0.4 build 110<a class="headerlink" href="#version-0-0-4-build-110" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>8/11/2011</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>fixed color for the individual phase patterns (when Ipr = 2 or 3)</p></li>
+<li><p>stability improvements during pcr file loading</p></li>
+<li><p>added button to run Powder pattern simulation from <cite>*</cite>.cfl and <cite>*</cite>.cif files (part of FullProf Suite)</p></li>
+</ul>
+</section>
+<section id="version-0-0-4-build-109">
+<h3>Version 0.0.4 build 109<a class="headerlink" href="#version-0-0-4-build-109" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>14/10/2011</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>added ability to reload folder for check for new pcr/m50 files (F4)</p></li>
+<li><p>short cuts for edit PCR/M50 (F6), OUT/M40 (F7), SUM/M41 (F8) added</p></li>
+<li><p>editor form reload file short cut F5</p></li>
+<li><p>some short cuts changed Check for update F2, Reload pcr/jana file F5</p></li>
+<li><p>prompt when “save as” the file what already exists</p></li>
+<li><p>in Editor form when reload is applied the caret stay at the same position</p></li>
+<li><p>short cuts added for lunching FullProf(F9), EdPCR(F10), Winplotr(F11) and Jana2006(F12)</p></li>
+<li><p>debugging set off by default</p></li>
+<li><p>debugging log named GetControl-XXX.log (random number) can be deleted or send with debug report</p></li>
+</ul>
+</section>
+<section id="version-0-0-4-build-108">
+<h3>Version 0.0.4 build 108<a class="headerlink" href="#version-0-0-4-build-108" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>19/7/2011</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>debug log added</p></li>
+</ul>
+</section>
+<section id="version-0-0-4-build-107">
+<h3>Version 0.0.4 build 107<a class="headerlink" href="#version-0-0-4-build-107" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3/5/2011</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>new editor</p></li>
+<li><p>new updater</p></li>
+<li><p>retaking the development</p></li>
+</ul>
+</section>
+<section id="version-0-0-4-build-100">
+<h3>Version 0.0.4 build 100<a class="headerlink" href="#version-0-0-4-build-100" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>12/10/2010</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>rebuild the data collection routine</p></li>
+<li><p>editor is no more in modal mode, you are able to edit files and work with application together</p></li>
+<li><p>adding tab in Structure summary with profile parameters</p></li>
+<li><p>some more information extracted mainly in Refinement summary tab</p></li>
+<li><p>in profile viewer the printing in d-spacing now works</p></li>
+<li><p>information about each reflection is read out from <cite>*</cite>.out file if exported</p></li>
+<li><p>Save summary to the text file button save now all three tabs information together</p></li>
+</ul>
+</section>
+<section id="version-0-0-3-build-1306">
+<h3>Version 0.0.3 build 1306<a class="headerlink" href="#version-0-0-3-build-1306" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>12/08/2010</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>added routine to control the error number format as (NaN, <cite>****</cite>, etc.),
+in this case the number is showed as -999</p></li>
+</ul>
+</section>
+<section id="version-0-0-3-build-1305">
+<h3>Version 0.0.3 build 1305<a class="headerlink" href="#version-0-0-3-build-1305" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>11/08/2010</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>added some new buttons for lunching external applications</p></li>
+<li><p>again enabled auto update after file change (if cause problems please refer)</p></li>
+</ul>
+</section>
+<section id="version-0-0-3-build-1304">
+<h3>Version 0.0.3 build 1304<a class="headerlink" href="#version-0-0-3-build-1304" title="Link to this heading">¶</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>10/08/2010</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>Internet update available</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+</article>
+        <aside class="nftt-toc my-3">
+          
+          <div class="my-sm-1 my-lg-0 ps-xl-3 text-muted">
+            <button class="btn btn-link p-lg-0 mb-2 mb-lg-0 text-decoration-none nftt-toc-toggle d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents"
+            >On this page <i class="ms-2 bi bi-chevron-expand"></i></button>
+            <div class="title d-none d-lg-block">
+              <i class="bi bi-file-earmark-text"></i>&nbsp;&nbsp;<span class="small">On this page</span>
+            </div>
+            <div class="collapse nftt-toc-collapse" id="tocContents">
+              <nav id="TableOfContents">
+                <ul>
+<li><a class="reference internal" href="#">What is news</a><ul>
+<li><a class="reference internal" href="#version-0-9">Version 0.9</a><ul>
+<li><a class="reference internal" href="#version-0-9-3-build-1">Version 0.9.3 build 1</a></li>
+<li><a class="reference internal" href="#version-0-9-2-build-4">Version 0.9.2 build 4</a></li>
+<li><a class="reference internal" href="#version-0-9-2-build-3">Version 0.9.2 build 3</a></li>
+<li><a class="reference internal" href="#version-0-9-1-build-2">Version 0.9.1 build 2</a></li>
+<li><a class="reference internal" href="#version-0-9-1-build-1">Version 0.9.1 build 1</a></li>
+<li><a class="reference internal" href="#version-0-9-0-build-1">Version 0.9.0 build 1</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#version-0-8">Version 0.8</a><ul>
+<li><a class="reference internal" href="#version-0-8-0-build-2">Version 0.8.0 build 2</a></li>
+<li><a class="reference internal" href="#version-0-8-0-build-1">Version 0.8.0 build 1</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#version-0-7">Version 0.7</a><ul>
+<li><a class="reference internal" href="#version-0-7-2-build-2">Version 0.7.2 build 2</a></li>
+<li><a class="reference internal" href="#version-0-7-2-build-1">Version 0.7.2 build 1</a></li>
+<li><a class="reference internal" href="#version-0-7-1-build-1">Version 0.7.1 build 1</a></li>
+<li><a class="reference internal" href="#version-0-7-0-build-1">Version 0.7.0 build 1</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#version-0-6">Version 0.6</a><ul>
+<li><a class="reference internal" href="#version-0-6-2-build-2">Version 0.6.2 build 2</a></li>
+<li><a class="reference internal" href="#version-0-6-2-build-1">Version 0.6.2 build 1</a></li>
+<li><a class="reference internal" href="#version-0-6-1-build-1">Version 0.6.1 build 1</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#version-0-5">Version 0.5</a><ul>
+<li><a class="reference internal" href="#version-0-5-1-build-2">Version 0.5.1 build 2</a></li>
+<li><a class="reference internal" href="#version-0-5-1-build-1">Version 0.5.1 build 1</a></li>
+<li><a class="reference internal" href="#version-0-5-0-build-1">Version 0.5.0 build 1</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#version-0-4">Version 0.4</a><ul>
+<li><a class="reference internal" href="#version-0-4-9-build-1">Version 0.4.9 build 1</a></li>
+<li><a class="reference internal" href="#version-0-4-8-build-2">Version 0.4.8 build 2</a></li>
+<li><a class="reference internal" href="#version-0-4-8-build-1">Version 0.4.8 build 1</a></li>
+<li><a class="reference internal" href="#version-0-4-7-build-3">Version 0.4.7 build 3</a></li>
+<li><a class="reference internal" href="#version-0-4-7-build-2">Version 0.4.7 build 2</a></li>
+<li><a class="reference internal" href="#version-0-4-7-build-1">Version 0.4.7 build 1</a></li>
+<li><a class="reference internal" href="#version-0-4-6-build-1">Version 0.4.6 build 1</a></li>
+<li><a class="reference internal" href="#version-0-4-5-build-5">Version 0.4.5 build 5</a></li>
+<li><a class="reference internal" href="#version-0-4-5-build-4">Version 0.4.5 build 4</a></li>
+<li><a class="reference internal" href="#version-0-4-5-build-3">Version 0.4.5 build 3</a></li>
+<li><a class="reference internal" href="#version-0-4-5-build-2">Version 0.4.5 build 2</a></li>
+<li><a class="reference internal" href="#version-0-4-5-build-1">Version 0.4.5 build 1</a></li>
+<li><a class="reference internal" href="#version-0-4-0-build-2">Version 0.4.0 build 2</a></li>
+<li><a class="reference internal" href="#version-0-4-0-build-1">Version 0.4.0 build 1</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#version-0-3">Version 0.3</a><ul>
+<li><a class="reference internal" href="#version-0-3-5-build-1">Version 0.3.5 build 1</a></li>
+<li><a class="reference internal" href="#version-0-3-4-build-1">Version 0.3.4 build 1</a></li>
+<li><a class="reference internal" href="#version-0-3-3-build-2">Version 0.3.3 build 2</a></li>
+<li><a class="reference internal" href="#version-0-3-3-build-1">Version 0.3.3 build 1</a></li>
+<li><a class="reference internal" href="#version-0-3-2-build-3">Version 0.3.2 build 3</a></li>
+<li><a class="reference internal" href="#version-0-3-2-build-2">Version 0.3.2 build 2</a></li>
+<li><a class="reference internal" href="#version-0-3-2-build-1">Version 0.3.2 build 1</a></li>
+<li><a class="reference internal" href="#version-0-3-1-build-2">Version 0.3.1 build 2</a></li>
+<li><a class="reference internal" href="#version-0-3-1-build-1">Version 0.3.1 build 1</a></li>
+<li><a class="reference internal" href="#version-0-3-0-build-5">Version 0.3.0 build 5</a></li>
+<li><a class="reference internal" href="#version-0-3-0-build-4">Version 0.3.0 build 4</a></li>
+<li><a class="reference internal" href="#version-0-3-0-build-3">Version 0.3.0 build 3</a></li>
+<li><a class="reference internal" href="#version-0-3-0-build-2">Version 0.3.0 build 2</a></li>
+<li><a class="reference internal" href="#version-0-3-0-build-1">Version 0.3.0 build 1</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#version-0-2">Version 0.2</a><ul>
+<li><a class="reference internal" href="#version-0-2-0-build-1">Version 0.2.0 build 1</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#version-0-1">Version 0.1</a><ul>
+<li><a class="reference internal" href="#version-0-1-1-build-1">Version 0.1.1 build 1</a></li>
+<li><a class="reference internal" href="#version-0-1-0-build-3">Version 0.1.0 build 3</a></li>
+<li><a class="reference internal" href="#version-0-1-0-build-2">Version 0.1.0 build 2</a></li>
+<li><a class="reference internal" href="#version-0-1-0-build-1">Version 0.1.0 build 1</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#version-0-0">Version 0.0</a><ul>
+<li><a class="reference internal" href="#version-0-0-9-build-2">Version 0.0.9 build 2</a></li>
+<li><a class="reference internal" href="#version-0-0-9-build-1">Version 0.0.9 build 1</a></li>
+<li><a class="reference internal" href="#version-0-0-8-build-8">Version 0.0.8 build 8</a></li>
+<li><a class="reference internal" href="#version-0-0-8-build-7">Version 0.0.8 build 7</a></li>
+<li><a class="reference internal" href="#version-0-0-8-build-6">Version 0.0.8 build 6</a></li>
+<li><a class="reference internal" href="#version-0-0-8-build-5">Version 0.0.8 build 5</a></li>
+<li><a class="reference internal" href="#version-0-0-8-build-4">Version 0.0.8 build 4</a></li>
+<li><a class="reference internal" href="#version-0-0-8-build-3">Version 0.0.8 build 3</a></li>
+<li><a class="reference internal" href="#version-0-0-8-build-2">Version 0.0.8 build 2</a></li>
+<li><a class="reference internal" href="#version-0-0-8-build-1">Version 0.0.8 build 1</a></li>
+<li><a class="reference internal" href="#version-0-0-7-build-1">Version 0.0.7 build 1</a></li>
+<li><a class="reference internal" href="#version-0-0-6-build-1">Version 0.0.6 build 1</a></li>
+<li><a class="reference internal" href="#version-0-0-5-build-2">Version 0.0.5 build 2</a></li>
+<li><a class="reference internal" href="#version-0-0-5-build-1">Version 0.0.5 build 1</a></li>
+<li><a class="reference internal" href="#version-0-0-4-build-110">Version 0.0.4 build 110</a></li>
+<li><a class="reference internal" href="#version-0-0-4-build-109">Version 0.0.4 build 109</a></li>
+<li><a class="reference internal" href="#version-0-0-4-build-108">Version 0.0.4 build 108</a></li>
+<li><a class="reference internal" href="#version-0-0-4-build-107">Version 0.0.4 build 107</a></li>
+<li><a class="reference internal" href="#version-0-0-4-build-100">Version 0.0.4 build 100</a></li>
+<li><a class="reference internal" href="#version-0-0-3-build-1306">Version 0.0.3 build 1306</a></li>
+<li><a class="reference internal" href="#version-0-0-3-build-1305">Version 0.0.3 build 1305</a></li>
+<li><a class="reference internal" href="#version-0-0-3-build-1304">Version 0.0.3 build 1304</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </nav>
+            </div>
+          </div>
+          
+        </aside>
+      </div>
+    </div>
+
+    <footer class="nftt-footer">
+      <nav id="paginator" class="py-4" aria-label="Documentation navigation">
+    <div class="container">
+      <ul class="pagination justify-content-between mb-0"><li class="d-flex page-item">
+            <a href="plotters.html" class="d-flex px-5 align-items-end" rel="prev" aria-label="Previous page: SXY and MIC plotters">
+              <span class="prev-page"><i class="bi bi-caret-left"></i></span>
+              <div class="d-none d-sm-flex flex-column">
+                <span class="text-small text-start text-muted">Previous</span>
+                <span class="underline">SXY and MIC plotters</span>
+              </div>
+            </a>
+          </li>
+        <li class="d-flex page-item ms-auto">
+            <a href="../fptricks/strain.html" class="d-flex px-5 align-items-end" rel="next" aria-label="Next page: The strain refinement">
+              <div class="d-flex flex-column">
+                <span class="text-small text-end text-start text-muted">Next</span>
+                <span class="underline">The strain refinement</span>
+              </div>
+              <span class="next-page"><i class="bi bi-caret-right"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </nav>
+
+      <div class="py-5 px-4 px-md-3">
+  <div class="container">
+    
+    <div class="row">
+      <ul id="nftt-footer-links" class="list-unstyled list-separator col-lg-12 pb-2 text-center">
+        
+          <li class="d-inline">
+            <a href="https://wildrams.github.io/getcontrol" class="list-item">Documentation</a>
+          </li>
+        
+          <li class="d-inline">
+            <a href="https://github.com/wildrams/getcontrol/releases/latest" class="list-item">Download</a>
+          </li>
+        
+          <li class="d-inline">
+            <a href="https://github.com/wildrams/getcontrol" class="list-item">Repository</a>
+          </li>
+        
+      </ul>
+    </div>
+    
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <a class="brand-text d-inline-flex align-items-center mb-2 text-decoration-none" href="/" aria-label="GetControl">
+          <span class="fs-6 fw-bold">GetControl</span>
+        </a>
+        
+          <ul class="list-unstyled small text-muted">
+            <li>2011-2025, WildRam</li>
+          </ul>
+        
+        
+        <div class="built-with pt-2">
+          Built with <a href="http://sphinx-doc.org">Sphinx 8.1.3</a> and <a href="https://github.com/danirus/sphinx-nefertiti">Nefertiti 0.8.6</a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+    </footer>
+    <script src="../_static/documentation_options.js?v=77cf03ce"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/docs-versions.js?v=00aa30ed"></script>
+    <script src="../_static/sphinx-nefertiti.min.js?v=cd4e68e4"></script>
+    <script src="../_static/bootstrap.bundle.min.js?v=ff4e7878"></script>
+  </body>
+</html>

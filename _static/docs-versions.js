@@ -1,0 +1,2 @@
+window.docs_versions = [{"name": "v0.9.3.1", "url": "https://github.com/wildrams/getcontrol/releases/tag/v0.9.3.1/"}, {"name": "v0.9.2.4", "url": "https://github.com/wildrams/getcontrol/releases/tag/v0.9.2.4/"}, {"name": "v0.9.1.1", "url": "https://github.com/wildrams/getcontrol/releases/tag/v0.9.1.1/"}, {"name": "v0.9.0.1", "url": "https://github.com/wildrams/getcontrol/releases/tag/v0.9.0.1/"}, {"name": "v0.8.0.1", "url": "https://github.com/wildrams/getcontrol/releases/tag/v0.8.0.1/"}];
+window.def_ver = 'v0.9.3.1';

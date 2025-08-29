@@ -1,0 +1,646 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    
+    <meta name="docsearch:name" content="GetControl" />
+    <meta name="docsearch:package_type" content="" />
+    <meta name="docsearch:release" content="0.9.3.1" />
+    <meta name="docsearch:version" content="0.9.3.1" />
+    
+      <meta name="theme-color" content="#0D6EFD" />
+    
+    
+      <title>SXY and MIC plotters &mdash; GetControl 0.9.3.1 documentation</title>
+    
+    <link rel="canonical" href="documentation/plotters" />
+      <link rel="icon" href="../_static/favicon.ico" />
+          <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8e8a900e" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/sphinx-nefertiti-blue.min.css?v=6eb1378b" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/fonts/nunito/stylesheet.css?v=abf98f06" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/fonts/open-sans/stylesheet.css?v=8129c031" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/pygments-dark.css?v=f21207c5" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/pygments-light.css?v=6c104457" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/bootstrap-icons.min.css?v=44730005" /><!-- add (1) -->
+        <link rel="index" title="Index" href="../genindex.html" />
+        <link rel="search" title="Search" href="../search.html" />
+        <link rel="top" title="GetControl 0.9.3.1 documentation" href="#" />
+        <link rel="next" title="What is news" href="changelog.html" />
+        <link rel="prev" title="Internal editor" href="editor.html" />
+    <style>
+      :root {
+        --nftt-body-font-family: "Nunito", var(--nftt-font-sans-serif) !important;
+        --nftt-font-monospace: "Andale Mono", var(--nftt-font-family-monospace) !important;
+        --nftt-project-name-font: var(--nftt-body-font-family);
+        --nftt-documentation-font: "Open Sans", var(--nftt-body-font-family);
+        --nftt-doc-headers-font: "Georgia", var(--nftt-documentation-font);--nftt-documentation-font-size: 1.0rem;--nftt-monospace-font-size: 1.0rem;}
+
+      h1 *,
+      h2 *,
+      h3 *,
+      h4 *,
+      h5 *,
+      h6 * {
+        font-size: inherit;
+      }
+
+      .light pre,
+      .dark pre {
+        line-height: var(--nftt-pre-line-height, 140%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="back-to-top-container" class="position-fixed start-50 translate-middle-x">
+      <button id="back-to-top" type="button" class="d-none btn btn-neutral btn-sm shadow px-4" data-bs-toggle="button">Back to top</button>
+    </div>
+    <header id="snftt-nav-bar" class="navbar navbar-expand-xl navbar-dark nftt-navbar flex-column fixed-top">
+      <div class="skip-links container-fluid visually-hidden-focusable overflow-hidden justify-content-start flex-grow-1">
+        <div class="border-bottom mb-2 pb-2 w-100">
+          <a class="d-none d-md-inline-flex p-2 m-1" href="#sidebar-filter">Skip to index filter</a>
+          <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
+        </div>
+      </div>
+      <nav class="container-xxl nftt-gutter flex-nowrap" aria-label="Main navigation">
+        <div class="nftt-navbar-toggler">
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-label="Toggle documentation navigation">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+          <a
+            href="../index.html"
+            class="navbar-brand"
+          >
+            <img src="../_static/img/getcontrol.svg" width="35" height="35" alt="GetControl"
+              class="project-logo"
+            />
+            <span class="brand-text">GetControl</span><span class="brand-short-text">GetControl</span>
+          </a>
+        
+        
+          <ul class="nftt-header-links-large navbar-nav">
+          
+            
+            
+            
+            
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="../index.html" data-snftt-hl-id="1" >Home</a>
+    </li>
+  
+
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="introduction.html" data-snftt-hl-id="2" >Documentation</a>
+    </li>
+  
+
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="changelog.html" data-snftt-hl-id="3" >What is new</a>
+    </li>
+  
+
+          
+          </ul>
+        
+        <div class="d-flex d-xl-none">
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#nfttSearch" aria-controls="nfttSearch" aria-label="Search">
+            <i class="bi bi-search"></i>
+          </button>
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#nfttNavbar" aria-controls="nfttNavbar" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+        </div>
+        
+<div class="offcanvas-xl offcanvas-end flex-grow-1" tabindex="-1" id="nfttSearch" aria-labelledby="nfttSearchOffcanvasLabel" data-bs-scroll="true">
+  <div class="offcanvas-header px-4 pb-0">
+    <h5 class="offcanvas-title fw-bold" id="nfttSearchOffcanvasLabel">Search the documentation</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#nfttSearch"></button>
+  </div>
+  <div class="offcanvas-body p-4 pt-0 p-xl-0 ps-xl-4">
+    <hr class="d-xl-none text-white-50">
+    <ul class="navbar-nav flex-row align-items-center flex-wrap ms-md-auto">
+      <li class="nav-item col-12 col-xl-auto">
+        <form id="nftt-search-form" action="../search.html" method="get">
+          <div class="input-group">
+            <input type="text" name="q" class="form-control search-input" placeholder="Search" aria-label="Search" aria-describedby="button-search">
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+            <button class="btn btn-primary" type="submit" id="button-search" aria-label="Search"><i class="bi bi-search"></i></button>
+          </div>
+        </form>
+      </li>
+    </ul>
+  </div>
+</div>
+
+        <div class="offcanvas-xl offcanvas-end" tabindex="-1" id="nfttNavbar" aria-labelledby="nfttNavbarOffcanvasLabel" data-bs-scroll="true">
+          <div class="offcanvas-header px-4 pb-0">
+            <div class="offcanvas-title navbar-brand" id="nfttNavbarOffcanvasLabel"><span class="brand-short-text">GetControl</span></div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#nfttNavbar"></button>
+          </div>
+          <div class="offcanvas-body p-4 pt-0 p-xl-0 px-xl-3">
+            <hr class="d-xl-none text-white-50">
+            <ul class="navbar-nav flex-row align-items-center flex-wrap ms-lg-auto">
+              
+                <div class="nftt-header-links-small">
+                  
+                    
+                    
+                    
+                    <div class="d-inline-block">
+                      
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="../index.html" data-snftt-hl-id="1" >Home</a>
+    </li>
+  
+
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="introduction.html" data-snftt-hl-id="2" >Documentation</a>
+    </li>
+  
+
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="changelog.html" data-snftt-hl-id="3" >What is new</a>
+    </li>
+  
+
+                    </div>
+                  
+                  <li class="nav-item col-12 col-xl-auto h-100" aria-hidden="true">
+                    <div class="vr d-none d-xl-flex h-100 mx-xl-2 text-white-50"></div>
+                    <hr class="d-xl-none text-white-50">
+                  </li>
+                </div>
+              
+              
+              <li class="nav-item col-12 col-xl-auto">
+                <a class="nav-link py-2 py-xl-0 px-0 px-xl-2" href="https://github.com/wildrams/getcontrol" target="_blank" rel="noopener">
+                  <div class="d-flex align-items-center">
+                    <div class="me-2">
+                      <i class="bi bi-git size-24"></i>
+                    </div>
+                    <div class="repo d-flex flex-column align-items-center" data-snftt-repo-url="https://github.com/wildrams/getcontrol">
+                      wildrams/getcontrol
+                      <div class="d-flex justify-content-center" data-snftt-repo-metrics>
+                        <span class="pe-2 d-flex justify-content-center align-items-center">
+                          <i class="bi bi-tag size-14"></i>
+                          <span class="repo-metric" data-snftt-repo-tag></span>
+                        </span>
+                        <span class="pe-2 d-flex justify-content-center align-items-center">
+                          <i class="bi bi-star size-14"></i>
+                          <span class="repo-metric" data-snftt-repo-stars></span>
+                        </span>
+                        <span class="d-flex justify-content-center align-items-center">
+                          <i class="bi bi-diagram-2 size-14"></i>
+                          <span class="repo-metric" data-snftt-repo-forks></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item col-12 col-xl-auto h-100" aria-hidden="true">
+                <div class="vr d-none d-xl-flex h-100 mx-xl-2 text-white-50"></div>
+                <hr class="d-xl-none text-white-50">
+              </li>
+              
+              
+  <li class="nav-item dropdown">
+    <a class="nav-link d-flex py-2 px-0 px-xl-2 dropdown-toggle align-items-center" id="snftt-version" href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Select version">
+      <span id="snftt-version-text" class="d-xl-none">GetControl</span>
+      <span class="ms-2" data-snftt-version-active="v0.9.3.1">v0.9.3.1</span>
+    </a>
+    
+    <ul class="dropdown-menu dropdown-menu-end dropdown-limit-max-height" aria-labelledby="snftt-version-text" id="versions-dropdown-menu">
+      <li>
+        <h6 class="dropdown-header">Versions</h6>
+      </li>
+    </ul>
+  </li>
+  <li class="nav-item col-12 col-xl-auto h-100" aria-hidden="true">
+    <div class="vr d-none d-xl-flex h-100 mx-xl-2 text-white-50"></div>
+    <hr class="d-xl-none text-white-50">
+  </li>
+
+              
+              
+              <!-- lightdark-dropdown.html -->
+<li class="nav-item dropdown">
+  <a class="nav-link d-flex py-2 px-0 px-xl-2 dropdown-toggle align-items-center" id="snftt-luz" href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Change appearance">
+    <i class="bi bi-circle-half" data-snftt-luz-icon-active></i>
+    <span id="snftt-luz-text" class="d-xl-none ms-2">Change appearance</span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="snftt-luz-text">
+    <li>
+      <h6 class="dropdown-header">Change appearance</h6>
+    </li>
+    <li>
+      <a class="dropdown-item d-flex align-items-center" data-snftt-luz="light" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-sun" data-snftt-luz-icon="light"></i>
+        </span>
+        <span class="ms-3">Light</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item d-flex align-items-center" data-snftt-luz="dark" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-moon-stars" data-snftt-luz-icon="dark"></i>
+        </span>
+        <span class="ms-3">Dark</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item current d-flex align-items-center" data-snftt-luz="default" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-circle-half" data-snftt-luz-icon="default"></i>
+        </span>
+        <span class="ms-3">Automatic</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+  </ul>
+</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    </header>
+
+    <div class="container-fluid flex-grow-1">
+      <div class="nftt-gutter nftt-page">
+        <aside class="nftt-sidebar ">
+          <div class="nftt-sidebar-content">
+            
+            <div class="title d-none d-xl-block">
+              <i class="bi bi-book"></i>&nbsp;&nbsp;<span>Index</span>
+            </div>
+            <div id="sidebar" tabindex="-1" class="offcanvas-xl offcanvas-start" aria-labelledby="nfttSidebarOffcanvasLabel">
+                <!-- sidebartemplate: "globaltoc.html" --><div class="offcanvas-header border-bottom">
+  <h5 class="offcanvas-title fw-bold" id="nfttSidebarOffcanvasLabel">
+    Index
+  </h5>
+  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#sidebar"></button>
+</div>
+
+<div class="offcanvas-body">
+  <nav class="toc" aria-label="Main menu">
+    <div class="mb-3 p-1 pt-3 pb-4 border-bottom">
+      <input id="sidebar-filter" type="text" name="filter" class="form-control form-control-sm" placeholder="index filter" aria-label="index filter">
+    </div>
+    <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mainform.html">Main form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences.html">Preferences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editor.html">Internal editor</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SXY and MIC plotters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">What is news</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FullProf Tricks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fptricks/strain.html">The strain refinement</a></li>
+</ul>
+
+  </nav>
+  <template data-toggle-item-template>
+    <button class="btn btn-sm btn-link toctree-expand" type="button">
+      <i class="bi bi-caret-right"></i>
+      <span class="visually-hidden">Toggle menu contents</span>
+    </button>
+  </template>
+</div>
+            </div>
+            
+          </div>
+        </aside>
+        <article id="content" class="nftt-content" role="main">
+          <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../index.html">Start</a></li>
+    <li class="breadcrumb-item active" aria-current="page">SXY and MIC plotters</li>
+  </ol>
+</nav>
+    <section id="sxy-and-mic-plotters">
+<span id="plotters"></span><h1>SXY and MIC plotters<a class="headerlink" href="#sxy-and-mic-plotters" title="Link to this heading">¶</a></h1>
+<p>The <strong>GetControl</strong> allows you to export (via <a class="reference internal" href="mainform.html#menu-export"><span class="std std-ref">export</span></a> menu on the <a class="reference internal" href="mainform.html#main-form"><span class="std std-ref">Main form</span></a>) the profile or microstructure charts using Python scripts. <strong>Any time</strong> you open the helper of the plotter by clicking the menu item, the application saves the script into the working directory.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>If you already have the <code class="docutils literal notranslate"><span class="pre">sxy-plotter.py</span></code> or <code class="docutils literal notranslate"><span class="pre">mic-plotter.py</span></code> file in the directory, the file will be <strong>overwritten</strong> without warning. If you make some adjustments to it, they will be lost. If you want to <em>change</em> or <em>adjust</em> the content of the scripts and you want to be permanent, please use the <a class="reference internal" href="editor.html#special-editor-menu"><span class="std std-ref">Special menu</span></a> in the <a class="reference internal" href="editor.html#editor"><span class="std std-ref">Editor</span></a>. It allows you to save your changes into the script, which will be saved in the <a class="reference internal" href="introduction.html#settingstorage"><span class="std std-ref">config</span></a> folder, and anytime you want to use the plotter, the application will copy your local version from that directory.</p>
+</div>
+<p>Each plotter has some settings which need to be provided to work properly. You can use the special forms (they appear when clicking the appropriate <a class="reference internal" href="mainform.html#menu-export"><span class="std std-ref">menu</span></a>) designed to help you with the <strong>command</strong> line formation (see below).</p>
+<p>Advanced users can try to run the command below for the <em>SXY plotter</em> in their terminal, and the script will provide you with instructions for help. Others can click <a class="reference internal" href="#show-the-script-hints">Show the script hints</a> button to see the help in editor.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>sxy-plotter.py<span class="w"> </span>--help
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The scripts need <strong>Python3</strong> to run. Depending on your <em>Python</em> system settings, you may need to adjust the name of the executable to <code class="docutils literal notranslate"><span class="pre">python3</span></code>.</p>
+</div>
+<section id="how-to-work-with-the-helpers">
+<h2>How to work with the helpers<a class="headerlink" href="#how-to-work-with-the-helpers" title="Link to this heading">¶</a></h2>
+<p>The way of working with the script helper forms is very similar for both plotters. You select what files you want to plot, and then you can adjust some captions/titles/phase descriptions and decide if you want to export the final chart to a file. The form will create the <strong>command</strong> line in the text editor. You can adjust it as described below; for example, you change the title string or X-axis range, copy it into the <em>clipboard</em>, paste it into the <em>terminal</em>, and hit <em>enter</em>.</p>
+<p>For most of the actions, there are buttons which do the job for you (copy the command line, open the terminal in the working directory, etc.).</p>
+</section>
+<section id="sxy-plotter-helper">
+<span id="sxy-plotter"></span><h2>SXY plotter helper<a class="headerlink" href="#sxy-plotter-helper" title="Link to this heading">¶</a></h2>
+<p>The <strong>SXY plotter</strong> can plot multiple patterns at one chart with <strong>linked</strong> X axis. You can plot all patterns from your multi-pattern refinement (you will see the list of patterns available in your refinement), or you can even plot patterns from different refinements. For that, you need to check <code class="docutils literal notranslate"><span class="pre">Plot</span> <span class="pre">any</span> <span class="pre">SXY</span> <span class="pre">file</span> <span class="pre">in</span> <span class="pre">directory</span></code>. Then, you can select what SXY files are available.</p>
+<p>The SXY files are created by the <strong>GetControl</strong> whenever the helper is open. It means that when the dialog is open and you select another PCR file in the <a class="reference internal" href="mainform.html#main-form"><span class="std std-ref">Main form</span></a>, the SXY files are created for that PCR file (the existing ones are overwritten).</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/sxy-plotter.jpg"><img alt="../_images/sxy-plotter.jpg" src="../_images/sxy-plotter.jpg" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">SXY plotter helper</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>When you plot multiple patterns, be aware of the X-axis setting. When you want to compare various radiations, switch <a class="reference internal" href="mainform.html#axis-manipulations"><span class="std std-ref">X-axis setting</span></a> to <strong>Q</strong> or <strong>d</strong> spacing.</p>
+</div>
+<section id="files-and-checkboxes">
+<h3>Files and checkboxes<a class="headerlink" href="#files-and-checkboxes" title="Link to this heading">¶</a></h3>
+<ul>
+<li><dl class="simple">
+<dt>Files to plot</dt><dd><p>Select the appropriate pattern index or the SXY file (when <strong>plot any SXY file</strong> is selected) to plot. If you are not happy with the order (the first one will be on the top of the chart), then adjust the order after the <code class="docutils literal notranslate"><span class="pre">-f</span></code> parameter (for <strong>plot any SXY file</strong>) or after the <code class="docutils literal notranslate"><span class="pre">-n</span></code> parameter (index of the pattern in the multi-pattern PCR).</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Adjusting X and Y axis ranges</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">-l</span></code> left and <code class="docutils literal notranslate"><span class="pre">-r</span></code> right</dt><dd><ul>
+<li><p>Default: <code class="docutils literal notranslate"><span class="pre">-l</span> <span class="pre">min</span></code> and <code class="docutils literal notranslate"><span class="pre">-r</span> <span class="pre">max</span></code></p></li>
+<li><p>Change the <code class="docutils literal notranslate"><span class="pre">min</span></code> or <code class="docutils literal notranslate"><span class="pre">max</span></code> to any value you want; be aware of your X-axis spacing</p></li>
+<li><p>All charts have the same linked X-axis!</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">-b</span></code> bottom and <code class="docutils literal notranslate"><span class="pre">-t</span></code> top</dt><dd><ul>
+<li><p>Default: <code class="docutils literal notranslate"><span class="pre">-b</span> <span class="pre">min</span></code> and <code class="docutils literal notranslate"><span class="pre">-t</span> <span class="pre">max</span></code>, for multi-pattern: <code class="docutils literal notranslate"><span class="pre">-b</span> <span class="pre">min,min,min</span></code> and <code class="docutils literal notranslate"><span class="pre">-t</span> <span class="pre">max,max,max</span></code></p></li>
+<li><p>Change the <code class="docutils literal notranslate"><span class="pre">min</span></code> or <code class="docutils literal notranslate"><span class="pre">max</span></code> to the any value you want</p></li>
+<li><p>In the multi-pattern plot, the Y axes are individual for each pattern, and then there is a list of values; change the one you need</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Further, you can adjust some other properties such as titles, captions, phase names, etc. Those options will be added to the <strong>command</strong> when you select them by checking the appropriate checkboxes. Below is the description of those options.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Adjust main title</dt><dd><p>The default main title is taken from the title of PCR. If you want your own, check this option. It adds <code class="docutils literal notranslate"><span class="pre">--title</span> <span class="pre">&quot;-&quot;</span></code> in to the <strong>command</strong> line. You can change the text in the quotation to your own (for example, <code class="docutils literal notranslate"><span class="pre">--title</span> <span class="pre">&quot;My</span> <span class="pre">new</span> <span class="pre">main</span> <span class="pre">title</span></code>).</p>
+<p>If you want to remove the main title, then set the title to the following <code class="docutils literal notranslate"><span class="pre">--title</span> <span class="pre">&quot;#&quot;</span></code>.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In the strings for title, captions and phase names, you can use the LaTeX notations, for example, <code class="docutils literal notranslate"><span class="pre">--title</span> <span class="pre">&quot;Pattern</span> <span class="pre">of</span> <span class="pre">H$_2$O$_2$&quot;</span></code></p>
+</div>
+<ul>
+<li><dl>
+<dt>Adjust chart labels</dt><dd><p>Default chart labels are <em>radiation and wavelength*</em>. If you want to change it, check this option. It adds <code class="docutils literal notranslate"><span class="pre">--labels</span> <span class="pre">&quot;-&quot;</span></code> in to the <strong>command</strong> line. You can change the text in the quotation to your own (for example, <code class="docutils literal notranslate"><span class="pre">--labels</span> <span class="pre">&quot;My</span> <span class="pre">new</span> <span class="pre">main</span> <span class="pre">title</span></code>). If multiple patterns are plotted, provide the text for all patterns or leave <code class="docutils literal notranslate"><span class="pre">&quot;-&quot;</span></code> for default (example: <code class="docutils literal notranslate"><span class="pre">--labels</span> <span class="pre">&quot;Neutrons</span> <span class="pre">D1B&quot;,&quot;-&quot;,&quot;X-Ray</span> <span class="pre">in</span> <span class="pre">my</span> <span class="pre">lab&quot;</span></code>).</p>
+<p>If you want to remove the chart label, then set it to the following <code class="docutils literal notranslate"><span class="pre">--labels</span> <span class="pre">&quot;#&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">--labels</span> <span class="pre">&quot;-&quot;,&quot;#&quot;</span></code> in the case of multi-pattern (it will remove the chart label only at the second pattern).</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Phases title(s)</dt><dd><p>Default phase titles are taken from the PCR (SXY file). If you want to change it, check this option. It adds <code class="docutils literal notranslate"><span class="pre">--phases</span> <span class="pre">&quot;-&quot;</span></code> in to the <strong>command</strong> line. You can change the text in quotation to your own (example: <code class="docutils literal notranslate"><span class="pre">--phases</span> <span class="pre">&quot;Phase1&quot;</span></code>). If there are more phases, you can adjust each of them or leave <code class="docutils literal notranslate"><span class="pre">&quot;-&quot;</span></code> for default (example: <code class="docutils literal notranslate"><span class="pre">--phases</span> <span class="pre">&quot;Phase1&quot;,&quot;-&quot;,&quot;TiO$_2$&quot;</span></code>).</p>
+<p>When multi-pattern is plotted than there is <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> separating the patterns (example: <code class="docutils literal notranslate"><span class="pre">--phases</span> <span class="pre">&quot;Ph1-Pat1&quot;,&quot;Ph2-Pat1&quot;&#64;&quot;Ph1-Pat2&quot;</span></code>).</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to see the Braggs for each pattern, you have to set <strong>Save Bragg positions</strong> in <a class="reference internal" href="preferences.html#general-setup"><span class="std std-ref">Pref-&gt;General</span></a> tab to <code class="docutils literal notranslate"><span class="pre">XY</span> <span class="pre">for</span> <span class="pre">each</span> <span class="pre">phase</span></code>.</p>
+</div>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Direct save to file</dt><dd><p>If checked, the script will save the chart in the selected format. The format can be selected by clicking the appropriate option. The default is <code class="docutils literal notranslate"><span class="pre">PDF</span></code> format.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Save as file name</dt><dd><p>If this option is checked, the <strong>Direct save to file</strong> will be activated automatically. It adds <code class="docutils literal notranslate"><span class="pre">--save-as</span> <span class="pre">&quot;-&quot;</span></code> into the <strong>command</strong> line. You can adjust the text in quotation to the appropriate file name to save the chart figure. <strong>Don’t add the extension.</strong> If not provided or <code class="docutils literal notranslate"><span class="pre">&quot;-&quot;</span></code> used, the title will be used.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="buttons">
+<h3>Buttons<a class="headerlink" href="#buttons" title="Link to this heading">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/clean.png"><img alt="../_images/clean.png" class="align-left" src="../_images/clean.png" style="width: 20px;" />
+</a>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Clean files</dt><dd><p>It will delete all the SXY files in the working directory. You can recreate them by selecting the PCR in the <a class="reference internal" href="mainform.html#main-form"><span class="std std-ref">Main form</span></a> when the helper is open or open it from the <a class="reference internal" href="mainform.html#menu-export"><span class="std std-ref">Export menu</span></a>.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/editor.png"><img alt="../_images/editor.png" class="align-left" src="../_images/editor.png" style="width: 20px;" />
+</a>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Edit script</dt><dd><p>It opens the script actually stored in the <strong>working directory</strong> in the editor, and you can make proper adjustments.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Edits made in the script file from the <strong>working directory</strong> will be lost when the helper is closed and re-opened. The application will rewrite it with the default or the one stored in <a class="reference internal" href="introduction.html#settingstorage"><span class="std std-ref">config</span></a> folder. To make the changes permanent, use the <a class="reference internal" href="editor.html#special-editor-menu"><span class="std std-ref">Special menu</span></a> in the <a class="reference internal" href="editor.html#editor"><span class="std std-ref">Editor</span></a>.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/show-hints.png" id="show-the-script-hints"><img alt="../_images/show-hints.png" class="align-left" id="show-the-script-hints" src="../_images/show-hints.png" style="width: 20px;" />
+</a>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Show hints</dt><dd><p>It opens the help for the script in the editor.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/edit-copy.png"><img alt="../_images/edit-copy.png" class="align-left" src="../_images/edit-copy.png" style="width: 20px;" />
+</a>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Copy to clipboard</dt><dd><p>It copies the content of the <strong>command</strong> into the clipboard.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/terminal.png"><img alt="../_images/terminal.png" class="align-left" src="../_images/terminal.png" style="width: 20px;" />
+</a>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Open terminal</dt><dd><p>It tries to open the system terminal in the working directory.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You don’t need to open the terminal every time you change the <strong>command</strong> line. It is fine to open it once and then just copy and paste the command line. Unless, of course, you close the terminal every time you end up with the script.</p>
+</div>
+<p>An example of the output from the <strong>SXY plotter</strong> can be found <a class="reference internal" href="mainform.html#sxy-plotter-example"><span class="std std-ref">here</span></a>.</p>
+</section>
+</section>
+<section id="mic-plotter-helper">
+<span id="mic-plotter"></span><h2>MIC plotter helper<a class="headerlink" href="#mic-plotter-helper" title="Link to this heading">¶</a></h2>
+<p>The <strong>MIC plotter</strong> can plot the content of MIC files one at a time. The MIC files are created by the <strong>FullProf</strong> any time the IRF file is provided during the refinement. But until you start to refine microstructure parameters that files are without any useful information to be plotted, then you will see the <a class="reference internal" href="mainform.html#microstructure-viewer"><span class="std std-ref">Microstructure</span></a> tab on the <a class="reference internal" href="mainform.html#main-form"><span class="std std-ref">Main form</span></a>. If the microstructure parameters are refined, then you can use the <strong>MIC plotter</strong> to plot summary charts.</p>
+<p>Working with the <strong>MIC plotter</strong> helper is very similar to the <a class="reference internal" href="#sxy-plotter">SXY plotter</a> helper. So, for the various adjustment options, please refer to the proper description there. The main difference is that <strong>MIC plotter</strong> can plot only one MIC file at a time, and any <em>title</em>, <em>caption</em>, <em>phase name</em> adjustment has one string in quotation <code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">&quot;</span></code>.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/mic-plotter.jpg"><img alt="../_images/mic-plotter.jpg" src="../_images/mic-plotter.jpg" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">MIC plotter helper</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>There is also a missing button <code class="docutils literal notranslate"><span class="pre">Clean</span> <span class="pre">files</span></code> as MIC files are created during refinement and are not generated by <strong>GetControl</strong> as in the case of SXY files for <strong>SXY plotter</strong>.</p>
+<p>But there is one additional checkbox <code class="docutils literal notranslate"><span class="pre">Analyse</span></code>. If checked, the script tries to fit the Williamson-Hall (WH) plot and provides some basic analysis. An example of the output from the <strong>MIC plotter</strong> is shown in the picture below.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The analysis of the WH plot works only when symmetric microstructure broadening is refined. For the anisotropic broadening, it makes no sense.</p>
+</div>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../_images/mic-plotter-example.jpg"><img alt="../_images/mic-plotter-example.jpg" src="../_images/mic-plotter-example.jpg" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Example of the <em>MIC plotter</em> output</span><a class="headerlink" href="#id3" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+</article>
+        <aside class="nftt-toc my-3">
+          
+          <div class="my-sm-1 my-lg-0 ps-xl-3 text-muted">
+            <button class="btn btn-link p-lg-0 mb-2 mb-lg-0 text-decoration-none nftt-toc-toggle d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents"
+            >On this page <i class="ms-2 bi bi-chevron-expand"></i></button>
+            <div class="title d-none d-lg-block">
+              <i class="bi bi-file-earmark-text"></i>&nbsp;&nbsp;<span class="small">On this page</span>
+            </div>
+            <div class="collapse nftt-toc-collapse" id="tocContents">
+              <nav id="TableOfContents">
+                <ul>
+<li><a class="reference internal" href="#">SXY and MIC plotters</a><ul>
+<li><a class="reference internal" href="#how-to-work-with-the-helpers">How to work with the helpers</a></li>
+<li><a class="reference internal" href="#sxy-plotter-helper">SXY plotter helper</a><ul>
+<li><a class="reference internal" href="#files-and-checkboxes">Files and checkboxes</a></li>
+<li><a class="reference internal" href="#buttons">Buttons</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#mic-plotter-helper">MIC plotter helper</a></li>
+</ul>
+</li>
+</ul>
+
+              </nav>
+            </div>
+          </div>
+          
+        </aside>
+      </div>
+    </div>
+
+    <footer class="nftt-footer">
+      <nav id="paginator" class="py-4" aria-label="Documentation navigation">
+    <div class="container">
+      <ul class="pagination justify-content-between mb-0"><li class="d-flex page-item">
+            <a href="editor.html" class="d-flex px-5 align-items-end" rel="prev" aria-label="Previous page: Internal editor">
+              <span class="prev-page"><i class="bi bi-caret-left"></i></span>
+              <div class="d-none d-sm-flex flex-column">
+                <span class="text-small text-start text-muted">Previous</span>
+                <span class="underline">Internal editor</span>
+              </div>
+            </a>
+          </li>
+        <li class="d-flex page-item ms-auto">
+            <a href="changelog.html" class="d-flex px-5 align-items-end" rel="next" aria-label="Next page: What is news">
+              <div class="d-flex flex-column">
+                <span class="text-small text-end text-start text-muted">Next</span>
+                <span class="underline">What is news</span>
+              </div>
+              <span class="next-page"><i class="bi bi-caret-right"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </nav>
+
+      <div class="py-5 px-4 px-md-3">
+  <div class="container">
+    
+    <div class="row">
+      <ul id="nftt-footer-links" class="list-unstyled list-separator col-lg-12 pb-2 text-center">
+        
+          <li class="d-inline">
+            <a href="https://wildrams.github.io/getcontrol" class="list-item">Documentation</a>
+          </li>
+        
+          <li class="d-inline">
+            <a href="https://github.com/wildrams/getcontrol/releases/latest" class="list-item">Download</a>
+          </li>
+        
+          <li class="d-inline">
+            <a href="https://github.com/wildrams/getcontrol" class="list-item">Repository</a>
+          </li>
+        
+      </ul>
+    </div>
+    
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <a class="brand-text d-inline-flex align-items-center mb-2 text-decoration-none" href="/" aria-label="GetControl">
+          <span class="fs-6 fw-bold">GetControl</span>
+        </a>
+        
+          <ul class="list-unstyled small text-muted">
+            <li>2011-2025, WildRam</li>
+          </ul>
+        
+        
+        <div class="built-with pt-2">
+          Built with <a href="http://sphinx-doc.org">Sphinx 8.1.3</a> and <a href="https://github.com/danirus/sphinx-nefertiti">Nefertiti 0.8.6</a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+    </footer>
+    <script src="../_static/documentation_options.js?v=77cf03ce"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/docs-versions.js?v=00aa30ed"></script>
+    <script src="../_static/sphinx-nefertiti.min.js?v=cd4e68e4"></script>
+    <script src="../_static/bootstrap.bundle.min.js?v=ff4e7878"></script>
+  </body>
+</html>

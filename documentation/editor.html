@@ -1,0 +1,637 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    
+    <meta name="docsearch:name" content="GetControl" />
+    <meta name="docsearch:package_type" content="" />
+    <meta name="docsearch:release" content="0.9.3.1" />
+    <meta name="docsearch:version" content="0.9.3.1" />
+    
+      <meta name="theme-color" content="#0D6EFD" />
+    
+    
+      <title>Internal editor &mdash; GetControl 0.9.3.1 documentation</title>
+    
+    <link rel="canonical" href="documentation/editor" />
+      <link rel="icon" href="../_static/favicon.ico" />
+          <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8e8a900e" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/sphinx-nefertiti-blue.min.css?v=6eb1378b" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/fonts/nunito/stylesheet.css?v=abf98f06" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/fonts/open-sans/stylesheet.css?v=8129c031" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/pygments-dark.css?v=f21207c5" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/pygments-light.css?v=6c104457" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/bootstrap-icons.min.css?v=44730005" /><!-- add (1) -->
+        <link rel="index" title="Index" href="../genindex.html" />
+        <link rel="search" title="Search" href="../search.html" />
+        <link rel="top" title="GetControl 0.9.3.1 documentation" href="#" />
+        <link rel="next" title="SXY and MIC plotters" href="plotters.html" />
+        <link rel="prev" title="Preferences" href="preferences.html" />
+    <style>
+      :root {
+        --nftt-body-font-family: "Nunito", var(--nftt-font-sans-serif) !important;
+        --nftt-font-monospace: "Andale Mono", var(--nftt-font-family-monospace) !important;
+        --nftt-project-name-font: var(--nftt-body-font-family);
+        --nftt-documentation-font: "Open Sans", var(--nftt-body-font-family);
+        --nftt-doc-headers-font: "Georgia", var(--nftt-documentation-font);--nftt-documentation-font-size: 1.0rem;--nftt-monospace-font-size: 1.0rem;}
+
+      h1 *,
+      h2 *,
+      h3 *,
+      h4 *,
+      h5 *,
+      h6 * {
+        font-size: inherit;
+      }
+
+      .light pre,
+      .dark pre {
+        line-height: var(--nftt-pre-line-height, 140%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="back-to-top-container" class="position-fixed start-50 translate-middle-x">
+      <button id="back-to-top" type="button" class="d-none btn btn-neutral btn-sm shadow px-4" data-bs-toggle="button">Back to top</button>
+    </div>
+    <header id="snftt-nav-bar" class="navbar navbar-expand-xl navbar-dark nftt-navbar flex-column fixed-top">
+      <div class="skip-links container-fluid visually-hidden-focusable overflow-hidden justify-content-start flex-grow-1">
+        <div class="border-bottom mb-2 pb-2 w-100">
+          <a class="d-none d-md-inline-flex p-2 m-1" href="#sidebar-filter">Skip to index filter</a>
+          <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
+        </div>
+      </div>
+      <nav class="container-xxl nftt-gutter flex-nowrap" aria-label="Main navigation">
+        <div class="nftt-navbar-toggler">
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-label="Toggle documentation navigation">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+          <a
+            href="../index.html"
+            class="navbar-brand"
+          >
+            <img src="../_static/img/getcontrol.svg" width="35" height="35" alt="GetControl"
+              class="project-logo"
+            />
+            <span class="brand-text">GetControl</span><span class="brand-short-text">GetControl</span>
+          </a>
+        
+        
+          <ul class="nftt-header-links-large navbar-nav">
+          
+            
+            
+            
+            
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="../index.html" data-snftt-hl-id="1" >Home</a>
+    </li>
+  
+
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="introduction.html" data-snftt-hl-id="2" >Documentation</a>
+    </li>
+  
+
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="changelog.html" data-snftt-hl-id="3" >What is new</a>
+    </li>
+  
+
+          
+          </ul>
+        
+        <div class="d-flex d-xl-none">
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#nfttSearch" aria-controls="nfttSearch" aria-label="Search">
+            <i class="bi bi-search"></i>
+          </button>
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#nfttNavbar" aria-controls="nfttNavbar" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+        </div>
+        
+<div class="offcanvas-xl offcanvas-end flex-grow-1" tabindex="-1" id="nfttSearch" aria-labelledby="nfttSearchOffcanvasLabel" data-bs-scroll="true">
+  <div class="offcanvas-header px-4 pb-0">
+    <h5 class="offcanvas-title fw-bold" id="nfttSearchOffcanvasLabel">Search the documentation</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#nfttSearch"></button>
+  </div>
+  <div class="offcanvas-body p-4 pt-0 p-xl-0 ps-xl-4">
+    <hr class="d-xl-none text-white-50">
+    <ul class="navbar-nav flex-row align-items-center flex-wrap ms-md-auto">
+      <li class="nav-item col-12 col-xl-auto">
+        <form id="nftt-search-form" action="../search.html" method="get">
+          <div class="input-group">
+            <input type="text" name="q" class="form-control search-input" placeholder="Search" aria-label="Search" aria-describedby="button-search">
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+            <button class="btn btn-primary" type="submit" id="button-search" aria-label="Search"><i class="bi bi-search"></i></button>
+          </div>
+        </form>
+      </li>
+    </ul>
+  </div>
+</div>
+
+        <div class="offcanvas-xl offcanvas-end" tabindex="-1" id="nfttNavbar" aria-labelledby="nfttNavbarOffcanvasLabel" data-bs-scroll="true">
+          <div class="offcanvas-header px-4 pb-0">
+            <div class="offcanvas-title navbar-brand" id="nfttNavbarOffcanvasLabel"><span class="brand-short-text">GetControl</span></div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#nfttNavbar"></button>
+          </div>
+          <div class="offcanvas-body p-4 pt-0 p-xl-0 px-xl-3">
+            <hr class="d-xl-none text-white-50">
+            <ul class="navbar-nav flex-row align-items-center flex-wrap ms-lg-auto">
+              
+                <div class="nftt-header-links-small">
+                  
+                    
+                    
+                    
+                    <div class="d-inline-block">
+                      
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="../index.html" data-snftt-hl-id="1" >Home</a>
+    </li>
+  
+
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="introduction.html" data-snftt-hl-id="2" >Documentation</a>
+    </li>
+  
+
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="changelog.html" data-snftt-hl-id="3" >What is new</a>
+    </li>
+  
+
+                    </div>
+                  
+                  <li class="nav-item col-12 col-xl-auto h-100" aria-hidden="true">
+                    <div class="vr d-none d-xl-flex h-100 mx-xl-2 text-white-50"></div>
+                    <hr class="d-xl-none text-white-50">
+                  </li>
+                </div>
+              
+              
+              <li class="nav-item col-12 col-xl-auto">
+                <a class="nav-link py-2 py-xl-0 px-0 px-xl-2" href="https://github.com/wildrams/getcontrol" target="_blank" rel="noopener">
+                  <div class="d-flex align-items-center">
+                    <div class="me-2">
+                      <i class="bi bi-git size-24"></i>
+                    </div>
+                    <div class="repo d-flex flex-column align-items-center" data-snftt-repo-url="https://github.com/wildrams/getcontrol">
+                      wildrams/getcontrol
+                      <div class="d-flex justify-content-center" data-snftt-repo-metrics>
+                        <span class="pe-2 d-flex justify-content-center align-items-center">
+                          <i class="bi bi-tag size-14"></i>
+                          <span class="repo-metric" data-snftt-repo-tag></span>
+                        </span>
+                        <span class="pe-2 d-flex justify-content-center align-items-center">
+                          <i class="bi bi-star size-14"></i>
+                          <span class="repo-metric" data-snftt-repo-stars></span>
+                        </span>
+                        <span class="d-flex justify-content-center align-items-center">
+                          <i class="bi bi-diagram-2 size-14"></i>
+                          <span class="repo-metric" data-snftt-repo-forks></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item col-12 col-xl-auto h-100" aria-hidden="true">
+                <div class="vr d-none d-xl-flex h-100 mx-xl-2 text-white-50"></div>
+                <hr class="d-xl-none text-white-50">
+              </li>
+              
+              
+  <li class="nav-item dropdown">
+    <a class="nav-link d-flex py-2 px-0 px-xl-2 dropdown-toggle align-items-center" id="snftt-version" href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Select version">
+      <span id="snftt-version-text" class="d-xl-none">GetControl</span>
+      <span class="ms-2" data-snftt-version-active="v0.9.3.1">v0.9.3.1</span>
+    </a>
+    
+    <ul class="dropdown-menu dropdown-menu-end dropdown-limit-max-height" aria-labelledby="snftt-version-text" id="versions-dropdown-menu">
+      <li>
+        <h6 class="dropdown-header">Versions</h6>
+      </li>
+    </ul>
+  </li>
+  <li class="nav-item col-12 col-xl-auto h-100" aria-hidden="true">
+    <div class="vr d-none d-xl-flex h-100 mx-xl-2 text-white-50"></div>
+    <hr class="d-xl-none text-white-50">
+  </li>
+
+              
+              
+              <!-- lightdark-dropdown.html -->
+<li class="nav-item dropdown">
+  <a class="nav-link d-flex py-2 px-0 px-xl-2 dropdown-toggle align-items-center" id="snftt-luz" href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Change appearance">
+    <i class="bi bi-circle-half" data-snftt-luz-icon-active></i>
+    <span id="snftt-luz-text" class="d-xl-none ms-2">Change appearance</span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="snftt-luz-text">
+    <li>
+      <h6 class="dropdown-header">Change appearance</h6>
+    </li>
+    <li>
+      <a class="dropdown-item d-flex align-items-center" data-snftt-luz="light" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-sun" data-snftt-luz-icon="light"></i>
+        </span>
+        <span class="ms-3">Light</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item d-flex align-items-center" data-snftt-luz="dark" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-moon-stars" data-snftt-luz-icon="dark"></i>
+        </span>
+        <span class="ms-3">Dark</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item current d-flex align-items-center" data-snftt-luz="default" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-circle-half" data-snftt-luz-icon="default"></i>
+        </span>
+        <span class="ms-3">Automatic</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+  </ul>
+</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    </header>
+
+    <div class="container-fluid flex-grow-1">
+      <div class="nftt-gutter nftt-page">
+        <aside class="nftt-sidebar ">
+          <div class="nftt-sidebar-content">
+            
+            <div class="title d-none d-xl-block">
+              <i class="bi bi-book"></i>&nbsp;&nbsp;<span>Index</span>
+            </div>
+            <div id="sidebar" tabindex="-1" class="offcanvas-xl offcanvas-start" aria-labelledby="nfttSidebarOffcanvasLabel">
+                <!-- sidebartemplate: "globaltoc.html" --><div class="offcanvas-header border-bottom">
+  <h5 class="offcanvas-title fw-bold" id="nfttSidebarOffcanvasLabel">
+    Index
+  </h5>
+  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#sidebar"></button>
+</div>
+
+<div class="offcanvas-body">
+  <nav class="toc" aria-label="Main menu">
+    <div class="mb-3 p-1 pt-3 pb-4 border-bottom">
+      <input id="sidebar-filter" type="text" name="filter" class="form-control form-control-sm" placeholder="index filter" aria-label="index filter">
+    </div>
+    <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mainform.html">Main form</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preferences.html">Preferences</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Internal editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotters.html">SXY and MIC plotters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">What is news</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FullProf Tricks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fptricks/strain.html">The strain refinement</a></li>
+</ul>
+
+  </nav>
+  <template data-toggle-item-template>
+    <button class="btn btn-sm btn-link toctree-expand" type="button">
+      <i class="bi bi-caret-right"></i>
+      <span class="visually-hidden">Toggle menu contents</span>
+    </button>
+  </template>
+</div>
+            </div>
+            
+          </div>
+        </aside>
+        <article id="content" class="nftt-content" role="main">
+          <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../index.html">Start</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Internal editor</li>
+  </ol>
+</nav>
+    <section id="internal-editor">
+<span id="editor"></span><h1>Internal editor<a class="headerlink" href="#internal-editor" title="Link to this heading">¶</a></h1>
+<p>The internal <strong>Editor</strong> is a simple text editor that allows you to open any file. It allows multiple files to be opened in one window. The files are open in separate tabs. It has the usual functionality of the text editor. For the PCR files, it offers additional tools and functions helpful in handling the structural refinements with <strong>FullProf</strong>.</p>
+<p>It can be opened from the <a class="reference internal" href="mainform.html#main-form"><span class="std std-ref">Main from</span></a> using <a class="reference internal" href="mainform.html#menu-and-toolbar"><span class="std std-ref">menu or toolbar</span></a> button. It will also open any time the files are edited. If no external editor is selected in <a class="reference internal" href="preferences.html#general-setup"><span class="std std-ref">Pref-&gt;General</span></a> setup, then the internal one is used.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/editor-empty.jpg"><img alt="../_images/editor-empty.jpg" src="../_images/editor-empty.jpg" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Empty page in Editor form</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The description of the basic text editor functionality, such as <em>Open</em>, <em>Save</em>, <em>Find</em>, <em>Undo</em>, etc., are skipped here. Instead, the focus is on the description of the advanced tools for the PCR files or the application itself.</p>
+<section id="general-editor-area">
+<h2>General editor area<a class="headerlink" href="#general-editor-area" title="Link to this heading">¶</a></h2>
+<ul>
+<li><dl class="simple">
+<dt>Line numbering and edits</dt><dd><p>Lines are numbered, and if some change is made to the text, a yellow mark will be placed on the left side of the text. If the file is saved, the colour changes to green.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Keywords</dt><dd><p>The main keywords are printed in <strong>bold</strong>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Folding</dt><dd><p>The content of the PCR file can be folded at several points to shorten the content on the page. See the small rectangles on the left side of the text.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Autocompletion</dt><dd><p>When pressing <em>Ctrl-Space</em> in the empty space or predefined short commands, you can initiate the auto-completion dialogue, which allows you to add special nontrivial additional lines of code for further analysis.</p>
+<p>Example of adding the lines necessary to produce the BVS calculation. Type “add” or “bvs” and initiate autocomplete by <em>Ctrl+Space</em>. You should see the following.</p>
+<a class="reference internal image-reference" href="../_images/autocomplete-ini.jpg"><img alt="../_images/autocomplete-ini.jpg" class="align-center" src="../_images/autocomplete-ini.jpg" style="width: 80%;" />
+</a>
+<p>If you select the proper adding routine (adding BVS calculation), the auto-completion will add the necessary lines which still need to be updated, but it gives you hints about what needs to be added.</p>
+<a class="reference internal image-reference" href="../_images/autocomplete-done.jpg"><img alt="../_images/autocomplete-done.jpg" class="align-center" src="../_images/autocomplete-done.jpg" style="width: 80%;" />
+</a>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>You have to know where those additional lines have to be added and initiate the autocomplete from the proper location.</p>
+</div>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="menu-and-toolbar">
+<h2>Menu and Toolbar<a class="headerlink" href="#menu-and-toolbar" title="Link to this heading">¶</a></h2>
+<p>Most of the <strong>Menu</strong> items have their corresponding <strong>Toolbar</strong> buttons.</p>
+<section id="left-toolbar-and-menu-edit">
+<h3>Left toolbar and menu Edit<a class="headerlink" href="#left-toolbar-and-menu-edit" title="Link to this heading">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/fold-all.png"><img alt="../_images/fold-all.png" class="align-left" src="../_images/fold-all.png" style="width: 20px;" />
+</a>
+<p><strong>Fold all</strong> - The <em>Fold all</em> will collapse all the fold points.</p>
+<a class="reference internal image-reference" href="../_images/fold-unfold-all.png"><img alt="../_images/fold-unfold-all.png" class="align-left" src="../_images/fold-unfold-all.png" style="width: 20px;" />
+</a>
+<p><strong>Expand all</strong> - The <em>Expand all</em> will expand all the fold points.</p>
+<a class="reference internal image-reference" href="../_images/fold-background.png"><img alt="../_images/fold-background.png" class="align-left" src="../_images/fold-background.png" style="width: 20px;" />
+</a>
+<p><strong>Fold background</strong> - It will fold the part of the long <em>background</em> lists when <code class="docutils literal notranslate"><span class="pre">Nba</span> <span class="pre">&gt;</span> <span class="pre">2</span></code>. A shortcut <code class="docutils literal notranslate"><span class="pre">Ctrl+B</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/goto-line.png"><img alt="../_images/goto-line.png" class="align-left" src="../_images/goto-line.png" style="width: 20px;" />
+</a>
+<p><strong>Go to Phase XY</strong> - The drop-down menu with the list of the phases to quickly navigate to the part of the PCR file where the selected phase starts. A shortcut <code class="docutils literal notranslate"><span class="pre">Alt+PhaseNumber</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/CrysCalc.png"><img alt="../_images/CrysCalc.png" class="align-left" src="../_images/CrysCalc.png" style="width: 20px;" />
+</a>
+<p><strong>Launch CrysCalc</strong> - The button is active only when <strong>CFL file</strong> (created by <a class="reference internal" href="mainform.html#cc"><span class="std std-ref">CC</span></a> tool at the <a class="reference internal" href="mainform.html#supplementary-files"><span class="std std-ref">Supplementary files</span></a> or by user) is open. It allows quick launch of the <strong>CrysCalc</strong> application with the CFL file as input.</p>
+</section>
+<section id="top-toolbar-and-menu-view">
+<h3>Top toolbar and menu View<a class="headerlink" href="#top-toolbar-and-menu-view" title="Link to this heading">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/show-hints.png"><img alt="../_images/show-hints.png" class="align-left" src="../_images/show-hints.png" style="width: 20px;" />
+</a>
+<p><strong>Show FullProf hints</strong> - When enabled/pressed, the description of the <strong>keywords</strong> in the form of <em>hint</em> will appear when the cursor is over it. The font size of the hints can be adjusted in the <a class="reference internal" href="preferences.html#colours-and-layout"><span class="std std-ref">Pref-&gt;Colours&amp;layout</span></a>.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/editor-hints.jpg"><img alt="../_images/editor-hints.jpg" src="../_images/editor-hints.jpg" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Editor with the PCR file open and active hint on the <code class="docutils literal notranslate"><span class="pre">Job</span></code> parameter</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Keywords</strong> descriptions are taken from the <em>FullProf</em> manual (year 2000) combined with additional information from <em>changelog</em> and personal experince. If you have more insight help update, please (see <strong>Menu Special</strong> below).</p>
+</div>
+</section>
+<section id="top-toolbar-and-menu-fp">
+<h3>Top toolbar and menu FP<a class="headerlink" href="#top-toolbar-and-menu-fp" title="Link to this heading">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/dummy-run.png"><img alt="../_images/dummy-run.png" class="align-left" src="../_images/dummy-run.png" style="width: 20px;" />
+</a>
+<p><strong>Dummy run</strong> - When clicked, it changes the parameter <code class="docutils literal notranslate"><span class="pre">Aut</span></code> and sets the <code class="docutils literal notranslate"><span class="pre">!Number</span> <span class="pre">of</span> <span class="pre">refined</span> <span class="pre">parameters</span></code> both to <strong>0</strong> and start the refinement. To set those two parameters to zero means that only one cycle will be performed without real refinement of any parameter. In other words, only <em>simulation</em> will be performed. It is useful when you want to check the influence of the hand-made change of certain parameters. A shortcut <code class="docutils literal notranslate"><span class="pre">Ctrl+F9</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/auto-on.png"><img alt="../_images/auto-on.png" class="align-left" src="../_images/auto-on.png" style="width: 20px;" />
+</a>
+<a class="reference internal image-reference" href="../_images/auto-off.png"><img alt="../_images/auto-off.png" class="align-left" src="../_images/auto-off.png" style="width: 20px;" />
+</a>
+<p><strong>“Aut” parameter status</strong> - It shows the status of the parameter <code class="docutils literal notranslate"><span class="pre">Aut</span></code>. If <code class="docutils literal notranslate"><span class="pre">Aut=1</span></code>, the button is green, and if <code class="docutils literal notranslate"><span class="pre">Aut=0</span></code>, the button is red. You can <strong>change</strong> the status by clicking the button. The editor will set the <code class="docutils literal notranslate"><span class="pre">Aut</span></code> parameter as described.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To restart the full refinement after <strong>Dummy run</strong>, press the <strong>“Aut” parameter status</strong> to set <code class="docutils literal notranslate"><span class="pre">Aut</span></code> to <strong>1</strong> and start the refinement.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/chi-remove.png"><img alt="../_images/chi-remove.png" class="align-left" src="../_images/chi-remove.png" style="width: 20px;" />
+</a>
+<p><strong>𝜒2 warning remove</strong> - When your refinement ends up with the below message, your PCR will not be overwritten with the new results. But if you are sure that this is a good way for you to continue, click on this button, and the editor will remove the line <code class="docutils literal notranslate"><span class="pre">!</span> <span class="pre">Current</span> <span class="pre">global</span> <span class="pre">Chi2</span> <span class="pre">...</span></code> from the PCR and save it. This action will remove this warning during the next refinement run.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The warning is important to preserve your PCR setting when the refinement goes wrong. <em>FullProf</em> compares the lates calculated 𝜒2 with the one stored in the PCR file (<code class="docutils literal notranslate"><span class="pre">!</span> <span class="pre">Current</span> <span class="pre">global</span> <span class="pre">Chi2</span> <span class="pre">(Bragg</span> <span class="pre">contrib.)</span> <span class="pre">=</span> <span class="pre">2.608</span></code>). If you are fine with the worst 𝜒2, then you can increase the number in that line to some big number or remove it. By clicking <strong>𝜒2 warning remove</strong>, the application does it for you.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>=&gt; Normal end, final calculations and writing...
+=&gt; W A R N I N G!
+=&gt; Current parameters not saved to the current PCR file: final(Chi2) &gt; 1.2*initial(Chi2)
+=&gt; Current parameters are saved in a file of extension NEW
+</pre></div>
+</div>
+</div>
+</section>
+<section id="menu-special">
+<span id="special-editor-menu"></span><h3>Menu Special<a class="headerlink" href="#menu-special" title="Link to this heading">¶</a></h3>
+<ul>
+<li><dl>
+<dt>Edit FullProf Hints</dt><dd><p>It saves (into <a class="reference internal" href="introduction.html#settingstorage"><span class="std std-ref">config</span></a> folder) and opens the source file for the <em>FullProf hints</em>. This file contains special formatting input, which is read by the application and shown in the form of hints. You can edit the content of each hint, correct it or add a new one. Please follow the instructions in the header and look to the other hints for proper formatting. Please, <strong>share</strong> it when you enhance it.</p>
+<p>When you save the changes in the file, you can see the effect directly in the open PCR file, as the hints are reloaded immediately after saving.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The application searches first in the <a class="reference internal" href="introduction.html#settingstorage"><span class="std std-ref">config</span></a> folder for this file. If it exists, it loads it. If the file doesn’t exist, it loads the hints from the memory. If something goes wrong, just <strong>remove</strong> the hint file from the folder.</p>
+</div>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Edit Python SXY plotter script</dt><dd><p>It saves (into <a class="reference internal" href="introduction.html#settingstorage"><span class="std std-ref">config</span></a> folder) and opens the source file for the <em>SXY plotter</em>. You can edit/modify the content of the script. When you use the <strong>SXY plotter</strong> form, the application will use your modified script stored in the <a class="reference internal" href="introduction.html#settingstorage"><span class="std std-ref">config</span></a> folder instead of build-in one. If you want to restore the default, just delete your modified one.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Edit Python MIC plotter script</dt><dd><p>It saves (into <a class="reference internal" href="introduction.html#settingstorage"><span class="std std-ref">config</span></a> folder) and opens the source file for the <em>MIC plotter</em>. You can edit/modify the content of the script. When you use the <strong>MIC plotter</strong> form, the application will use your modified script stored in the <a class="reference internal" href="introduction.html#settingstorage"><span class="std std-ref">config</span></a> folder instead of build-in one. If you want to restore the default, just delete your modified one.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Edit Auto Complete list</dt><dd><p>It saves (into <a class="reference internal" href="introduction.html#settingstorage"><span class="std std-ref">config</span></a> folder) and opens the source file for the <em>Autocompletion</em>. This file contains special formatting input, which is read by the application. You can edit the content of each item, correct it or add a new one. Please follow the formatting, or otherwise, it will not be shown properly. Please, <strong>share</strong> it when you enhance it. If you want to restore the default, just delete your modified one.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Description of the autocomplete formatting:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">short_name</span> <span class="o">-</span> <span class="n">long</span> <span class="n">descriptions</span> <span class="k">with</span> <span class="n">spaces</span>
+<span class="o">=</span> <span class="n">puting</span> <span class="n">the</span> <span class="n">text</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="o">=</span> <span class="n">puting</span> <span class="n">the</span> <span class="n">text</span> <span class="n">line</span> <span class="mi">2</span><span class="o">|</span>
+</pre></div>
+</div>
+<p>“|” symbol says where the cursor should be placed after autocompletion. Real example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>more1 - Add paremeter line when More=1
+=1
+=!Jvi Jdi Hel Sol Mom Ter  N_Domains
+=   0|   0   0   0   0   0      0
+</pre></div>
+</div>
+</div>
+</section>
+<section id="help">
+<h3>Help<a class="headerlink" href="#help" title="Link to this heading">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/FP-news.png"><img alt="../_images/FP-news.png" class="align-left" src="../_images/FP-news.png" style="width: 20px;" />
+</a>
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">FullProf</span> <span class="pre">News</span></code> (Ctrl(⌘)+Alt+M)</dt><dd><p>It opens in the editor the <em>FullProf changelog</em> (information from the year 2000 onwards)</p>
+</dd>
+</dl>
+</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/FP-manual.png"><img alt="../_images/FP-manual.png" class="align-left" src="../_images/FP-manual.png" style="width: 20px;" />
+</a>
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">FullProf</span> <span class="pre">Manual</span></code> (Ctrl+Shift+M)</dt><dd><p>It opens the <em>FullProf manual</em> (PDF file from 2000) in the default viewer.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+</section>
+</section>
+
+</article>
+        <aside class="nftt-toc my-3">
+          
+          <div class="my-sm-1 my-lg-0 ps-xl-3 text-muted">
+            <button class="btn btn-link p-lg-0 mb-2 mb-lg-0 text-decoration-none nftt-toc-toggle d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents"
+            >On this page <i class="ms-2 bi bi-chevron-expand"></i></button>
+            <div class="title d-none d-lg-block">
+              <i class="bi bi-file-earmark-text"></i>&nbsp;&nbsp;<span class="small">On this page</span>
+            </div>
+            <div class="collapse nftt-toc-collapse" id="tocContents">
+              <nav id="TableOfContents">
+                <ul>
+<li><a class="reference internal" href="#">Internal editor</a><ul>
+<li><a class="reference internal" href="#general-editor-area">General editor area</a></li>
+<li><a class="reference internal" href="#menu-and-toolbar">Menu and Toolbar</a><ul>
+<li><a class="reference internal" href="#left-toolbar-and-menu-edit">Left toolbar and menu Edit</a></li>
+<li><a class="reference internal" href="#top-toolbar-and-menu-view">Top toolbar and menu View</a></li>
+<li><a class="reference internal" href="#top-toolbar-and-menu-fp">Top toolbar and menu FP</a></li>
+<li><a class="reference internal" href="#menu-special">Menu Special</a></li>
+<li><a class="reference internal" href="#help">Help</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </nav>
+            </div>
+          </div>
+          
+        </aside>
+      </div>
+    </div>
+
+    <footer class="nftt-footer">
+      <nav id="paginator" class="py-4" aria-label="Documentation navigation">
+    <div class="container">
+      <ul class="pagination justify-content-between mb-0"><li class="d-flex page-item">
+            <a href="preferences.html" class="d-flex px-5 align-items-end" rel="prev" aria-label="Previous page: Preferences">
+              <span class="prev-page"><i class="bi bi-caret-left"></i></span>
+              <div class="d-none d-sm-flex flex-column">
+                <span class="text-small text-start text-muted">Previous</span>
+                <span class="underline">Preferences</span>
+              </div>
+            </a>
+          </li>
+        <li class="d-flex page-item ms-auto">
+            <a href="plotters.html" class="d-flex px-5 align-items-end" rel="next" aria-label="Next page: SXY and MIC plotters">
+              <div class="d-flex flex-column">
+                <span class="text-small text-end text-start text-muted">Next</span>
+                <span class="underline">SXY and MIC plotters</span>
+              </div>
+              <span class="next-page"><i class="bi bi-caret-right"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </nav>
+
+      <div class="py-5 px-4 px-md-3">
+  <div class="container">
+    
+    <div class="row">
+      <ul id="nftt-footer-links" class="list-unstyled list-separator col-lg-12 pb-2 text-center">
+        
+          <li class="d-inline">
+            <a href="https://wildrams.github.io/getcontrol" class="list-item">Documentation</a>
+          </li>
+        
+          <li class="d-inline">
+            <a href="https://github.com/wildrams/getcontrol/releases/latest" class="list-item">Download</a>
+          </li>
+        
+          <li class="d-inline">
+            <a href="https://github.com/wildrams/getcontrol" class="list-item">Repository</a>
+          </li>
+        
+      </ul>
+    </div>
+    
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <a class="brand-text d-inline-flex align-items-center mb-2 text-decoration-none" href="/" aria-label="GetControl">
+          <span class="fs-6 fw-bold">GetControl</span>
+        </a>
+        
+          <ul class="list-unstyled small text-muted">
+            <li>2011-2025, WildRam</li>
+          </ul>
+        
+        
+        <div class="built-with pt-2">
+          Built with <a href="http://sphinx-doc.org">Sphinx 8.1.3</a> and <a href="https://github.com/danirus/sphinx-nefertiti">Nefertiti 0.8.6</a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+    </footer>
+    <script src="../_static/documentation_options.js?v=77cf03ce"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/docs-versions.js?v=00aa30ed"></script>
+    <script src="../_static/sphinx-nefertiti.min.js?v=cd4e68e4"></script>
+    <script src="../_static/bootstrap.bundle.min.js?v=ff4e7878"></script>
+  </body>
+</html>

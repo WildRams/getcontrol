@@ -1,0 +1,592 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    
+    <meta name="docsearch:name" content="GetControl" />
+    <meta name="docsearch:package_type" content="" />
+    <meta name="docsearch:release" content="0.9.3.1" />
+    <meta name="docsearch:version" content="0.9.3.1" />
+    
+      <meta name="theme-color" content="#0D6EFD" />
+    
+    
+      <title>Preferences &mdash; GetControl 0.9.3.1 documentation</title>
+    
+    <link rel="canonical" href="documentation/preferences" />
+      <link rel="icon" href="../_static/favicon.ico" />
+          <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8e8a900e" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/sphinx-nefertiti-blue.min.css?v=6eb1378b" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/fonts/nunito/stylesheet.css?v=abf98f06" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/fonts/open-sans/stylesheet.css?v=8129c031" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/pygments-dark.css?v=f21207c5" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/pygments-light.css?v=6c104457" /><!-- add (1) -->
+          <link rel="stylesheet" type="text/css" href="../_static/bootstrap-icons.min.css?v=44730005" /><!-- add (1) -->
+        <link rel="index" title="Index" href="../genindex.html" />
+        <link rel="search" title="Search" href="../search.html" />
+        <link rel="top" title="GetControl 0.9.3.1 documentation" href="#" />
+        <link rel="next" title="Internal editor" href="editor.html" />
+        <link rel="prev" title="Main form" href="mainform.html" />
+    <style>
+      :root {
+        --nftt-body-font-family: "Nunito", var(--nftt-font-sans-serif) !important;
+        --nftt-font-monospace: "Andale Mono", var(--nftt-font-family-monospace) !important;
+        --nftt-project-name-font: var(--nftt-body-font-family);
+        --nftt-documentation-font: "Open Sans", var(--nftt-body-font-family);
+        --nftt-doc-headers-font: "Georgia", var(--nftt-documentation-font);--nftt-documentation-font-size: 1.0rem;--nftt-monospace-font-size: 1.0rem;}
+
+      h1 *,
+      h2 *,
+      h3 *,
+      h4 *,
+      h5 *,
+      h6 * {
+        font-size: inherit;
+      }
+
+      .light pre,
+      .dark pre {
+        line-height: var(--nftt-pre-line-height, 140%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="back-to-top-container" class="position-fixed start-50 translate-middle-x">
+      <button id="back-to-top" type="button" class="d-none btn btn-neutral btn-sm shadow px-4" data-bs-toggle="button">Back to top</button>
+    </div>
+    <header id="snftt-nav-bar" class="navbar navbar-expand-xl navbar-dark nftt-navbar flex-column fixed-top">
+      <div class="skip-links container-fluid visually-hidden-focusable overflow-hidden justify-content-start flex-grow-1">
+        <div class="border-bottom mb-2 pb-2 w-100">
+          <a class="d-none d-md-inline-flex p-2 m-1" href="#sidebar-filter">Skip to index filter</a>
+          <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
+        </div>
+      </div>
+      <nav class="container-xxl nftt-gutter flex-nowrap" aria-label="Main navigation">
+        <div class="nftt-navbar-toggler">
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-label="Toggle documentation navigation">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+          <a
+            href="../index.html"
+            class="navbar-brand"
+          >
+            <img src="../_static/img/getcontrol.svg" width="35" height="35" alt="GetControl"
+              class="project-logo"
+            />
+            <span class="brand-text">GetControl</span><span class="brand-short-text">GetControl</span>
+          </a>
+        
+        
+          <ul class="nftt-header-links-large navbar-nav">
+          
+            
+            
+            
+            
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="../index.html" data-snftt-hl-id="1" >Home</a>
+    </li>
+  
+
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="introduction.html" data-snftt-hl-id="2" >Documentation</a>
+    </li>
+  
+
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="changelog.html" data-snftt-hl-id="3" >What is new</a>
+    </li>
+  
+
+          
+          </ul>
+        
+        <div class="d-flex d-xl-none">
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#nfttSearch" aria-controls="nfttSearch" aria-label="Search">
+            <i class="bi bi-search"></i>
+          </button>
+          <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#nfttNavbar" aria-controls="nfttNavbar" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+        </div>
+        
+<div class="offcanvas-xl offcanvas-end flex-grow-1" tabindex="-1" id="nfttSearch" aria-labelledby="nfttSearchOffcanvasLabel" data-bs-scroll="true">
+  <div class="offcanvas-header px-4 pb-0">
+    <h5 class="offcanvas-title fw-bold" id="nfttSearchOffcanvasLabel">Search the documentation</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#nfttSearch"></button>
+  </div>
+  <div class="offcanvas-body p-4 pt-0 p-xl-0 ps-xl-4">
+    <hr class="d-xl-none text-white-50">
+    <ul class="navbar-nav flex-row align-items-center flex-wrap ms-md-auto">
+      <li class="nav-item col-12 col-xl-auto">
+        <form id="nftt-search-form" action="../search.html" method="get">
+          <div class="input-group">
+            <input type="text" name="q" class="form-control search-input" placeholder="Search" aria-label="Search" aria-describedby="button-search">
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+            <button class="btn btn-primary" type="submit" id="button-search" aria-label="Search"><i class="bi bi-search"></i></button>
+          </div>
+        </form>
+      </li>
+    </ul>
+  </div>
+</div>
+
+        <div class="offcanvas-xl offcanvas-end" tabindex="-1" id="nfttNavbar" aria-labelledby="nfttNavbarOffcanvasLabel" data-bs-scroll="true">
+          <div class="offcanvas-header px-4 pb-0">
+            <div class="offcanvas-title navbar-brand" id="nfttNavbarOffcanvasLabel"><span class="brand-short-text">GetControl</span></div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#nfttNavbar"></button>
+          </div>
+          <div class="offcanvas-body p-4 pt-0 p-xl-0 px-xl-3">
+            <hr class="d-xl-none text-white-50">
+            <ul class="navbar-nav flex-row align-items-center flex-wrap ms-lg-auto">
+              
+                <div class="nftt-header-links-small">
+                  
+                    
+                    
+                    
+                    <div class="d-inline-block">
+                      
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="../index.html" data-snftt-hl-id="1" >Home</a>
+    </li>
+  
+
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="introduction.html" data-snftt-hl-id="2" >Documentation</a>
+    </li>
+  
+
+  
+    <li class="nav-item">
+      <a class="snftt-hl nav-link" href="changelog.html" data-snftt-hl-id="3" >What is new</a>
+    </li>
+  
+
+                    </div>
+                  
+                  <li class="nav-item col-12 col-xl-auto h-100" aria-hidden="true">
+                    <div class="vr d-none d-xl-flex h-100 mx-xl-2 text-white-50"></div>
+                    <hr class="d-xl-none text-white-50">
+                  </li>
+                </div>
+              
+              
+              <li class="nav-item col-12 col-xl-auto">
+                <a class="nav-link py-2 py-xl-0 px-0 px-xl-2" href="https://github.com/wildrams/getcontrol" target="_blank" rel="noopener">
+                  <div class="d-flex align-items-center">
+                    <div class="me-2">
+                      <i class="bi bi-git size-24"></i>
+                    </div>
+                    <div class="repo d-flex flex-column align-items-center" data-snftt-repo-url="https://github.com/wildrams/getcontrol">
+                      wildrams/getcontrol
+                      <div class="d-flex justify-content-center" data-snftt-repo-metrics>
+                        <span class="pe-2 d-flex justify-content-center align-items-center">
+                          <i class="bi bi-tag size-14"></i>
+                          <span class="repo-metric" data-snftt-repo-tag></span>
+                        </span>
+                        <span class="pe-2 d-flex justify-content-center align-items-center">
+                          <i class="bi bi-star size-14"></i>
+                          <span class="repo-metric" data-snftt-repo-stars></span>
+                        </span>
+                        <span class="d-flex justify-content-center align-items-center">
+                          <i class="bi bi-diagram-2 size-14"></i>
+                          <span class="repo-metric" data-snftt-repo-forks></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item col-12 col-xl-auto h-100" aria-hidden="true">
+                <div class="vr d-none d-xl-flex h-100 mx-xl-2 text-white-50"></div>
+                <hr class="d-xl-none text-white-50">
+              </li>
+              
+              
+  <li class="nav-item dropdown">
+    <a class="nav-link d-flex py-2 px-0 px-xl-2 dropdown-toggle align-items-center" id="snftt-version" href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Select version">
+      <span id="snftt-version-text" class="d-xl-none">GetControl</span>
+      <span class="ms-2" data-snftt-version-active="v0.9.3.1">v0.9.3.1</span>
+    </a>
+    
+    <ul class="dropdown-menu dropdown-menu-end dropdown-limit-max-height" aria-labelledby="snftt-version-text" id="versions-dropdown-menu">
+      <li>
+        <h6 class="dropdown-header">Versions</h6>
+      </li>
+    </ul>
+  </li>
+  <li class="nav-item col-12 col-xl-auto h-100" aria-hidden="true">
+    <div class="vr d-none d-xl-flex h-100 mx-xl-2 text-white-50"></div>
+    <hr class="d-xl-none text-white-50">
+  </li>
+
+              
+              
+              <!-- lightdark-dropdown.html -->
+<li class="nav-item dropdown">
+  <a class="nav-link d-flex py-2 px-0 px-xl-2 dropdown-toggle align-items-center" id="snftt-luz" href="#" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" aria-label="Change appearance">
+    <i class="bi bi-circle-half" data-snftt-luz-icon-active></i>
+    <span id="snftt-luz-text" class="d-xl-none ms-2">Change appearance</span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="snftt-luz-text">
+    <li>
+      <h6 class="dropdown-header">Change appearance</h6>
+    </li>
+    <li>
+      <a class="dropdown-item d-flex align-items-center" data-snftt-luz="light" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-sun" data-snftt-luz-icon="light"></i>
+        </span>
+        <span class="ms-3">Light</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item d-flex align-items-center" data-snftt-luz="dark" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-moon-stars" data-snftt-luz-icon="dark"></i>
+        </span>
+        <span class="ms-3">Dark</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item current d-flex align-items-center" data-snftt-luz="default" href="#" aria-pressed="false">
+        <span>
+          <i class="bi bi-circle-half" data-snftt-luz-icon="default"></i>
+        </span>
+        <span class="ms-3">Automatic</span>
+        <i class="bi bi-check ms-auto"></i>
+      </a>
+    </li>
+  </ul>
+</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+    </header>
+
+    <div class="container-fluid flex-grow-1">
+      <div class="nftt-gutter nftt-page">
+        <aside class="nftt-sidebar ">
+          <div class="nftt-sidebar-content">
+            
+            <div class="title d-none d-xl-block">
+              <i class="bi bi-book"></i>&nbsp;&nbsp;<span>Index</span>
+            </div>
+            <div id="sidebar" tabindex="-1" class="offcanvas-xl offcanvas-start" aria-labelledby="nfttSidebarOffcanvasLabel">
+                <!-- sidebartemplate: "globaltoc.html" --><div class="offcanvas-header border-bottom">
+  <h5 class="offcanvas-title fw-bold" id="nfttSidebarOffcanvasLabel">
+    Index
+  </h5>
+  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#sidebar"></button>
+</div>
+
+<div class="offcanvas-body">
+  <nav class="toc" aria-label="Main menu">
+    <div class="mb-3 p-1 pt-3 pb-4 border-bottom">
+      <input id="sidebar-filter" type="text" name="filter" class="form-control form-control-sm" placeholder="index filter" aria-label="index filter">
+    </div>
+    <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mainform.html">Main form</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Preferences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editor.html">Internal editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plotters.html">SXY and MIC plotters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">What is news</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FullProf Tricks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fptricks/strain.html">The strain refinement</a></li>
+</ul>
+
+  </nav>
+  <template data-toggle-item-template>
+    <button class="btn btn-sm btn-link toctree-expand" type="button">
+      <i class="bi bi-caret-right"></i>
+      <span class="visually-hidden">Toggle menu contents</span>
+    </button>
+  </template>
+</div>
+            </div>
+            
+          </div>
+        </aside>
+        <article id="content" class="nftt-content" role="main">
+          <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../index.html">Start</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Preferences</li>
+  </ol>
+</nav>
+    <section id="preferences">
+<span id="id1"></span><h1>Preferences<a class="headerlink" href="#preferences" title="Link to this heading">¶</a></h1>
+<p><strong>Preferences</strong> allows you to preset some important settings or adjust the layout of the <a class="reference internal" href="mainform.html#main-form"><span class="std std-ref">Main Form</span></a> and the application itself. It has four tabs that group the properties together for better organisation.</p>
+<section id="general-setup-tab">
+<span id="general-setup"></span><h2>General setup tab<a class="headerlink" href="#general-setup-tab" title="Link to this heading">¶</a></h2>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/pref-general.jpg"><img alt="../_images/pref-general.jpg" src="../_images/pref-general.jpg" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Preferences: General setup tab</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="checkboxes">
+<h3>Checkboxes<a class="headerlink" href="#checkboxes" title="Link to this heading">¶</a></h3>
+<p>The top part contains the selection of behaviours, which are detailed below.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Save windows’ position and size</dt><dd><p>If checked, it will store the size and position of each window in the application and store it in the file in <a class="reference internal" href="introduction.html#settingstorage"><span class="std std-ref">config</span></a> folder. It also applies to the position of the splitter between <em>Files list</em> and <em>Information pages</em>.</p>
+<ul>
+<li><p>By default, it is <strong>True</strong>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Save program setting</dt><dd><p>It saves the setting in the file in the <a class="reference internal" href="introduction.html#settingstorage"><span class="std std-ref">config</span></a> folder. If <em>False</em>, nothing is stored, not even application paths.</p>
+<ul>
+<li><p>By default, it is <strong>True</strong>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Apply Scor factor to errors</dt><dd><p>It multiplies all errors by the <em>Scor</em> factor (see <a class="reference internal" href="mainform.html#refinement-summary"><span class="std std-ref">Refinement summary</span></a> tab).</p>
+<ul>
+<li><p>By default, it is <strong>False</strong>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Automatic check for updates</dt><dd><p>If <em>True</em>, the application checks at the launch for the new versions on the GitHub server. A small file (around 50 kB) is downloaded during that process. If a new version is found, the user is informed.</p>
+<ul>
+<li><p>By default, it is <strong>True</strong></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Ask for name when backup?</dt><dd><p>If <em>True</em>, the <code class="docutils literal notranslate"><span class="pre">Backup</span> <span class="pre">structure</span></code> (see <a class="reference internal" href="mainform.html#menu-and-toolbar"><span class="std std-ref">Menu and Toolbar</span></a> -&gt; <code class="docutils literal notranslate"><span class="pre">Edit</span></code>) function asks for the new name instead of putting automatically <strong>-backup</strong> string.</p>
+<ul>
+<li><p>By default, it is <strong>False</strong></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Even if it is <em>False</em> by default, it is very useful to check <code class="docutils literal notranslate"><span class="pre">True</span></code> the <strong>Ask for a name when backup?</strong> options. It combines the <em>Backup</em> and <em>Rename</em> functions into one.</p>
+</div>
+<p>If the <code class="docutils literal notranslate"><span class="pre">Write</span> <span class="pre">debug</span> <span class="pre">log</span></code> menu (see <a class="reference internal" href="mainform.html#menu-and-toolbar"><span class="std std-ref">Menu and Toolbar</span></a> -&gt; <code class="docutils literal notranslate"><span class="pre">Help</span></code>) is checked, the log files are created and stored in the <a class="reference internal" href="introduction.html#settingstorage"><span class="std std-ref">config</span></a> folder. The size and number of LOG files are shown. You can open the directory to see the files, or you can clean up all the log files when their size becomes too big.</p>
+</section>
+<section id="application-paths">
+<h3>Application paths<a class="headerlink" href="#application-paths" title="Link to this heading">¶</a></h3>
+<p>In the four edits, you should provide the paths to the used application as <em>FullProf</em>, <em>CIF viewer</em>, <em>Dysnomia</em> and external <em>text editor</em> of your choice.</p>
+<p>The <em>labels</em> above the edits link to the proposed <strong>web pages</strong> to download the necessary applications.</p>
+<p>You can navigate to the appropriate path by clicking the <em>Directory</em> icon on the left side of each edit.</p>
+</section>
+<section id="bottom-part">
+<h3>Bottom part<a class="headerlink" href="#bottom-part" title="Link to this heading">¶</a></h3>
+<dl class="simple">
+<dt><strong>Length of error</strong> (default <strong>1</strong>, interval <strong>1-3</strong>)</dt><dd><p>It sets the maximum size of the errors behind the value (ex. 12.548(454) for length=3).</p>
+</dd>
+<dt><strong>Save Bragg positions</strong></dt><dd><p>It sets the weather how the Bragg positions are saved in the SXY files (see <a class="reference internal" href="mainform.html#menu-and-toolbar"><span class="std std-ref">Menu and Toolbar</span></a> -&gt; <code class="docutils literal notranslate"><span class="pre">Export</span></code>). It has two options:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>all phases in one XY (default)</dt><dd><p>This is the default option and saves all the Bragg in one column independent of the phase count. It is stored in the PRF file the same way. The file is smaller.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>XY for each phase</dt><dd><p>It splits the Braggs for each phase and stores the columns for each phase.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To be able to use the <strong>SXY plotter</strong> script with the phase contributions (as <a class="reference internal" href="mainform.html#sxy-plotter-example"><span class="std std-ref">here</span></a>), one has to switch to <strong>XY for each phase</strong>.</p>
+</div>
+</section>
+</section>
+<section id="profile-chart-setup">
+<span id="profile-chart"></span><h2>Profile chart setup<a class="headerlink" href="#profile-chart-setup" title="Link to this heading">¶</a></h2>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../_images/pref-line.jpg"><img alt="../_images/pref-line.jpg" src="../_images/pref-line.jpg" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Preferences: Profile chart setup tab</span><a class="headerlink" href="#id3" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Here you can set the properties of the <a class="reference internal" href="mainform.html#profile-viewer"><span class="std std-ref">Profile viewer</span></a> chart as <em>label/number font size</em> of the axis, axis <em>titles</em>, <em>legend font size</em> and <em>visibility</em>, etc. The description of the setting is quite intuitive, so there is no more explanation here.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The <em>font size</em> will be preserved, but titles will be changed/reloaded when the new PCR is selected.</p>
+</div>
+</section>
+<section id="mic-chart-setup">
+<span id="mic-chart"></span><h2>MIC chart setup<a class="headerlink" href="#mic-chart-setup" title="Link to this heading">¶</a></h2>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../_images/pref-mic.jpg"><img alt="../_images/pref-mic.jpg" src="../_images/pref-mic.jpg" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Preferences: MIC chart setup tab</span><a class="headerlink" href="#id4" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Here, you can set the properties of the <a class="reference internal" href="mainform.html#microstructure-viewer"><span class="std std-ref">Microstructure viewer</span></a> chart as <em>label/number font size</em> of the axis, axis <em>titles</em>, <em>marks</em> options, etc. The description of the setting is quite intuitive, so there is no more explanation here.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The <em>font size</em> and <em>marks</em> settings will be preserved, but titles will be changed/reloaded when the new PCR is selected.</p>
+</div>
+</section>
+<section id="colours-layout">
+<span id="colours-and-layout"></span><h2>Colours/layout<a class="headerlink" href="#colours-layout" title="Link to this heading">¶</a></h2>
+<p>Here, you can adjust the colours for the phases if you are not happy with the primary selection.</p>
+<p>The size of the icons on the <a class="reference internal" href="mainform.html#main-form"><span class="std std-ref">Main form</span></a> can be adjusted if necessary together with the font size of the <em>hints</em> in <a class="reference internal" href="editor.html#editor"><span class="std std-ref">Editor</span></a>. This is practical for HiDPI monitors where <em>hints</em> take too much of the screen space.</p>
+<p>The <em>Reset forms</em> button resets the position and size of all the forms. This can be useful when you have multiple monitors, and you switch the one, and the form is placed on the other monitor. All open forms except the main one will be closed, and the size will be reset.</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../_images/pref-layout.jpg"><img alt="../_images/pref-layout.jpg" src="../_images/pref-layout.jpg" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Preferences: Colours/layout tab</span><a class="headerlink" href="#id5" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+</article>
+        <aside class="nftt-toc my-3">
+          
+          <div class="my-sm-1 my-lg-0 ps-xl-3 text-muted">
+            <button class="btn btn-link p-lg-0 mb-2 mb-lg-0 text-decoration-none nftt-toc-toggle d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents"
+            >On this page <i class="ms-2 bi bi-chevron-expand"></i></button>
+            <div class="title d-none d-lg-block">
+              <i class="bi bi-file-earmark-text"></i>&nbsp;&nbsp;<span class="small">On this page</span>
+            </div>
+            <div class="collapse nftt-toc-collapse" id="tocContents">
+              <nav id="TableOfContents">
+                <ul>
+<li><a class="reference internal" href="#">Preferences</a><ul>
+<li><a class="reference internal" href="#general-setup-tab">General setup tab</a><ul>
+<li><a class="reference internal" href="#checkboxes">Checkboxes</a></li>
+<li><a class="reference internal" href="#application-paths">Application paths</a></li>
+<li><a class="reference internal" href="#bottom-part">Bottom part</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#profile-chart-setup">Profile chart setup</a></li>
+<li><a class="reference internal" href="#mic-chart-setup">MIC chart setup</a></li>
+<li><a class="reference internal" href="#colours-layout">Colours/layout</a></li>
+</ul>
+</li>
+</ul>
+
+              </nav>
+            </div>
+          </div>
+          
+        </aside>
+      </div>
+    </div>
+
+    <footer class="nftt-footer">
+      <nav id="paginator" class="py-4" aria-label="Documentation navigation">
+    <div class="container">
+      <ul class="pagination justify-content-between mb-0"><li class="d-flex page-item">
+            <a href="mainform.html" class="d-flex px-5 align-items-end" rel="prev" aria-label="Previous page: Main form">
+              <span class="prev-page"><i class="bi bi-caret-left"></i></span>
+              <div class="d-none d-sm-flex flex-column">
+                <span class="text-small text-start text-muted">Previous</span>
+                <span class="underline">Main form</span>
+              </div>
+            </a>
+          </li>
+        <li class="d-flex page-item ms-auto">
+            <a href="editor.html" class="d-flex px-5 align-items-end" rel="next" aria-label="Next page: Internal editor">
+              <div class="d-flex flex-column">
+                <span class="text-small text-end text-start text-muted">Next</span>
+                <span class="underline">Internal editor</span>
+              </div>
+              <span class="next-page"><i class="bi bi-caret-right"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </nav>
+
+      <div class="py-5 px-4 px-md-3">
+  <div class="container">
+    
+    <div class="row">
+      <ul id="nftt-footer-links" class="list-unstyled list-separator col-lg-12 pb-2 text-center">
+        
+          <li class="d-inline">
+            <a href="https://wildrams.github.io/getcontrol" class="list-item">Documentation</a>
+          </li>
+        
+          <li class="d-inline">
+            <a href="https://github.com/wildrams/getcontrol/releases/latest" class="list-item">Download</a>
+          </li>
+        
+          <li class="d-inline">
+            <a href="https://github.com/wildrams/getcontrol" class="list-item">Repository</a>
+          </li>
+        
+      </ul>
+    </div>
+    
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <a class="brand-text d-inline-flex align-items-center mb-2 text-decoration-none" href="/" aria-label="GetControl">
+          <span class="fs-6 fw-bold">GetControl</span>
+        </a>
+        
+          <ul class="list-unstyled small text-muted">
+            <li>2011-2025, WildRam</li>
+          </ul>
+        
+        
+        <div class="built-with pt-2">
+          Built with <a href="http://sphinx-doc.org">Sphinx 8.1.3</a> and <a href="https://github.com/danirus/sphinx-nefertiti">Nefertiti 0.8.6</a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+    </footer>
+    <script src="../_static/documentation_options.js?v=77cf03ce"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/docs-versions.js?v=00aa30ed"></script>
+    <script src="../_static/sphinx-nefertiti.min.js?v=cd4e68e4"></script>
+    <script src="../_static/bootstrap.bundle.min.js?v=ff4e7878"></script>
+  </body>
+</html>
