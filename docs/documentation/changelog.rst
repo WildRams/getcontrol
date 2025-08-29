@@ -3,12 +3,24 @@
 What is news
 ############
 
-Compiled with `CT <https://www.pilotlogic.com>`__ 8.5
+Compiled with `CT <https://www.pilotlogic.com>`__ 8.7
 
 All suggestions are welcomed at prema@email.cz
 
 Version 0.9
 ^^^^^^^^^^^
+
+Version 0.9.3 build 1
+-----------------------------------------------
+:Date: 29/08/2025
+
+- Slider for size changing the file list not visible (macOS) corrected.
+- Python command editors (SXY and MIC) wrongly formatted command line when editor was updated manually, now corrected.
+- Corrected wrong reading space group info when using modes Jbt=±6.
+- Corrected not reading and showing HKL info on the chart for Jbt=±6.
+- When using the COMMANDS block, the phase name is read correctly now.
+- New option in Preferences->Colors/layout tab, you can select if the phase colour will be used for font face colour
+  or background (default). (Suggested by Denis)
 
 Version 0.9.2 build 4
 -----------------------------------------------
