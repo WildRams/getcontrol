@@ -10,6 +10,21 @@ All suggestions are welcomed at prema@email.cz
 Version 0.9
 ^^^^^^^^^^^
 
+Version 0.9.4 build 1
+-----------------------------------------------
+:Date: 30/04/2026
+
+- CrysCalc launcher doesn't work when the file name contains spaces. Now it should be corrected.
+  But, good practice, don't use spaces in the file and directory names.
+- There may be a GC freeze in some circumstances when changing the empty tabs. Now corrected.
+- Corrected the wrong display of the large errors bigger than 1.
+- Problem with opening the desnisty maps for versions <= 8.1 is corrected.
+- Profiles parameters from IRF were not properly read and displayed for TOF patterns. Now corrected.
+- Bov parameter not read for TOF cases.
+- Bov parameter is now shown also below each phase if used. (Stefan’s request)
+- When drag&drop or passing the file with the path as a parameter, the GC shows after loading that exact file.
+- With the new FP with PySide6, make sure you select the proper directory with the "fp2k" executable.
+
 Version 0.9.3 build 1
 -----------------------------------------------
 :Date: 29/08/2025

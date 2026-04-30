@@ -19,9 +19,9 @@ else:
 
 project = 'GetControl'
 author = 'Přemysl (Premek) Beran'
-copyright = '2011-2025, WildRam'
+copyright = '2011-2026, WildRam'
 
-version = '0.9.3.1'
+version = '0.9.4.1'
 release = version
 
 language = 'en'
@@ -62,6 +62,7 @@ show_authors = True
 release_pattern_url = 'https://github.com/wildrams/getcontrol/releases/tag/v{release}/'
 releases = [
     release,
+    '0.9.3.1',
     '0.9.2.4',
     '0.9.1.1',
     '0.9.0.1',

@@ -1,8 +1,8 @@
-0.9.3 build 1
-Win32-MD5Sum: cf32fc9038949a6099a9b019d6696f86
-Linux32-MD5Sum: 4c4767e7a2d7a5dbab6cf0ec0f2410ba
-Win64-MD5Sum: 15b79dd3c2676a8b4327b4763e2962d0
-Linux64-MD5Sum: bf48027a9099e34713ab3830d6a8d20f
+0.9.4 build 1
+Win32-MD5Sum: 973738e38057cb685df1e3e870260e3a
+Linux32-MD5Sum: 2d96b952d62bb8380cfe5fdf85af6a11
+Win64-MD5Sum: 2c04a36502158b451d12beae8019eea4
+Linux64-MD5Sum: 31b720e6930b47c1b951efd02db0da48
 -----------------------------------------------
                  GetControl
  Tool for collecting information about 
@@ -14,6 +14,17 @@ Linux64-MD5Sum: bf48027a9099e34713ab3830d6a8d20f
  Compiled with CT 8.5
  
 - all suggestions are welcomed at prema@email.cz
+-----------------------------------------------
+30/04/2026 0.9.4 build 1
+- CrysCalc launcher doesn't work when the file name contains spaces. Now it should be corrected. But, good practice, don't use spaces in the file and directory names.
+- There may be a GC freeze in some circumstances when changing the empty tabs. Now corrected.
+- Corrected the wrong display of the large errors bigger than 1.
+- Problem with opening the desnisty maps for versions <= 8.1 is corrected.
+- Profiles parameters from IRF were not properly read and displayed for TOF patterns. Now corrected.
+- Bov parameter not read for TOF cases.
+- Bov parameter is now shown also below each phase if used. (Stefan’s request)
+- When drag&drop or passing the file with the path as a parameter, the GC shows after loading that exact file.
+- With the new FP with PySide6, make sure you select the proper directory with the "fp2k" executable.
 -----------------------------------------------
 29/08/2025 0.9.3 build 1
 - Slider for size changing the file list not visible (macOS) corrected.
