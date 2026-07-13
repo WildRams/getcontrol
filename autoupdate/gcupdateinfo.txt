@@ -1,8 +1,8 @@
-0.9.4 build 1
-Win32-MD5Sum: 973738e38057cb685df1e3e870260e3a
-Linux32-MD5Sum: 2d96b952d62bb8380cfe5fdf85af6a11
-Win64-MD5Sum: 2c04a36502158b451d12beae8019eea4
-Linux64-MD5Sum: 31b720e6930b47c1b951efd02db0da48
+0.9.4 build 2
+Win32-MD5Sum: 3217e6a3401c4d2a1778b861ef990875
+Linux32-MD5Sum: 8594ec9040bdea5ed603046328063366
+Win64-MD5Sum: 06b639f96c3a925cee0f2b7461b886e7
+Linux64-MD5Sum: f27a546998f0a608c4e11e220f9ce9b9
 -----------------------------------------------
                  GetControl
  Tool for collecting information about 
@@ -11,9 +11,14 @@ Linux64-MD5Sum: 31b720e6930b47c1b951efd02db0da48
  Web page on Github https://github.com/WildRams/getcontrol
  Documentation on https://wildrams.github.io/getcontrol/
  
- Compiled with CT 8.5
+ Compiled with CT 8.7
  
 - all suggestions are welcomed at prema@email.cz
+-----------------------------------------------
+13/07/2026 0.9.4 build 2
+- GC update initialisation file for FP toolbar, so when TFP is launched from GC, it opens with the active path and the file
+- The recent dir sometimes showed an empty line; this is now corrected
+- Some minor updates to PCR parsing
 -----------------------------------------------
 30/04/2026 0.9.4 build 1
 - CrysCalc launcher doesn't work when the file name contains spaces. Now it should be corrected. But, good practice, don't use spaces in the file and directory names.
