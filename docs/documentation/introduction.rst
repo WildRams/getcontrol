@@ -71,7 +71,7 @@ Check the releases_ section or follow the link below for the direct download of 
 +------------------------+----------+----------+
 | Linux (gtk2 widgets)   | `Lin32`_ | `Lin64`_ |
 +------------------------+----------+----------+
-| macOS (DMG image disk) |          | `Mac64`_ |
+| macOS (Intel DMG file) |          | `Mac64`_ |
 +------------------------+----------+----------+
 
 .. _Contact:

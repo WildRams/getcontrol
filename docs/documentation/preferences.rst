@@ -58,6 +58,9 @@ The *labels* above the edits link to the proposed **web pages** to download the 
 
 You can navigate to the appropriate path by clicking the *Directory* icon on the left side of each edit.
 
+.. attention::
+    The *FullProf* has two versions **classic** and **PySide6** based. When selecting the directory where *FullProf* is installed (if it is not picked up automatically), select the one where the **fp2k** file is located, not the one where the toolbar executable is.
+
 Bottom part
 -----------
 
@@ -117,6 +120,8 @@ Here, you can adjust the colours for the phases if you are not happy with the pr
 The size of the icons on the :ref:`Main form<Main form>` can be adjusted if necessary together with the font size of the *hints* in :ref:`Editor<Editor>`. This is practical for HiDPI monitors where *hints* take too much of the screen space.
 
 The *Reset forms* button resets the position and size of all the forms. This can be useful when you have multiple monitors, and you switch the one, and the form is placed on the other monitor. All open forms except the main one will be closed, and the size will be reset.
+
+When *Use colour for font background* is checked (true by default) then on the :ref:`Phases info tab<Phases info>` the phase colours will be used for as a background. If unchecked the pahse colours will be used as the font colour.
 
 .. figure:: ./img/pref-layout.jpg
     :width: 50%

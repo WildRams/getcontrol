@@ -13,7 +13,7 @@ The lates is ![GitHub release (latest by date)](https://img.shields.io/github/v/
 Information about _What is new_ can be found [here](autoupdate/gcupdateinfo.txt?raw=true).
 
 ## Installation
-There is no need for installation. For Windows and Linux, there are single-file executables. For the macOS, the image disk (DMG file) is available.
+There is no need for installation. For Windows and Linux, there are single-file executables. For the macOS, the Intel image disk (DMG file) is available.
 
 The program tries to search for the FullProf path automatically. If not found or you use a nonstandard path, please set it in the Preferences.
 

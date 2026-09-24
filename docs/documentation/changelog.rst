@@ -10,9 +10,32 @@ All suggestions are welcomed at prema@email.cz
 Version 0.9
 ^^^^^^^^^^^
 
+Version 0.9.5 build 1
+-----------------------------------------------
+:Date: 24/09/2026
+
+- Ctrl-Y (Cleanup function) shortcut, when initiated with the cursor in any text tab, caused line removal. Now corrected.
+- Recent directory list is cleared up from non existing directories on closing. Open and close once to take place.
+- Wrong alignment of the errors when bigger than 1. Now it should be fine.
+- When phase is not contributing to the pattern its empty contribution is not loaded as separate line in the chart.
+- A total magnetic moment added side the axis contributions when using cartesian coordination.
+- Corrected crash of the application when the title line was empty.
+- Corrected the error message about the log file name format (thanks Maximilian for reporting)
+- When using modes (Jbt=-6) the magnetic moments per atoms were not properly read from `*`.out file. Now it should be fine.
+- When using modes (Jbt=±6) the final position with the errors after application of the modes is read from `*`.out file and showed in the phase info tab.
+- When on the profile viewer tab, you can open the series list form by double-clicking on the legend, using the F3 shortcut, or via the menu/button. The form allows you to quickly activate/deactivate data lines with some additional adjustments to the plot (requested by Denis).
+
+Version 0.9.4 build 2
+-----------------------------------------------
+:Date: 13/07/2026
+
+- GC update initialisation file for FP toolbar, so when TFP is launched from GC, it opens with the active path and the file.
+- The recent dir sometimes showed an empty line; this is now corrected.
+- Some minor updates to PCR parsing.
+
 Version 0.9.4 build 1
 -----------------------------------------------
-:Date: 30/04/2026
+:Date: 1/04/2026
 
 - CrysCalc launcher doesn't work when the file name contains spaces. Now it should be corrected.
   But, good practice, don't use spaces in the file and directory names.

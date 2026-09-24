@@ -9,7 +9,7 @@ The **GetControl** main form contains several main parts: `Menu and Toolbar`_, `
     :width: 100%
     :align: center
 
-    Main GetControl window. Green - `Menu and Toolbar`_, Red - `Information pages`_, Blue - `Files list`_, Pink - `FP applications`_, Black - `Supplementary files`_
+    Main GetControl window. Green - `Menu and Toolbar`_, Red - `Information pages`_, Blue - `Files list`_, Violet - `FP applications`_, Black - `Supplementary files`_
 
 How to start
 ============
@@ -179,6 +179,13 @@ Most of the **Menu** items have their corresponding **Toolbar** buttons. Below i
     * ``Reload`` (F5)
         It reloads structure information from the selected PCR file.
 
+    .. image:: ./svg/series-info.png
+        :align: left
+        :width: 20px
+
+    * ``Series list`` (F3 or dblclik on the legend)
+        It opens the table listing all the series on the profile chart where you can adjust some properties of the series.
+
 .. _Menu export:
 
 - Export [4]_
@@ -235,7 +242,7 @@ Most of the **Menu** items have their corresponding **Toolbar** buttons. Below i
         :align: left
         :width: 20px
 
-    * ``Open Terminal`` (Ctrl+T) [3]_
+    * ``Open Terminal`` (Ctrl+T)
         It will try to open the default system terminal.
 
     .. image:: ./svg/COD.png
@@ -477,6 +484,24 @@ When the **Profile viewer** is active tab, you can use the **Measuring tool**, w
 .. note::
     The **ZOOM** options will not work when *Measuring form* is visible. You need to use the **Ctrl** to enable it within the measuring mode or close the form.
 
+Series list
+^^^^^^^^^^^
+
+When the **Profile viewer** is active tab, you can use the **Series list** table to adapt the activity **A** of the dataset or set on/ff the visibility of points (**P**) or line (**L**) for each dataset. There is also possibility to change the thickness of the line between 1 and 5 px.
+
+The list form stays above the main form and is updated when changing different files or patterns.
+
+.. figure:: ./img/series-info.jpg
+    :width: 40%
+    :align: center
+
+    Series list adjustment example
+
+.. note::
+    The setting stay the same when using **Relaod** but when change the file or pattern the default setting is restored.
+
+    The list is automatically closed when selecting another tab than **Profile viewer**.
+
 .. _Microstructure viewer:
 
 Microstructure viewer tab
@@ -510,10 +535,18 @@ The panel provides access to a quick launch of the selected *FullProf* applicati
     :width: 32px
     :align: left
 
+.. figure:: ./svg/FP2k-py.png
+    :width: 32px
+    :align: left
+
 - *FullProf* (shortcut F9)
     Launching the FullProf (*wfp2k*) with the selected PCR file.
 
 .. figure:: ./svg/EdPcr.png
+    :width: 32px
+    :align: left
+
+.. figure:: ./svg/EdPcr-py.png
     :width: 32px
     :align: left
 
@@ -528,6 +561,10 @@ The panel provides access to a quick launch of the selected *FullProf* applicati
     Opens the PRF file with the *WinPlotr* tool. This tool is not available on *Unix-based* systems.
 
 .. figure:: ./svg/WinPLOTR-2006.png
+    :width: 32px
+    :align: left
+
+.. figure:: ./svg/WinPLOTR-2006-py.png
     :width: 32px
     :align: left
 
@@ -559,11 +596,18 @@ The panel provides access to a quick launch of the selected *FullProf* applicati
     :width: 32px
     :align: left
 
+.. figure:: ./svg/fpt-py.png
+    :width: 32px
+    :align: left
+
 - *FPT*
     It opens the *FullProf Toolbar*. Toolbar to access the settings and the programs of the FullProf Suite.
 
 .. caution::
     Those tools are available only when the *FullProf* path is properly set up in the :ref:`Pref->General <General setup>` setup tab.
+
+.. note::
+    The *FullProf* has two versions **classic** and **PySide6** based. The icons for the applications changed and *GetControl* recognise the version you are using and adjust the icons on those buttons.
 
 .. _Supplementary files:
 

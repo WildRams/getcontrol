@@ -23,7 +23,7 @@ The tool is under continuous but unregular development. All bug reports or sugge
 Download
 --------
 
-The application 32- and 64-bit executables for **Windows**, **Linux** or 64-bit image disk (DMG) for **macOS** can be downloaded :ref:`here<Download>`.
+The application 32- and 64-bit executables for **Windows**, **Linux** or 64-bit Intel image disk (DMG) for **macOS** can be downloaded :ref:`here<Download>`.
 
 Table of content
 ----------------

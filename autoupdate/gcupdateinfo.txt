@@ -1,8 +1,8 @@
-0.9.4 build 2
-Win32-MD5Sum: 3217e6a3401c4d2a1778b861ef990875
-Linux32-MD5Sum: 8594ec9040bdea5ed603046328063366
-Win64-MD5Sum: 06b639f96c3a925cee0f2b7461b886e7
-Linux64-MD5Sum: f27a546998f0a608c4e11e220f9ce9b9
+0.9.5 build 1
+Win32-MD5Sum: 7abeeb0942d3a07b0872a022f94e0447
+Linux32-MD5Sum: a704373aacfa240df22f69b179b2cada
+Win64-MD5Sum: f0e19ea1a44d58f4ae606a7264b69065
+Linux64-MD5Sum: b4b6e5bab5c0f43be09a0a1bb3507ce4
 -----------------------------------------------
                  GetControl
  Tool for collecting information about 
@@ -14,6 +14,21 @@ Linux64-MD5Sum: f27a546998f0a608c4e11e220f9ce9b9
  Compiled with CT 8.7
  
 - all suggestions are welcomed at prema@email.cz
+-----------------------------------------------
+24/09/2026 0.9.5 build 1
+- Ctrl-Y (Cleanup function) shortcut, when initiated with the cursor in any text tab, caused line removal. Now corrected.
+- Recent directory list is cleared up from non existing directories on closing. Open and close once to take place.
+- Wrong alignment of the errors when bigger than 1. Now it should be fine.
+- When phase is not contributing to the pattern its empty contribution is not loaded as separate line in the chart.
+- A total magnetic moment added side the axis contributions when using cartesian coordination.
+- Corrected crash of the application when the title line was empty.
+- Corrected the error message about the log file name format (thanks Maximilian for reporting)
+- When using modes (Jbt=-6) the magnetic moments per atoms were not properly read from *.out file. Now it should be fine.
+- When using modes (Jbt=±6) the final position with the errors after application of the modes is read
+  from *.out file and showed in the phase info tab.
+- When on the profile viewer tab, you can open the series list form by double-clicking on the legend,
+  using the F3 shortcut, or via the menu/button. The form allows you to quickly activate/deactivate data lines
+  with some additional adjustments to the plot (requested by Denis).
 -----------------------------------------------
 13/07/2026 0.9.4 build 2
 - GC update initialisation file for FP toolbar, so when TFP is launched from GC, it opens with the active path and the file
