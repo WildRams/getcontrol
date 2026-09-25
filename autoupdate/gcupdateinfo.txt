@@ -19,10 +19,10 @@ Linux64-MD5Sum: b4b6e5bab5c0f43be09a0a1bb3507ce4
 - Ctrl-Y (Cleanup function) shortcut, when initiated with the cursor in any text tab, caused line removal. Now corrected.
 - Recent directory list is cleared of non-existing directories on closing. Open and close once to take effect.
 - Wrong alignment of the errors when bigger than 1. Now it should be fine.
-- When phase is not contributing to the pattern its empty contribution is not loaded as separate line in the chart.
+- When a phase is not contributing to the pattern its empty contribution is not loaded as separate line in the chart.
 - A total magnetic moment is added beside the axis contributions when using Cartesian coordinates.
 - Corrected a crash of the application when the title line was empty.
-- Corrected the error message about the log file name format (thanks Mehsa for reporting)
+- Corrected the error message about the log file name format (thanks Mahsa for reporting)
 - When using modes (Jbt=-6), the magnetic moments per atom were not properly read from the *.out file. Now it should be fine.
 - When using modes (Jbt=±6), the final position with the errors after application of the modes is read
   from the *.out file and shown in the phase info tab.
