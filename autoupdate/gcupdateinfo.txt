@@ -1,8 +1,8 @@
-0.9.5 build 1
-Win32-MD5Sum: 7abeeb0942d3a07b0872a022f94e0447
-Linux32-MD5Sum: a704373aacfa240df22f69b179b2cada
-Win64-MD5Sum: f0e19ea1a44d58f4ae606a7264b69065
-Linux64-MD5Sum: b4b6e5bab5c0f43be09a0a1bb3507ce4
+0.9.5 build 2
+Win32-MD5Sum: 7a19423ecae6cf1602123a1a2f2d154c
+Linux32-MD5Sum: 9e206d9b61f550477424ffdee43fd964
+Win64-MD5Sum: 301f00ee4deebc203922ba44d040a8d3
+Linux64-MD5Sum: dd3984826a8e44dd30ccfd990a369c74
 -----------------------------------------------
                  GetControl
  Tool for collecting information about 
@@ -14,6 +14,13 @@ Linux64-MD5Sum: b4b6e5bab5c0f43be09a0a1bb3507ce4
  Compiled with CT 8.7
  
 - all suggestions are welcomed at prema@email.cz
+-----------------------------------------------
+09/11/2026 0.9.5 build 2
+- both Winploters, when launched, didn't open the appropriate pattern file; now corrected
+- appropriate *.mic files were not found when exporting to plot MIC files; now corrected
+- added some more items to the auto-completion list
+- added a Help menu to open the summary of the FP commands from the docs
+- a new link to the FP website
 -----------------------------------------------
 24/09/2026 0.9.5 build 1
 - Ctrl-Y (Cleanup function) shortcut, when initiated with the cursor in any text tab, caused line removal. Now corrected.
