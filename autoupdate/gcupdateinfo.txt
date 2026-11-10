@@ -1,8 +1,8 @@
-0.9.5 build 2
-Win32-MD5Sum: 7a19423ecae6cf1602123a1a2f2d154c
-Linux32-MD5Sum: 9e206d9b61f550477424ffdee43fd964
-Win64-MD5Sum: 301f00ee4deebc203922ba44d040a8d3
-Linux64-MD5Sum: dd3984826a8e44dd30ccfd990a369c74
+0.9.5 build 3
+Win32-MD5Sum: abbb590ab414c66c557e97ee9470e0ef
+Linux32-MD5Sum: cbf8aaf543993965e81c4e33b22acdc5
+Win64-MD5Sum: 84fc649768bba2e071bd92b8bb5c3985
+Linux64-MD5Sum: 58563b7e17f8fe2d07d9fde97f5b5efe
 -----------------------------------------------
                  GetControl
  Tool for collecting information about 
@@ -14,6 +14,9 @@ Linux64-MD5Sum: dd3984826a8e44dd30ccfd990a369c74
  Compiled with CT 8.7
  
 - all suggestions are welcomed at prema@email.cz
+-----------------------------------------------
+10/11/2026 0.9.5 build 3
+- corrected handling of the NaN as an error in the files
 -----------------------------------------------
 09/11/2026 0.9.5 build 2
 - both Winploters, when launched, didn't open the appropriate pattern file; now corrected
